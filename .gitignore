@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets — never commit
+.env
+*.env
+.streamlit/secrets.toml
+
+# OS / editor junk
+.DS_Store
+.~lock.*#
+*.swp
