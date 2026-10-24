@@ -1,0 +1,805 @@
+{
+  "study_id": "moderna_cove",
+  "instances": [
+    {
+      "id": "obj-001",
+      "type": "objective",
+      "data": {
+        "level": "primary",
+        "text": "To demonstrate the efficacy of mRNA-1273 to prevent coronavirus disease 2019 (COVID-19)."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 11,
+        "section": "1.1 Synopsis - Objectives: Primary",
+        "quote": "To demonstrate the efficacy of mRNA-1273 to prevent coronavirus disease 2019 (COVID-19)."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318564Z"
+    },
+    {
+      "id": "obj-002",
+      "type": "objective",
+      "data": {
+        "level": "primary",
+        "text": "To evaluate the safety and reactogenicity of 2 injections of mRNA-1273 given 28 days apart."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 11,
+        "section": "1.1 Synopsis - Objectives: Primary",
+        "quote": "To evaluate the safety and reactogenicity of 2 injections of mRNA-1273 given 28 days apart."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318620Z"
+    },
+    {
+      "id": "obj-003",
+      "type": "objective",
+      "data": {
+        "level": "secondary",
+        "text": "To evaluate the efficacy of mRNA-1273 to prevent severe COVID-19."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 11,
+        "section": "1.1 Synopsis - Objectives: Secondary",
+        "quote": "To evaluate the efficacy of mRNA-1273 to prevent severe COVID-19."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318627Z"
+    },
+    {
+      "id": "obj-004",
+      "type": "objective",
+      "data": {
+        "level": "secondary",
+        "text": "To evaluate the efficacy of mRNA-1273 to prevent serologically confirmed SARS-CoV-2 infection or COVID-19 regardless of symptomatology or severity."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 11,
+        "section": "1.1 Synopsis - Objectives: Secondary",
+        "quote": "To evaluate the efficacy of mRNA-1273 to prevent serologically confirmed severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection or COVID-19 regardless of symptomatology or severity."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318632Z"
+    },
+    {
+      "id": "obj-005",
+      "type": "objective",
+      "data": {
+        "level": "secondary",
+        "text": "To evaluate vaccine efficacy (VE) against a secondary definition of COVID-19."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 11,
+        "section": "1.1 Synopsis - Objectives: Secondary",
+        "quote": "To evaluate vaccine efficacy (VE) against a secondary definition of COVID-19."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318637Z"
+    },
+    {
+      "id": "obj-006",
+      "type": "objective",
+      "data": {
+        "level": "secondary",
+        "text": "To evaluate VE to prevent death caused by COVID-19."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 11,
+        "section": "1.1 Synopsis - Objectives: Secondary",
+        "quote": "To evaluate VE to prevent death caused by COVID-19."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318642Z"
+    },
+    {
+      "id": "obj-007",
+      "type": "objective",
+      "data": {
+        "level": "secondary",
+        "text": "To evaluate the efficacy of mRNA-1273 to prevent COVID-19 after the first dose of investigational product (IP)."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 11,
+        "section": "1.1 Synopsis - Objectives: Secondary",
+        "quote": "To evaluate the efficacy of mRNA-1273 to prevent COVID-19 after the first dose of investigational product (IP)."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318647Z"
+    },
+    {
+      "id": "obj-008",
+      "type": "objective",
+      "data": {
+        "level": "secondary",
+        "text": "To evaluate the efficacy of mRNA-1273 to prevent COVID-19 in all study participants, regardless of evidence of prior SARS-CoV-2 infection."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 11,
+        "section": "1.1 Synopsis - Objectives: Secondary",
+        "quote": "To evaluate the efficacy of mRNA-1273 to prevent COVID-19 in all study participants, regardless of evidence of prior SARS-CoV-2 infection."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318651Z"
+    },
+    {
+      "id": "obj-009",
+      "type": "objective",
+      "data": {
+        "level": "secondary",
+        "text": "To evaluate the efficacy of mRNA-1273 to prevent asymptomatic SARS-CoV-2 infection."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 11,
+        "section": "1.1 Synopsis - Objectives: Secondary",
+        "quote": "To evaluate the efficacy of mRNA-1273 to prevent asymptomatic SARS-CoV-2 infection."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318656Z"
+    },
+    {
+      "id": "obj-010",
+      "type": "objective",
+      "data": {
+        "level": "secondary",
+        "text": "To evaluate the immunogenicity of 2 doses of mRNA-1273 given 28 days apart."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 57,
+        "section": "3. Objectives and Endpoints - Immunogenicity Objective (Secondary)",
+        "quote": "To evaluate the immunogenicity of 2 doses of mRNA-1273 given 28 days apart."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318667Z"
+    },
+    {
+      "id": "obj-011",
+      "type": "objective",
+      "data": {
+        "level": "secondary",
+        "text": "To infer effectiveness of the 50 μg of mRNA-1273 booster by establishing noninferiority of Ab response after the BD compared to the primary series of mRNA-1273 using GMT values of serum Ab and seroresponse rate of post booster in Part C compared with primary series recipients of mRNA-1273."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 57,
+        "section": "3. Objectives and Endpoints - Immunogenicity Objective (Secondary) for Part C",
+        "quote": "To infer effectiveness of the 50 μg of mRNA-1273 booster by establishing noninferiority of Ab response after the BD compared to the primary series of mRNA-1273"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318673Z"
+    },
+    {
+      "id": "obj-012",
+      "type": "objective",
+      "data": {
+        "level": "exploratory",
+        "text": "To evaluate the effect of mRNA-1273 on the viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by RT-PCR and number of days from the estimated date of SARS-CoV-2 infection until undetectable SARS-CoV-2 infection by RT-PCR."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 57,
+        "section": "3. Objectives and Endpoints - Exploratory Objectives for Part A",
+        "quote": "To evaluate the effect of mRNA-1273 on the viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by RT-PCR"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318687Z"
+    },
+    {
+      "id": "obj-013",
+      "type": "objective",
+      "data": {
+        "level": "exploratory",
+        "text": "To assess VE to reduce the duration of symptoms of COVID-19."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 57,
+        "section": "3. Objectives and Endpoints - Exploratory Objectives for Part A",
+        "quote": "To assess VE to reduce the duration of symptoms of COVID-19."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318692Z"
+    },
+    {
+      "id": "obj-014",
+      "type": "objective",
+      "data": {
+        "level": "exploratory",
+        "text": "To evaluate VE against all-cause mortality."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 57,
+        "section": "3. Objectives and Endpoints - Exploratory Objectives for Part A",
+        "quote": "To evaluate VE against all-cause mortality."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318699Z"
+    },
+    {
+      "id": "obj-015",
+      "type": "objective",
+      "data": {
+        "level": "exploratory",
+        "text": "To assess VE against burden of disease due to COVID-19."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 57,
+        "section": "3. Objectives and Endpoints - Exploratory Objectives for Part A",
+        "quote": "To assess VE against burden of disease due to COVID-19."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318708Z"
+    },
+    {
+      "id": "obj-016",
+      "type": "objective",
+      "data": {
+        "level": "exploratory",
+        "text": "To evaluate the genetic and/or phenotypic relationships of isolated SARS-CoV-2 strains to the vaccine sequence."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 57,
+        "section": "3. Objectives and Endpoints - Exploratory Objectives for Part A",
+        "quote": "To evaluate the genetic and/or phenotypic relationships of isolated SARS-CoV-2 strains to the vaccine sequence."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318713Z"
+    },
+    {
+      "id": "obj-017",
+      "type": "objective",
+      "data": {
+        "level": "exploratory",
+        "text": "To evaluate immune response markers after dosing with IP as correlates of risk of COVID-19 and as correlates of risk of SARS-CoV-2 infection."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 57,
+        "section": "3. Objectives and Endpoints - Exploratory Objectives for Part A",
+        "quote": "To evaluate immune response markers after dosing with IP as correlates of risk of COVID-19 and as correlates of risk of SARS-CoV-2 infection."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318718Z"
+    },
+    {
+      "id": "obj-018",
+      "type": "objective",
+      "data": {
+        "level": "exploratory",
+        "text": "To conduct additional analyses related to furthering the understanding of SARS-CoV-2 infection and COVID-19, including analyses related to the immunology of this or other vaccines, detection of viral infection, and clinical conduct."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 58,
+        "section": "3. Objectives and Endpoints - Exploratory Objectives for Part A",
+        "quote": "To conduct additional analyses related to furthering the understanding of SARS-CoV-2 infection and COVID-19"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318723Z"
+    },
+    {
+      "id": "obj-019",
+      "type": "objective",
+      "data": {
+        "level": "exploratory",
+        "text": "To evaluate the safety of a BD of mRNA-1273."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 58,
+        "section": "3. Objectives and Endpoints - Exploratory Objectives for Part C",
+        "quote": "To evaluate the safety of a BD of mRNA-1273."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318728Z"
+    },
+    {
+      "id": "obj-020",
+      "type": "objective",
+      "data": {
+        "level": "exploratory",
+        "text": "To evaluate the immunogenicity of a BD of mRNA-1273."
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 58,
+        "section": "3. Objectives and Endpoints - Exploratory Objectives for Part C",
+        "quote": "To evaluate the immunogenicity of a BD of mRNA-1273."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:21.318733Z"
+    },
+    {
+      "id": "end-001",
+      "type": "endpoint",
+      "data": {
+        "level": "primary",
+        "text": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of COVID-19 starting 14 days after the second dose of IP, where COVID-19 is defined as symptomatic disease based on specified systemic/respiratory symptom and RT-PCR criteria.",
+        "objective_ref": null,
+        "timeframe": "Starting 14 days after the second dose of IP"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 54,
+        "section": "3. Objectives and Endpoints / Table 1",
+        "quote": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of COVID-19 starting 14 days after the second dose of IP"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414073Z"
+    },
+    {
+      "id": "end-002",
+      "type": "endpoint",
+      "data": {
+        "level": "safety",
+        "text": "Solicited local and systemic ARs through 7 days after each dose of IP (Part A).",
+        "objective_ref": null,
+        "timeframe": "Through 7 days after each dose of IP"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 54,
+        "section": "3. Objectives and Endpoints / Table 1 (Safety Endpoint Primary)",
+        "quote": "Solicited local and systemic ARs through 7 days after each dose of IP (Part A)."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414178Z"
+    },
+    {
+      "id": "end-003",
+      "type": "endpoint",
+      "data": {
+        "level": "safety",
+        "text": "Unsolicited AEs through 28 days after each dose of IP (Part A [all participants] and Part C [only those who receive the BD]).",
+        "objective_ref": null,
+        "timeframe": "Through 28 days after each dose of IP"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 54,
+        "section": "3. Objectives and Endpoints / Table 1 (Safety Endpoint Primary)",
+        "quote": "Unsolicited AEs through 28 days after each dose of IP (Part A [all participants] and Part C [only those who receive the BD])."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414204Z"
+    },
+    {
+      "id": "end-004",
+      "type": "endpoint",
+      "data": {
+        "level": "safety",
+        "text": "MAAEs or AEs leading to withdrawal through the entire study period.",
+        "objective_ref": null,
+        "timeframe": "Entire study period"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 54,
+        "section": "3. Objectives and Endpoints / Table 1 (Safety Endpoint Primary)",
+        "quote": "MAAEs or AEs leading to withdrawal through the entire study period."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414215Z"
+    },
+    {
+      "id": "end-005",
+      "type": "endpoint",
+      "data": {
+        "level": "safety",
+        "text": "SAEs throughout the entire study period.",
+        "objective_ref": null,
+        "timeframe": "Entire study period"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 54,
+        "section": "3. Objectives and Endpoints / Table 1 (Safety Endpoint Primary)",
+        "quote": "SAEs throughout the entire study period."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414221Z"
+    },
+    {
+      "id": "end-006",
+      "type": "endpoint",
+      "data": {
+        "level": "secondary",
+        "text": "Vaccine efficacy of mRNA-1273 to prevent severe COVID-19, defined as first occurrence of COVID-19 starting 14 days after the second dose of IP plus any specified severe-illness criteria.",
+        "objective_ref": null,
+        "timeframe": "Starting 14 days after the second dose of IP"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 55,
+        "section": "3. Objectives and Endpoints / Table 1 (Efficacy Endpoints Secondary)",
+        "quote": "Vaccine efficacy of mRNA-1273 to prevent severe COVID-19, defined as first occurrence of COVID-19 starting 14 days after the second dose of IP"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414227Z"
+    },
+    {
+      "id": "end-007",
+      "type": "endpoint",
+      "data": {
+        "level": "secondary",
+        "text": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of either COVID-19 or SARS-CoV-2 infection starting 14 days after the second IP dose (serologically confirmed infection regardless of symptomatology or severity).",
+        "objective_ref": null,
+        "timeframe": "Starting 14 days after the second IP dose"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 55,
+        "section": "3. Objectives and Endpoints / Table 1 (Efficacy Endpoints Secondary)",
+        "quote": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of either COVID-19 or SARS-CoV-2 infection starting 14 days after the second IP dose."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414232Z"
+    },
+    {
+      "id": "end-008",
+      "type": "endpoint",
+      "data": {
+        "level": "secondary",
+        "text": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 using a secondary definition of symptoms.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 28,
+        "section": "Statistical Methods / Secondary endpoints",
+        "quote": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 using a secondary definition of symptoms"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414238Z"
+    },
+    {
+      "id": "end-009",
+      "type": "endpoint",
+      "data": {
+        "level": "secondary",
+        "text": "Vaccine efficacy of mRNA-1273 to prevent death caused by COVID-19.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 28,
+        "section": "Statistical Methods / Secondary endpoints",
+        "quote": "Vaccine efficacy of mRNA-1273 to prevent death caused by COVID-19"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414245Z"
+    },
+    {
+      "id": "end-010",
+      "type": "endpoint",
+      "data": {
+        "level": "secondary",
+        "text": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 after the first dose of IP.",
+        "objective_ref": null,
+        "timeframe": "After the first dose of IP"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 28,
+        "section": "Statistical Methods / Secondary endpoints",
+        "quote": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 after the first dose of IP"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414250Z"
+    },
+    {
+      "id": "end-011",
+      "type": "endpoint",
+      "data": {
+        "level": "secondary",
+        "text": "Vaccine efficacy of mRNA-1273 to prevent asymptomatic SARS-CoV-2 infection.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 28,
+        "section": "Statistical Methods / Secondary endpoints",
+        "quote": "Vaccine efficacy of mRNA-1273 to prevent asymptomatic SARS-CoV-2 infection"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414255Z"
+    },
+    {
+      "id": "end-012",
+      "type": "endpoint",
+      "data": {
+        "level": "secondary",
+        "text": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 in all study participants, regardless of evidence of prior SARS-CoV-2 infection.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 28,
+        "section": "Statistical Methods / Efficacy Analyses",
+        "quote": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 in all study participants, regardless of evidence of prior SARS-CoV-2 infection"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414259Z"
+    },
+    {
+      "id": "end-013",
+      "type": "endpoint",
+      "data": {
+        "level": "secondary",
+        "text": "Part C Key Secondary Endpoint 1: Ab GMT at BD-Day 29 (noninferiority of booster dose GMT compared with primary series GMT at Day 57).",
+        "objective_ref": null,
+        "timeframe": "BD-Day 29"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 33,
+        "section": "Statistical Methods / Part C",
+        "quote": "Part C Key Secondary Endpoint 1: Ab GMT at BD-Day 29"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414264Z"
+    },
+    {
+      "id": "end-014",
+      "type": "endpoint",
+      "data": {
+        "level": "secondary",
+        "text": "Part C Key Secondary Endpoint 2: Ab Seroresponse Rate at BD-Day 29 (noninferiority compared with primary series SRR at Day 57).",
+        "objective_ref": null,
+        "timeframe": "BD-Day 29"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 34,
+        "section": "Statistical Methods / Part C",
+        "quote": "Part C Key Secondary Endpoint 2: Ab Seroresponse Rate at BD-Day 29"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414269Z"
+    },
+    {
+      "id": "end-015",
+      "type": "endpoint",
+      "data": {
+        "level": "exploratory",
+        "text": "Effect of mRNA-1273 on viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by RT-PCR and number of days until undetectable infection.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 12,
+        "section": "Exploratory for Part A",
+        "quote": "To evaluate the effect of mRNA-1273 on the viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by reverse transcriptase polymerase chain reaction (RT-PCR)"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414274Z"
+    },
+    {
+      "id": "end-016",
+      "type": "endpoint",
+      "data": {
+        "level": "exploratory",
+        "text": "VE to reduce the duration of symptoms of COVID-19.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 12,
+        "section": "Exploratory for Part A",
+        "quote": "To assess VE to reduce the duration of symptoms of COVID-19."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414281Z"
+    },
+    {
+      "id": "end-017",
+      "type": "endpoint",
+      "data": {
+        "level": "exploratory",
+        "text": "VE against all-cause mortality.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 12,
+        "section": "Exploratory for Part A",
+        "quote": "To evaluate VE against all-cause mortality."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414307Z"
+    },
+    {
+      "id": "end-018",
+      "type": "endpoint",
+      "data": {
+        "level": "exploratory",
+        "text": "VE against burden of disease due to COVID-19.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 12,
+        "section": "Exploratory for Part A",
+        "quote": "To assess VE against burden of disease due to COVID-19."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414318Z"
+    },
+    {
+      "id": "end-019",
+      "type": "endpoint",
+      "data": {
+        "level": "exploratory",
+        "text": "Genetic and/or phenotypic relationships of isolated SARS-CoV-2 strains to the vaccine sequence.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 12,
+        "section": "Exploratory for Part A",
+        "quote": "To evaluate the genetic and/or phenotypic relationships of isolated SARS-CoV-2 strains to the vaccine sequence."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414324Z"
+    },
+    {
+      "id": "end-020",
+      "type": "endpoint",
+      "data": {
+        "level": "exploratory",
+        "text": "Immune response markers after dosing with IP as correlates of risk of COVID-19 and of SARS-CoV-2 infection.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 12,
+        "section": "Exploratory for Part A",
+        "quote": "To evaluate immune response markers after dosing with IP as correlates of risk of COVID-19 and as correlates of risk of SARS-CoV-2 infection."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414329Z"
+    },
+    {
+      "id": "end-021",
+      "type": "endpoint",
+      "data": {
+        "level": "exploratory",
+        "text": "Safety of a booster dose (BD) of mRNA-1273.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 12,
+        "section": "Exploratory for Part C",
+        "quote": "To evaluate the safety of a booster dose (BD) of mRNA-1273"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414336Z"
+    },
+    {
+      "id": "end-022",
+      "type": "endpoint",
+      "data": {
+        "level": "exploratory",
+        "text": "Immunogenicity of a BD of mRNA-1273.",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 12,
+        "section": "Exploratory for Part C",
+        "quote": "To evaluate the immunogenicity of a BD of mRNA-1273."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [],
+      "version": 1,
+      "created": "2026-10-24T08:45:23.414341Z"
+    }
+  ]
+}
