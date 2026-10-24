@@ -1,6 +1,8 @@
 """Protocol Component Studio — source package."""
 from .models import (
-    Component,
+    ComponentDefinition,
+    ComponentInstance,
+    Study,
     ComponentType,
     Provenance,
     Objective,
@@ -13,10 +15,13 @@ from .models import (
     ExtractionResult,
 )
 from .templates import REGISTRY, SectionSlot, slots_for_component_type
+from .merge import merge_components
 
 __all__ = [
-    "Component", "ComponentType", "Provenance",
+    "ComponentDefinition", "ComponentInstance", "Study",
+    "ComponentType", "Provenance",
     "Objective", "Endpoint", "Arm", "Population", "EligibilityCriterion", "Visit",
     "ELEMENT_MODELS", "ExtractionResult",
     "REGISTRY", "SectionSlot", "slots_for_component_type",
+    "merge_components",
 ]

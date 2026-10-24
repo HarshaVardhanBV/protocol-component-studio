@@ -1,12 +1,18 @@
 """
-models.py — the USDM-*shaped* component contract.
+models.py — the component contract, split into DEFINITIONS and INSTANCES.
 
-This is the single source of truth for the whole app: every element extracted
-from a protocol becomes a validated, versioned `Component` with provenance.
-A USDM-shaped SUBSET on purpose (six element types), not the full CDISC USDM —
-named honestly, the same way the PV toolkit called its measure IC, not EBGM.
+- ComponentDefinition: content-less, study-agnostic "slot" derived from the
+  template/standard (USDM/M11), e.g. "Primary Efficacy Objective". The class.
+- ComponentInstance: a definition hydrated with content for ONE study/context
+  (drug, study), e.g. Moderna-COVE's primary efficacy objective text. The object.
+- Study: the context an instance is hydrated for.
 
-Reuses the Pydantic-everywhere pattern from the AE Triage tool.
+A definition has many instances (one per study); an instance links to one-or-more
+definitions. That many-to-many lives on graph edges, not here — on the instance we
+keep `definition_ids` (usually one). Provenance is the instance's single source of
+origin; reuse across OUTPUT documents is the graph's RENDERS edges.
+
+A USDM-shaped SUBSET on purpose (six element types), named honestly.
 """
 from __future__ import annotations
 
@@ -16,7 +22,7 @@ from typing import Literal, Optional, Union
 from pydantic import BaseModel, Field, model_validator
 
 # ---------------------------------------------------------------------------
-# Controlled vocabularies (Literal = the same discipline as the triage schema)
+# Controlled vocabularies
 # ---------------------------------------------------------------------------
 ComponentType = Literal["objective", "endpoint", "arm", "population", "eligibility", "visit"]
 ObjectiveLevel = Literal["primary", "secondary", "exploratory"]
@@ -26,18 +32,17 @@ CriterionKind = Literal["inclusion", "exclusion"]
 
 
 # ---------------------------------------------------------------------------
-# Provenance — where in the source protocol this element came from.
-# `quote` is the exact source sentence, kept for the audit/traceability story.
+# Provenance — single source of origin for an instance's content
 # ---------------------------------------------------------------------------
 class Provenance(BaseModel):
     protocol_id: str
     page: Optional[int] = None
-    section: Optional[str] = None          # e.g. "6.1 Primary Objective"
-    quote: Optional[str] = None            # exact source text, for audit
+    section: Optional[str] = None
+    quote: Optional[str] = None
 
 
 # ---------------------------------------------------------------------------
-# The six USDM-shaped element models (the `data` payload of a Component)
+# The six USDM-shaped element models (the instance's content payload)
 # ---------------------------------------------------------------------------
 class Objective(BaseModel):
     level: ObjectiveLevel
@@ -47,8 +52,8 @@ class Objective(BaseModel):
 class Endpoint(BaseModel):
     level: EndpointLevel
     text: str
-    objective_ref: Optional[str] = None    # id of the Objective component it supports
-    timeframe: Optional[str] = None         # e.g. "at Week 24"
+    objective_ref: Optional[str] = None
+    timeframe: Optional[str] = None
 
 
 class Arm(BaseModel):
@@ -60,54 +65,65 @@ class Arm(BaseModel):
 class Population(BaseModel):
     description: str
     planned_enrollment: Optional[int] = None
-    condition: Optional[str] = None         # indication / disease
+    condition: Optional[str] = None
 
 
 class EligibilityCriterion(BaseModel):
     kind: CriterionKind
     text: str
-    number: Optional[str] = None            # e.g. "I3", "E7"
+    number: Optional[str] = None
 
 
 class Visit(BaseModel):
     name: str
-    study_day: Optional[str] = None         # e.g. "Day 1", "Week 4 (±3 days)"
+    study_day: Optional[str] = None
     procedures: list[str] = Field(default_factory=list)
 
 
 ElementData = Union[Objective, Endpoint, Arm, Population, EligibilityCriterion, Visit]
 
-# type string -> model. Used to coerce `data` to the right model by `type`,
-# which avoids Pydantic picking the wrong union member (Objective vs Endpoint
-# overlap on level+text).
 ELEMENT_MODELS: dict[str, type[BaseModel]] = {
-    "objective": Objective,
-    "endpoint": Endpoint,
-    "arm": Arm,
-    "population": Population,
-    "eligibility": EligibilityCriterion,
-    "visit": Visit,
+    "objective": Objective, "endpoint": Endpoint, "arm": Arm,
+    "population": Population, "eligibility": EligibilityCriterion, "visit": Visit,
 }
 
 
 # ---------------------------------------------------------------------------
-# The Component envelope — the versioned, provenance-tagged source of truth.
-# One of these per extracted element; this is what becomes a graph node.
+# Study context
 # ---------------------------------------------------------------------------
-class Component(BaseModel):
-    id: str                                 # stable id, e.g. "end-001"
+class Study(BaseModel):
+    id: str                                 # e.g. "moderna_cove"
+    drug: Optional[str] = None
+    title: Optional[str] = None
+
+
+# ---------------------------------------------------------------------------
+# Definition — the content-less slot (the class)
+# ---------------------------------------------------------------------------
+class ComponentDefinition(BaseModel):
+    id: str                                 # e.g. "def-primary-efficacy-objective"
     type: ComponentType
+    name: str                               # canonical label, e.g. "Primary Efficacy Objective"
+    level: Optional[str] = None             # expected level, if the standard fixes one
+    description: Optional[str] = None
+
+
+# ---------------------------------------------------------------------------
+# Instance — a definition hydrated with content for one study (the object)
+# ---------------------------------------------------------------------------
+class ComponentInstance(BaseModel):
+    id: str                                 # stable id, e.g. "moderna_cove:end-001"
+    type: ComponentType
+    data: ElementData                       # the content
+    provenance: Provenance                  # single source of origin
+    study_id: str                           # context (-> Study.id)
+    definition_ids: list[str] = Field(default_factory=list)   # m:n link to definitions (usually 1)
     version: int = 1
-    data: ElementData
-    provenance: Provenance
     created: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-    supersedes: Optional[str] = None        # node key of the previous version, for the version chain
 
     @model_validator(mode="before")
     @classmethod
     def _coerce_data_by_type(cls, values):
-        """Parse `data` into the model named by `type` BEFORE field validation,
-        so a plain dict can't be mis-matched to the wrong element model."""
         if isinstance(values, dict):
             t, d = values.get("type"), values.get("data")
             model = ELEMENT_MODELS.get(t)
@@ -124,11 +140,11 @@ class Component(BaseModel):
 
 
 # ---------------------------------------------------------------------------
-# What the extractor returns for one protocol (Phase 1 will populate this).
+# What the extractor returns for one study (a bag of instances).
 # ---------------------------------------------------------------------------
 class ExtractionResult(BaseModel):
-    protocol_id: str
-    components: list[Component] = Field(default_factory=list)
+    study_id: str
+    instances: list[ComponentInstance] = Field(default_factory=list)
 
-    def by_type(self, t: ComponentType) -> list[Component]:
-        return [c for c in self.components if c.type == t]
+    def by_type(self, t: ComponentType) -> list[ComponentInstance]:
+        return [i for i in self.instances if i.type == t]
