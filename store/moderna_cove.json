@@ -15,7 +15,9 @@
         "quote": "To demonstrate the efficacy of mRNA-1273 to prevent coronavirus disease 2019 (COVID-19)."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318564Z"
     },
@@ -33,7 +35,9 @@
         "quote": "To evaluate the safety and reactogenicity of 2 injections of mRNA-1273 given 28 days apart."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318620Z"
     },
@@ -51,7 +55,9 @@
         "quote": "To evaluate the efficacy of mRNA-1273 to prevent severe COVID-19."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318627Z"
     },
@@ -69,7 +75,9 @@
         "quote": "To evaluate the efficacy of mRNA-1273 to prevent serologically confirmed severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection or COVID-19 regardless of symptomatology or severity."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318632Z"
     },
@@ -87,7 +95,9 @@
         "quote": "To evaluate vaccine efficacy (VE) against a secondary definition of COVID-19."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318637Z"
     },
@@ -105,7 +115,9 @@
         "quote": "To evaluate VE to prevent death caused by COVID-19."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318642Z"
     },
@@ -123,7 +135,9 @@
         "quote": "To evaluate the efficacy of mRNA-1273 to prevent COVID-19 after the first dose of investigational product (IP)."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318647Z"
     },
@@ -141,7 +155,9 @@
         "quote": "To evaluate the efficacy of mRNA-1273 to prevent COVID-19 in all study participants, regardless of evidence of prior SARS-CoV-2 infection."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318651Z"
     },
@@ -159,7 +175,9 @@
         "quote": "To evaluate the efficacy of mRNA-1273 to prevent asymptomatic SARS-CoV-2 infection."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318656Z"
     },
@@ -177,7 +195,9 @@
         "quote": "To evaluate the immunogenicity of 2 doses of mRNA-1273 given 28 days apart."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318667Z"
     },
@@ -186,16 +206,18 @@
       "type": "objective",
       "data": {
         "level": "secondary",
-        "text": "To infer effectiveness of the 50 μg of mRNA-1273 booster by establishing noninferiority of Ab response after the BD compared to the primary series of mRNA-1273 using GMT values of serum Ab and seroresponse rate of post booster in Part C compared with primary series recipients of mRNA-1273."
+        "text": "To infer effectiveness of the 50 \u03bcg of mRNA-1273 booster by establishing noninferiority of Ab response after the BD compared to the primary series of mRNA-1273 using GMT values of serum Ab and seroresponse rate of post booster in Part C compared with primary series recipients of mRNA-1273."
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 57,
         "section": "3. Objectives and Endpoints - Immunogenicity Objective (Secondary) for Part C",
-        "quote": "To infer effectiveness of the 50 μg of mRNA-1273 booster by establishing noninferiority of Ab response after the BD compared to the primary series of mRNA-1273"
+        "quote": "To infer effectiveness of the 50 \u03bcg of mRNA-1273 booster by establishing noninferiority of Ab response after the BD compared to the primary series of mRNA-1273"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318673Z"
     },
@@ -213,7 +235,9 @@
         "quote": "To evaluate the effect of mRNA-1273 on the viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by RT-PCR"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318687Z"
     },
@@ -231,7 +255,9 @@
         "quote": "To assess VE to reduce the duration of symptoms of COVID-19."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318692Z"
     },
@@ -249,7 +275,9 @@
         "quote": "To evaluate VE against all-cause mortality."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318699Z"
     },
@@ -267,7 +295,9 @@
         "quote": "To assess VE against burden of disease due to COVID-19."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318708Z"
     },
@@ -285,7 +315,9 @@
         "quote": "To evaluate the genetic and/or phenotypic relationships of isolated SARS-CoV-2 strains to the vaccine sequence."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318713Z"
     },
@@ -303,7 +335,9 @@
         "quote": "To evaluate immune response markers after dosing with IP as correlates of risk of COVID-19 and as correlates of risk of SARS-CoV-2 infection."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318718Z"
     },
@@ -321,7 +355,9 @@
         "quote": "To conduct additional analyses related to furthering the understanding of SARS-CoV-2 infection and COVID-19"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318723Z"
     },
@@ -339,7 +375,9 @@
         "quote": "To evaluate the safety of a BD of mRNA-1273."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318728Z"
     },
@@ -357,7 +395,9 @@
         "quote": "To evaluate the immunogenicity of a BD of mRNA-1273."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:21.318733Z"
     },
@@ -377,7 +417,9 @@
         "quote": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of COVID-19 starting 14 days after the second dose of IP"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414073Z"
     },
@@ -397,7 +439,9 @@
         "quote": "Solicited local and systemic ARs through 7 days after each dose of IP (Part A)."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414178Z"
     },
@@ -417,7 +461,9 @@
         "quote": "Unsolicited AEs through 28 days after each dose of IP (Part A [all participants] and Part C [only those who receive the BD])."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414204Z"
     },
@@ -437,7 +483,9 @@
         "quote": "MAAEs or AEs leading to withdrawal through the entire study period."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414215Z"
     },
@@ -457,7 +505,9 @@
         "quote": "SAEs throughout the entire study period."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414221Z"
     },
@@ -477,7 +527,9 @@
         "quote": "Vaccine efficacy of mRNA-1273 to prevent severe COVID-19, defined as first occurrence of COVID-19 starting 14 days after the second dose of IP"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414227Z"
     },
@@ -497,7 +549,9 @@
         "quote": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of either COVID-19 or SARS-CoV-2 infection starting 14 days after the second IP dose."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414232Z"
     },
@@ -517,7 +571,9 @@
         "quote": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 using a secondary definition of symptoms"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414238Z"
     },
@@ -537,7 +593,9 @@
         "quote": "Vaccine efficacy of mRNA-1273 to prevent death caused by COVID-19"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414245Z"
     },
@@ -557,7 +615,9 @@
         "quote": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 after the first dose of IP"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414250Z"
     },
@@ -577,7 +637,9 @@
         "quote": "Vaccine efficacy of mRNA-1273 to prevent asymptomatic SARS-CoV-2 infection"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414255Z"
     },
@@ -597,7 +659,9 @@
         "quote": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 in all study participants, regardless of evidence of prior SARS-CoV-2 infection"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414259Z"
     },
@@ -617,7 +681,9 @@
         "quote": "Part C Key Secondary Endpoint 1: Ab GMT at BD-Day 29"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414264Z"
     },
@@ -637,7 +703,9 @@
         "quote": "Part C Key Secondary Endpoint 2: Ab Seroresponse Rate at BD-Day 29"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414269Z"
     },
@@ -657,7 +725,9 @@
         "quote": "To evaluate the effect of mRNA-1273 on the viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by reverse transcriptase polymerase chain reaction (RT-PCR)"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414274Z"
     },
@@ -677,7 +747,9 @@
         "quote": "To assess VE to reduce the duration of symptoms of COVID-19."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414281Z"
     },
@@ -697,7 +769,9 @@
         "quote": "To evaluate VE against all-cause mortality."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414307Z"
     },
@@ -717,7 +791,9 @@
         "quote": "To assess VE against burden of disease due to COVID-19."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414318Z"
     },
@@ -737,7 +813,9 @@
         "quote": "To evaluate the genetic and/or phenotypic relationships of isolated SARS-CoV-2 strains to the vaccine sequence."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414324Z"
     },
@@ -757,7 +835,9 @@
         "quote": "To evaluate immune response markers after dosing with IP as correlates of risk of COVID-19 and as correlates of risk of SARS-CoV-2 infection."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414329Z"
     },
@@ -777,7 +857,9 @@
         "quote": "To evaluate the safety of a booster dose (BD) of mRNA-1273"
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414336Z"
     },
@@ -797,7 +879,9 @@
         "quote": "To evaluate the immunogenicity of a BD of mRNA-1273."
       },
       "study_id": "moderna_cove",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:45:23.414341Z"
     }

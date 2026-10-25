@@ -1,0 +1,878 @@
+[
+  {
+    "id": "OBJ-PRIMARY",
+    "type": "objective",
+    "role": "primary",
+    "name": "Primary Objective",
+    "label": "Primary Objective",
+    "description": "A primary trial objective: a precise question of interest the trial is designed to answer, paired with an associated estimand (ICH M11 \u00a73).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "3.1 Primary Objective(s) and Associated Estimand(s)",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "Objective (C188707)",
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "ICH E8(R1)",
+        "section": "General considerations \u2014 trial objectives",
+        "identifier": null,
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "prose",
+    "expected_attributes": [
+      {
+        "name": "clinical_question",
+        "label": "Objective / clinical question",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The objective stated as a precise question of interest.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH M11",
+          "section": "Section 3 \u2014 Trial Objectives and Associated Estimands",
+          "identifier": null,
+          "version": null,
+          "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+        }
+      },
+      {
+        "name": "associated_endpoints",
+        "label": "Associated endpoint(s)",
+        "required": false,
+        "data_type": "coded",
+        "cardinality": "multiple",
+        "description": "Endpoint(s) (via estimand) that operationalise this objective.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Objective \u2192 estimand \u2192 endpoint linkage",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      }
+    ],
+    "renders_into": [
+      "M11-OBJ",
+      "E3-9.2"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3",
+      "SAP"
+    ],
+    "min_occurs": 1,
+    "max_occurs": null,
+    "cardinality": "One or more; a trial typically has a single primary objective.",
+    "conformance_rules": [
+      {
+        "id": "OBJ-PRIMARY-1",
+        "text": "A trial must define at least one primary objective.",
+        "severity": "error",
+        "scope": "cardinality"
+      },
+      {
+        "id": "OBJ-EP-1",
+        "text": "Each objective should have at least one associated endpoint.",
+        "severity": "warning",
+        "scope": "associated_endpoints"
+      }
+    ],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "OBJ-SECONDARY",
+    "type": "objective",
+    "role": "secondary",
+    "name": "Secondary Objective",
+    "label": "Secondary Objective",
+    "description": "A secondary trial objective: a precise question of interest the trial is designed to answer, paired with an associated estimand (ICH M11 \u00a73).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "3.2 Secondary Objective(s) and Associated Estimand(s)",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "Objective (C188707)",
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "ICH E8(R1)",
+        "section": "General considerations \u2014 trial objectives",
+        "identifier": null,
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "prose",
+    "expected_attributes": [
+      {
+        "name": "clinical_question",
+        "label": "Objective / clinical question",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The objective stated as a precise question of interest.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH M11",
+          "section": "Section 3 \u2014 Trial Objectives and Associated Estimands",
+          "identifier": null,
+          "version": null,
+          "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+        }
+      },
+      {
+        "name": "associated_endpoints",
+        "label": "Associated endpoint(s)",
+        "required": false,
+        "data_type": "coded",
+        "cardinality": "multiple",
+        "description": "Endpoint(s) (via estimand) that operationalise this objective.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Objective \u2192 estimand \u2192 endpoint linkage",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      }
+    ],
+    "renders_into": [
+      "M11-OBJ",
+      "E3-9.2"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3",
+      "SAP"
+    ],
+    "min_occurs": 0,
+    "max_occurs": null,
+    "cardinality": "Zero or more.",
+    "conformance_rules": [
+      {
+        "id": "OBJ-EP-1",
+        "text": "Each objective should have at least one associated endpoint.",
+        "severity": "warning",
+        "scope": "associated_endpoints"
+      }
+    ],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "OBJ-EXPLORATORY",
+    "type": "objective",
+    "role": "exploratory",
+    "name": "Exploratory Objective",
+    "label": "Exploratory Objective",
+    "description": "A exploratory trial objective: a precise question of interest the trial is designed to answer, paired with an associated estimand (ICH M11 \u00a73).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "3.3 Exploratory Objective(s)",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "Objective (C188707)",
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "ICH E8(R1)",
+        "section": "General considerations \u2014 trial objectives",
+        "identifier": null,
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "prose",
+    "expected_attributes": [
+      {
+        "name": "clinical_question",
+        "label": "Objective / clinical question",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The objective stated as a precise question of interest.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH M11",
+          "section": "Section 3 \u2014 Trial Objectives and Associated Estimands",
+          "identifier": null,
+          "version": null,
+          "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+        }
+      },
+      {
+        "name": "associated_endpoints",
+        "label": "Associated endpoint(s)",
+        "required": false,
+        "data_type": "coded",
+        "cardinality": "multiple",
+        "description": "Endpoint(s) (via estimand) that operationalise this objective.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Objective \u2192 estimand \u2192 endpoint linkage",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      }
+    ],
+    "renders_into": [
+      "M11-OBJ",
+      "E3-9.2"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3",
+      "SAP"
+    ],
+    "min_occurs": 0,
+    "max_occurs": null,
+    "cardinality": "Zero or more.",
+    "conformance_rules": [
+      {
+        "id": "OBJ-EP-1",
+        "text": "Each objective should have at least one associated endpoint.",
+        "severity": "warning",
+        "scope": "associated_endpoints"
+      }
+    ],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "EP-PRIMARY",
+    "type": "endpoint",
+    "role": "primary",
+    "name": "Primary Endpoint",
+    "label": "Primary Endpoint",
+    "description": "A primary endpoint: the variable within the associated estimand that operationalises a primary objective (ICH E9(R1); ICH M11 \u00a73).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "Section 3 \u2014 Associated Estimand(s)",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "ICH E9(R1)",
+        "section": "Addendum: the estimand framework",
+        "identifier": null,
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "Endpoint (C188708)",
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "prose",
+    "expected_attributes": [
+      {
+        "name": "treatment",
+        "label": "Treatment condition",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The treatment(s) and comparator of interest, incl. regimen detail.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "population",
+        "label": "Target population",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The patients targeted by the clinical question (usually the trial I/E).",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "variable",
+        "label": "Variable (endpoint measure)",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The outcome measured per participant, how and at what timepoint.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "population_summary",
+        "label": "Population-level summary",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "Measure comparing conditions across the population (e.g. risk difference, hazard ratio, difference in means).",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "intercurrent_events",
+        "label": "Intercurrent-event strategy",
+        "required": true,
+        "data_type": "coded",
+        "cardinality": "multiple",
+        "description": "Pre-specified strategy for post-treatment events affecting the variable.",
+        "controlled_terms": [
+          "treatment_policy",
+          "composite",
+          "while_on_treatment",
+          "hypothetical",
+          "principal_stratum"
+        ],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "timeframe",
+        "label": "Timeframe",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "Timing/window over which the endpoint is assessed.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "Estimand (C188719)",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "purpose",
+        "label": "Endpoint purpose",
+        "required": false,
+        "data_type": "coded",
+        "cardinality": "single",
+        "description": "Orthogonal category of what the endpoint measures.",
+        "controlled_terms": [
+          "efficacy",
+          "safety",
+          "immunogenicity",
+          "pharmacokinetic",
+          "pharmacodynamic",
+          "other"
+        ],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "Endpoint (C188708)",
+          "version": null,
+          "url": null
+        }
+      }
+    ],
+    "renders_into": [
+      "M11-OBJ",
+      "E3-9.5"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3",
+      "SAP"
+    ],
+    "min_occurs": 1,
+    "max_occurs": null,
+    "cardinality": "One or more; aligned to the primary objective's estimand.",
+    "conformance_rules": [
+      {
+        "id": "EP-REF-1",
+        "text": "Each endpoint must reference the objective it supports.",
+        "severity": "error",
+        "scope": "objective_ref"
+      },
+      {
+        "id": "EP-EST-1",
+        "text": "A primary endpoint must specify its estimand attributes (treatment, population, variable, population-level summary, intercurrent events).",
+        "severity": "warning",
+        "scope": "estimand"
+      }
+    ],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "EP-SECONDARY",
+    "type": "endpoint",
+    "role": "secondary",
+    "name": "Secondary Endpoint",
+    "label": "Secondary Endpoint",
+    "description": "A secondary endpoint: the variable within the associated estimand that operationalises a secondary objective (ICH E9(R1); ICH M11 \u00a73).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "Section 3 \u2014 Associated Estimand(s)",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "ICH E9(R1)",
+        "section": "Addendum: the estimand framework",
+        "identifier": null,
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "Endpoint (C188708)",
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "prose",
+    "expected_attributes": [
+      {
+        "name": "treatment",
+        "label": "Treatment condition",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The treatment(s) and comparator of interest, incl. regimen detail.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "population",
+        "label": "Target population",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The patients targeted by the clinical question (usually the trial I/E).",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "variable",
+        "label": "Variable (endpoint measure)",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The outcome measured per participant, how and at what timepoint.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "population_summary",
+        "label": "Population-level summary",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "Measure comparing conditions across the population (e.g. risk difference, hazard ratio, difference in means).",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "intercurrent_events",
+        "label": "Intercurrent-event strategy",
+        "required": true,
+        "data_type": "coded",
+        "cardinality": "multiple",
+        "description": "Pre-specified strategy for post-treatment events affecting the variable.",
+        "controlled_terms": [
+          "treatment_policy",
+          "composite",
+          "while_on_treatment",
+          "hypothetical",
+          "principal_stratum"
+        ],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "timeframe",
+        "label": "Timeframe",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "Timing/window over which the endpoint is assessed.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "Estimand (C188719)",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "purpose",
+        "label": "Endpoint purpose",
+        "required": false,
+        "data_type": "coded",
+        "cardinality": "single",
+        "description": "Orthogonal category of what the endpoint measures.",
+        "controlled_terms": [
+          "efficacy",
+          "safety",
+          "immunogenicity",
+          "pharmacokinetic",
+          "pharmacodynamic",
+          "other"
+        ],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "Endpoint (C188708)",
+          "version": null,
+          "url": null
+        }
+      }
+    ],
+    "renders_into": [
+      "M11-OBJ",
+      "E3-9.5"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3",
+      "SAP"
+    ],
+    "min_occurs": 0,
+    "max_occurs": null,
+    "cardinality": "Zero or more.",
+    "conformance_rules": [
+      {
+        "id": "EP-REF-1",
+        "text": "Each endpoint must reference the objective it supports.",
+        "severity": "error",
+        "scope": "objective_ref"
+      }
+    ],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "EP-EXPLORATORY",
+    "type": "endpoint",
+    "role": "exploratory",
+    "name": "Exploratory Endpoint",
+    "label": "Exploratory Endpoint",
+    "description": "A exploratory endpoint: the variable within the associated estimand that operationalises a exploratory objective (ICH E9(R1); ICH M11 \u00a73).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "Section 3 \u2014 Associated Estimand(s)",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "ICH E9(R1)",
+        "section": "Addendum: the estimand framework",
+        "identifier": null,
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "Endpoint (C188708)",
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "prose",
+    "expected_attributes": [
+      {
+        "name": "treatment",
+        "label": "Treatment condition",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The treatment(s) and comparator of interest, incl. regimen detail.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "population",
+        "label": "Target population",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The patients targeted by the clinical question (usually the trial I/E).",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "variable",
+        "label": "Variable (endpoint measure)",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "The outcome measured per participant, how and at what timepoint.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "population_summary",
+        "label": "Population-level summary",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "Measure comparing conditions across the population (e.g. risk difference, hazard ratio, difference in means).",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "intercurrent_events",
+        "label": "Intercurrent-event strategy",
+        "required": true,
+        "data_type": "coded",
+        "cardinality": "multiple",
+        "description": "Pre-specified strategy for post-treatment events affecting the variable.",
+        "controlled_terms": [
+          "treatment_policy",
+          "composite",
+          "while_on_treatment",
+          "hypothetical",
+          "principal_stratum"
+        ],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Addendum: the estimand framework",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "timeframe",
+        "label": "Timeframe",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": "Timing/window over which the endpoint is assessed.",
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "Estimand (C188719)",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "purpose",
+        "label": "Endpoint purpose",
+        "required": false,
+        "data_type": "coded",
+        "cardinality": "single",
+        "description": "Orthogonal category of what the endpoint measures.",
+        "controlled_terms": [
+          "efficacy",
+          "safety",
+          "immunogenicity",
+          "pharmacokinetic",
+          "pharmacodynamic",
+          "other"
+        ],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "Endpoint (C188708)",
+          "version": null,
+          "url": null
+        }
+      }
+    ],
+    "renders_into": [
+      "M11-OBJ",
+      "E3-9.5"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3",
+      "SAP"
+    ],
+    "min_occurs": 0,
+    "max_occurs": null,
+    "cardinality": "Zero or more.",
+    "conformance_rules": [
+      {
+        "id": "EP-REF-1",
+        "text": "Each endpoint must reference the objective it supports.",
+        "severity": "error",
+        "scope": "objective_ref"
+      }
+    ],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  }
+]

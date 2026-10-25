@@ -65,28 +65,37 @@ OBJECTIVES_TOOL = {
     "description": "Record every study objective found in the protocol text.",
     "input_schema": {"type": "object", "properties": {"objectives": {"type": "array", "items": {
         "type": "object", "properties": {
-            "level": {"type": "string", "enum": ["primary", "secondary", "exploratory"]},
+            "role": {"type": "string", "enum": ["primary", "secondary", "exploratory"],
+                     "description": "the objective's level/importance (ICH M11 §3)"},
             "text": {"type": "string", "description": "the objective, verbatim or lightly cleaned"},
             **_PROV_PROPS},
-        "required": ["level", "text", "page"]}}}, "required": ["objectives"]},
+        "required": ["role", "text", "page"]}}}, "required": ["objectives"]},
 }
 ENDPOINTS_TOOL = {
     "name": "record_endpoints",
     "description": "Record every study endpoint (outcome measure) found in the protocol text.",
     "input_schema": {"type": "object", "properties": {"endpoints": {"type": "array", "items": {
         "type": "object", "properties": {
-            "level": {"type": "string", "enum": ["primary", "secondary", "exploratory", "safety"]},
+            "role": {"type": "string", "enum": ["primary", "secondary", "exploratory"],
+                     "description": "importance/level of the endpoint (ICH M11 §3) — NOT its purpose"},
+            "purpose": {"type": ["string", "null"],
+                        "enum": ["efficacy", "safety", "immunogenicity", "pharmacokinetic",
+                                 "pharmacodynamic", "other", None],
+                        "description": "what the endpoint measures; orthogonal to role (safety endpoints still have a role)"},
             "text": {"type": "string", "description": "the endpoint, verbatim or lightly cleaned"},
             "timeframe": {"type": ["string", "null"], "description": "assessment timeframe if stated, else null"},
             **_PROV_PROPS},
-        "required": ["level", "text", "page"]}}}, "required": ["endpoints"]},
+        "required": ["role", "text", "page"]}}}, "required": ["endpoints"]},
 }
 OBJ_SYSTEM = ("You extract STUDY OBJECTIVES from a clinical trial protocol. Call record_objectives "
               "with every objective actually present in the text — do not invent any. Ground each in "
               "its page and a short exact quote. If none are present, pass an empty list.")
 END_SYSTEM = ("You extract STUDY ENDPOINTS (outcome measures) from a clinical trial protocol. Call "
               "record_endpoints with every endpoint actually present — do not invent any, and do NOT "
-              "include objectives. Ground each in its page and a short exact quote. If none, pass an empty list.")
+              "include objectives. For each, give BOTH its `role` (primary/secondary/exploratory — its "
+              "importance) AND its `purpose` (efficacy/safety/immunogenicity/… — what it measures); these "
+              "are independent, so a safety endpoint still has a role. Ground each in its page and a short "
+              "exact quote. If none, pass an empty list.")
 
 
 # ---- 4. Forced tool call (lazy anthropic import) -> dict --------------------
@@ -119,7 +128,7 @@ def parse_objectives(data: dict, study_id: str) -> list[ComponentInstance]:
     for i, it in enumerate(items, 1):
         out.append(ComponentInstance(
             id=f"obj-{i:03d}", type="objective", study_id=study_id,
-            data={"level": it.get("level", "secondary"), "text": it["text"]},
+            data={"role": it.get("role", it.get("level", "secondary")), "text": it["text"]},
             provenance={"protocol_id": study_id, "page": _page_int(it.get("page")),
                         "section": it.get("section"), "quote": it.get("quote")},
         ))
@@ -132,8 +141,8 @@ def parse_endpoints(data: dict, study_id: str) -> list[ComponentInstance]:
     for i, it in enumerate(items, 1):
         out.append(ComponentInstance(
             id=f"end-{i:03d}", type="endpoint", study_id=study_id,
-            data={"level": it.get("level", "secondary"), "text": it["text"],
-                  "timeframe": it.get("timeframe")},
+            data={"role": it.get("role"), "purpose": it.get("purpose"),
+                  "text": it["text"], "timeframe": it.get("timeframe")},
             provenance={"protocol_id": study_id, "page": _page_int(it.get("page")),
                         "section": it.get("section"), "quote": it.get("quote")},
         ))

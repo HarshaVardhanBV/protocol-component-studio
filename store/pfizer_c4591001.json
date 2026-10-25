@@ -15,7 +15,9 @@
         "quote": "To describe the safety and tolerability profiles of prophylactic BNT162 vaccines in healthy adults after 1 or 2 doses"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424091Z"
     },
@@ -33,7 +35,9 @@
         "quote": "To describe the immune responses elicited by prophylactic BNT162 vaccines in healthy adults after 1 or 2 doses"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424333Z"
     },
@@ -51,7 +55,9 @@
         "quote": "To describe the immune responses elicited by a third dose of prophylactic BNT162b2 administered to healthy adults at least 6 months after the second dose of either BNT162b1 or BNT162b2"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424340Z"
     },
@@ -69,7 +75,9 @@
         "quote": "To describe the safety profile of a third dose of prophylactic BNT162b2 administered to healthy adults 6 to 12 months after the second dose of either BNT162b1 or BNT162b2"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424346Z"
     },
@@ -87,7 +95,9 @@
         "quote": "To describe the safety and tolerability profile of BNT162b2 given as a fourth dose at least 6 months after the third dose of BNT162b2 for participants who received a fourth dose as part of protocol amendment 19"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424351Z"
     },
@@ -105,7 +115,9 @@
         "quote": "To evaluate the efficacy of prophylactic BNT162b2 against confirmed COVID-19 occurring from 7 days after the second dose in participants without evidence of infection before vaccination"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424355Z"
     },
@@ -123,7 +135,9 @@
         "quote": "To evaluate the efficacy of prophylactic BNT162b2 against confirmed COVID-19 occurring from 7 days after the second dose in participants with and without evidence of infection before vaccination"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424360Z"
     },
@@ -141,7 +155,9 @@
         "quote": "To define the safety profile of prophylactic BNT162b2 in the first 360 participants randomized (Phase 2)"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424364Z"
     },
@@ -159,7 +175,9 @@
         "quote": "To define the safety profile of prophylactic BNT162b2 in all participants randomized in Phase 2/3"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424382Z"
     },
@@ -177,7 +195,9 @@
         "quote": "To define the safety profile of prophylactic BNT162b2 in participants 12 to 15 years of age in Phase 3"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424387Z"
     },
@@ -195,7 +215,9 @@
         "quote": "To describe the safety and tolerability profile of BNT162b2SA given as 1 or 2 doses to BNT162b2-experienced participants, or as 2 doses to BNT162b2-naive participants"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424392Z"
     },
@@ -213,7 +235,9 @@
         "quote": "To describe the safety and tolerability profile of BNT162b2 given as a third dose to BNT162b2-experienced participants in the subset for evaluation of boostability and protection against emerging VOCs"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424397Z"
     },
@@ -231,7 +255,9 @@
         "quote": "To describe the safety and tolerability profile of BNT162b2 given as a third dose at least 3 months after the second dose of BNT162b2 (or BNT162b2SA) for participants who received a third dose as part of protocol amendment 18"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424401Z"
     },
@@ -249,7 +275,9 @@
         "quote": "To describe the safety and tolerability profile of BNT162b2 given as a fourth (or fifth) dose at least 6 months after the third (or fourth) dose of BNT162b2 (or BNT162b2SA) for participants who received a fourth (or fifth) dose as part of protocol amendment 19"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424408Z"
     },
@@ -264,10 +292,12 @@
         "protocol_id": "pfizer_c4591001",
         "page": 30,
         "section": "3.2 For Phase 2/3 - Primary Immunogenicity",
-        "quote": "To demonstrate the noninferiority of the anti–reference strain immune response after a third dose of BNT162b2 at 30 µg compared to after 2 doses of BNT162b2, in the same individuals"
+        "quote": "To demonstrate the noninferiority of the anti\u2013reference strain immune response after a third dose of BNT162b2 at 30 \u00b5g compared to after 2 doses of BNT162b2, in the same individuals"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424413Z"
     },
@@ -282,10 +312,12 @@
         "protocol_id": "pfizer_c4591001",
         "page": 30,
         "section": "3.2 For Phase 2/3 - Primary Immunogenicity",
-        "quote": "To demonstrate the noninferiority of the anti-SA immune response after 1 dose of BNT162b2SA compared to the anti–reference strain immune response after 2 doses of BNT162b2, in the same individuals"
+        "quote": "To demonstrate the noninferiority of the anti-SA immune response after 1 dose of BNT162b2SA compared to the anti\u2013reference strain immune response after 2 doses of BNT162b2, in the same individuals"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "OBJ-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:21.424458Z"
     },
@@ -301,11 +333,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 27,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Primary",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Primary",
         "quote": "Local reactions (pain at the injection site, redness, and swelling)"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683545Z"
     },
@@ -321,11 +355,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 27,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Primary",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Primary",
         "quote": "Systemic events (fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, and new or worsened joint pain)"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683573Z"
     },
@@ -341,11 +377,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 27,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Primary",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Primary",
         "quote": "Adverse events (AEs) from Dose 1 to 1 month after the last dose"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683583Z"
     },
@@ -361,11 +399,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 27,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Primary",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Primary",
         "quote": "Serious AEs (SAEs) from Dose 1 to 6 months after the last dose"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683591Z"
     },
@@ -381,11 +421,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 27,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Primary",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Primary",
         "quote": "Hematology and chemistry laboratory parameters detailed in Section 10.2"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683599Z"
     },
@@ -394,18 +436,20 @@
       "type": "endpoint",
       "data": {
         "level": "secondary",
-        "text": "SARS-CoV-2 neutralizing titers (GMTs, GMFR, and proportion achieving ≥4-fold rise)",
+        "text": "SARS-CoV-2 neutralizing titers (GMTs, GMFR, and proportion achieving \u22654-fold rise)",
         "objective_ref": null,
         "timeframe": "7 and 21 days after Dose 1; 7 and 14 days and 1 and 6 months after Dose 2"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 27,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Secondary",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Secondary",
         "quote": "SARS-CoV-2 neutralizing titers"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683607Z"
     },
@@ -414,18 +458,20 @@
       "type": "endpoint",
       "data": {
         "level": "secondary",
-        "text": "S1-binding IgG levels and RBD-binding IgG levels (GMCs, GMFR, and proportion achieving ≥4-fold rise)",
+        "text": "S1-binding IgG levels and RBD-binding IgG levels (GMCs, GMFR, and proportion achieving \u22654-fold rise)",
         "objective_ref": null,
         "timeframe": "7 and 21 days after Dose 1; 7 and 14 days and 1 and 6 months after Dose 2"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 27,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Secondary",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Secondary",
         "quote": "S1-binding IgG levels and RBD-binding IgG levels"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683615Z"
     },
@@ -441,11 +487,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 28,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Secondary",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Secondary",
         "quote": "Geometric mean ratio (GMR), estimated by the ratio of the geometric mean of SARS-CoV-2 neutralizing titers to the geometric mean of binding IgG levels at each time point"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683623Z"
     },
@@ -461,11 +509,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 28,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Exploratory",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Exploratory",
         "quote": "SARS-CoV-2 reference-strain neutralizing titers"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683631Z"
     },
@@ -481,11 +531,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 28,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Exploratory",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Exploratory",
         "quote": "SARS-CoV-2 SA-variant neutralizing titers"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683639Z"
     },
@@ -501,11 +553,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 28,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Exploratory",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Exploratory",
         "quote": "Full-length S-binding or S1-binding IgG levels"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683647Z"
     },
@@ -521,11 +575,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 28,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Exploratory",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Exploratory",
         "quote": "Local reactions (pain at the injection site, redness, and swelling)"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683655Z"
     },
@@ -541,11 +597,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 28,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Exploratory",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Exploratory",
         "quote": "Systemic events (fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, and new or worsened joint pain)"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683663Z"
     },
@@ -561,11 +619,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 28,
-        "section": "Objectives, Estimands, and Endpoints – For Phase 1 – Exploratory",
+        "section": "Objectives, Estimands, and Endpoints \u2013 For Phase 1 \u2013 Exploratory",
         "quote": "AEs and SAEs from Dose 3 to 1 month after Dose 3"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683670Z"
     },
@@ -581,11 +641,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 30,
-        "section": "For Phase 2/3 – Primary Safety",
+        "section": "For Phase 2/3 \u2013 Primary Safety",
         "quote": "AEs and SAEs from Dose 4 (or Dose 5) to 1 month after Dose 4 (or Dose 5)"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683679Z"
     },
@@ -601,11 +663,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 29,
-        "section": "For Phase 2/3 – Primary Efficacy",
+        "section": "For Phase 2/3 \u2013 Primary Efficacy",
         "quote": "COVID-19 incidence per 1000 person-years of follow-up based on central laboratory or locally confirmed NAAT in participants with no serological or virological evidence (up to 7 days after receipt of the second dose) of past SARS-CoV-2 infection"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683687Z"
     },
@@ -621,11 +685,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 29,
-        "section": "For Phase 2/3 – Primary Efficacy",
+        "section": "For Phase 2/3 \u2013 Primary Efficacy",
         "quote": "COVID-19 incidence per 1000 person-years of follow-up based on central laboratory or locally confirmed NAAT"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683695Z"
     },
@@ -641,11 +707,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 29,
-        "section": "For Phase 2/3 – Primary Safety",
+        "section": "For Phase 2/3 \u2013 Primary Safety",
         "quote": "Local reactions (pain at the injection site, redness, and swelling)"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683703Z"
     },
@@ -661,11 +729,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 29,
-        "section": "For Phase 2/3 – Primary Safety",
-        "quote": "AEs from Dose 1 to 1 month after the second dose SAEs from Dose 1 to 6 months after the second dose"
+        "section": "For Phase 2/3 \u2013 Primary Safety",
+        "quote": "AEs from Dose 1 to 1 month after the second dose\u2003SAEs from Dose 1 to 6 months after the second dose"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683710Z"
     },
@@ -681,11 +751,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 29,
-        "section": "For Phase 2/3 – Primary Safety",
+        "section": "For Phase 2/3 \u2013 Primary Safety",
         "quote": "To define the safety profile of prophylactic BNT162b2 in participants 12 to 15 years of age in Phase 3"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683718Z"
     },
@@ -701,11 +773,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 30,
-        "section": "For Phase 2/3 – Primary Safety",
-        "quote": "AEs from Dose 1 to 1 month after the last dose SAEs from Dose 1 to 5 or 6 months after the last dose"
+        "section": "For Phase 2/3 \u2013 Primary Safety",
+        "quote": "AEs from Dose 1 to 1 month after the last dose\u2003SAEs from Dose 1 to 5 or 6 months after the last dose"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683725Z"
     },
@@ -721,11 +795,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 30,
-        "section": "For Phase 2/3 – Primary Safety",
+        "section": "For Phase 2/3 \u2013 Primary Safety",
         "quote": "AEs and SAEs from Dose 3 to 1 month after Dose 3"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683733Z"
     },
@@ -741,11 +817,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 30,
-        "section": "For Phase 2/3 – Primary Immunogenicity (BNT162b2-experienced)",
-        "quote": "SARS-CoV-2 reference strain NTs in participants with no serological or virological evidence (up to 1 month after receipt of the third dose of BNT162b2 at 30 µg) of past SARS-CoV-2 infection"
+        "section": "For Phase 2/3 \u2013 Primary Immunogenicity (BNT162b2-experienced)",
+        "quote": "SARS-CoV-2 reference strain NTs in participants with no serological or virological evidence (up to 1 month after receipt of the third dose of BNT162b2 at 30 \u00b5g) of past SARS-CoV-2 infection"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683741Z"
     },
@@ -761,11 +839,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 30,
-        "section": "For Phase 2/3 – Primary Immunogenicity (BNT162b2-experienced)",
+        "section": "For Phase 2/3 \u2013 Primary Immunogenicity (BNT162b2-experienced)",
         "quote": "SARS-CoV-2 SA and reference strain NTs in participants with no serological or virological evidence (up to 1 month after receipt of 1 dose of BNT162b2SA) of past SARS-CoV-2 infection"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683751Z"
     },
@@ -781,11 +861,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 31,
-        "section": "For Phase 2/3 – Primary Immunogenicity (BNT162b2-naïve)",
+        "section": "For Phase 2/3 \u2013 Primary Immunogenicity (BNT162b2-na\u00efve)",
         "quote": "SARS-CoV-2 SA and reference strain NTs in participants with no serological or virological evidence (up to 1 month after receipt of the second dose of BNT162b2SA or BNT162b2 as appropriate) of past SARS-CoV-2 infection"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683759Z"
     },
@@ -801,11 +883,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 31,
-        "section": "For Phase 2/3 – Secondary Efficacy",
+        "section": "For Phase 2/3 \u2013 Secondary Efficacy",
         "quote": "COVID-19 incidence per 1000 person-years of follow-up based on central laboratory or locally confirmed NAAT in participants with no serological or virological evidence (up to 14 days after receipt of the second dose) of past SARS-CoV-2 infection"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683767Z"
     },
@@ -821,11 +905,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 31,
-        "section": "For Phase 2/3 – Secondary Efficacy",
+        "section": "For Phase 2/3 \u2013 Secondary Efficacy",
         "quote": "COVID-19 incidence per 1000 person-years of follow-up based on central laboratory or locally confirmed NAAT"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683776Z"
     },
@@ -841,11 +927,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 31,
-        "section": "For Phase 2/3 – Secondary Efficacy",
+        "section": "For Phase 2/3 \u2013 Secondary Efficacy",
         "quote": "Confirmed severe COVID-19 incidence per 1000 person-years of follow-up in participants with no serological or virological evidence (up to 7 days and up to 14 days after receipt of the second dose) of past SARS-CoV-2 infection"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683784Z"
     },
@@ -861,11 +949,13 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 31,
-        "section": "For Phase 2/3 – Secondary Efficacy",
+        "section": "For Phase 2/3 \u2013 Secondary Efficacy",
         "quote": "Confirmed severe COVID-19 incidence per 1000 person-years of follow-up"
       },
       "study_id": "pfizer_c4591001",
-      "definition_ids": [],
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
       "version": 1,
       "created": "2026-10-24T08:44:23.683792Z"
     }
