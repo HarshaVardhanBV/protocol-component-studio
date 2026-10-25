@@ -1,0 +1,10 @@
+doc_type: ICF
+name: Informed Consent Form (subset)
+# Reuses the SAME objective components, rendered in plain LAY LANGUAGE for
+# participants. Transformed text must be reviewed before use.
+sections:
+  - section_id: ICF-PURPOSE
+    title: Why is this study being done?
+    display_order: 0
+    renders: [objective]
+    transform: lay_language

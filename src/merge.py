@@ -21,7 +21,7 @@ import re
 from difflib import SequenceMatcher
 from typing import Callable, Optional
 
-from .models import ComponentInstance
+from .models import ComponentInstance, component_text
 from .config import load_secrets
 
 GROUP_MODEL = "claude-opus-4-8"
@@ -119,14 +119,14 @@ def merge_components(components: list[ComponentInstance], grouper: Optional[Grou
 
     merged, counters = [], {}
     for t, comps in by_type.items():
-        groups = grouper([c.data.text for c in comps], t) if comps else []
+        groups = grouper([component_text(c.data) for c in comps], t) if comps else []
         # safety net: anything the grouper dropped becomes its own singleton group
         covered = {i for g in groups for i in g}
         groups = groups + [[i] for i in range(len(comps)) if i not in covered]
 
         for g in groups:
             members = [comps[i] for i in g]
-            rep = max(members, key=lambda c: len(c.data.text))   # keep the fullest statement
+            rep = max(members, key=lambda c: len(component_text(c.data)))   # fullest statement
             counters[t] = counters.get(t, 0) + 1
             merged.append(ComponentInstance(
                 id=f"{_ID_PREFIX.get(t, t[:3])}-{counters[t]:03d}", type=t,

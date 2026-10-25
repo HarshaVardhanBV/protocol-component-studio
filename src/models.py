@@ -27,7 +27,10 @@ from pydantic import BaseModel, Field, model_validator
 ComponentType = Literal["objective", "endpoint", "arm", "population", "eligibility", "visit"]
 ObjectiveLevel = Literal["primary", "secondary", "exploratory"]
 EndpointLevel = Literal["primary", "secondary", "exploratory", "safety"]
-ArmType = Literal["experimental", "active_comparator", "placebo_comparator", "sham", "other"]
+# Arm type — CDISC "Study Arm Type" value set (NCI C174222), machine form.
+ArmType = Literal["experimental", "active_comparator", "placebo_comparator",
+                  "sham_comparator", "no_intervention", "other"]
+# Eligibility criterion kind — CDISC Inclusion/Exclusion category (NCI C66797).
 CriterionKind = Literal["inclusion", "exclusion"]
 
 # Role = the ICH M11 §3 / CDISC objective-&-endpoint "level" classification. This is
@@ -127,6 +130,7 @@ class Arm(BaseModel):
     name: str
     type: ArmType
     description: Optional[str] = None
+    intervention: Optional[str] = None
 
 
 class Population(BaseModel):
@@ -153,6 +157,16 @@ ELEMENT_MODELS: dict[str, type[BaseModel]] = {
     "objective": Objective, "endpoint": Endpoint, "arm": Arm,
     "population": Population, "eligibility": EligibilityCriterion, "visit": Visit,
 }
+
+
+def component_text(data) -> str:
+    """The comparable/display text of any element payload. Not all have `.text`:
+    arms/visits use `name`, population uses `description`."""
+    for attr in ("text", "name", "description"):
+        v = getattr(data, attr, None)
+        if v:
+            return v
+    return ""
 
 
 # ---------------------------------------------------------------------------
@@ -255,16 +269,35 @@ class ComponentDefinition(BaseModel):
 
 
 # ---------------------------------------------------------------------------
+# Revision — an immutable, hash-stamped snapshot of a SUPERSEDED instance state.
+# History lives as a property list on the instance (not as graph nodes): a revision
+# describes one instance's own past, it is neither shared nor traversed.
+# ---------------------------------------------------------------------------
+class Revision(BaseModel):
+    version: int                            # the version number this snapshot represents (the prior state)
+    data: dict                              # frozen copy of the superseded element payload
+    superseded_at: datetime                 # when this state was replaced
+    superseded_by: str                      # who made the edit that replaced it (governance: never empty)
+    change_note: str                        # why (governance: never empty)
+    hash: str                               # sha256 of the canonical prior payload — tamper evidence
+
+
+# ---------------------------------------------------------------------------
 # Instance — a definition hydrated with content for one study (the object)
 # ---------------------------------------------------------------------------
 class ComponentInstance(BaseModel):
     id: str                                 # stable id, e.g. "moderna_cove:end-001"
     type: ComponentType
-    data: ElementData                       # the content
-    provenance: Provenance                  # single source of origin
+    data: ElementData                       # the content (current version)
+    provenance: Provenance                  # single source of ORIGIN (extraction) — preserved across edits
     study_id: str                           # context (-> Study.id)
     definition_ids: list[str] = Field(default_factory=list)   # m:n link to definitions (usually 1)
-    version: int = 1
+    version: int = 1                        # current version; v1 = as-extracted
+    # --- revision provenance (the LATEST edit); distinct from extraction provenance ---
+    revised_at: Optional[datetime] = None
+    revised_by: Optional[str] = None
+    change_note: Optional[str] = None
+    history: list[Revision] = Field(default_factory=list)      # append-only; len == version - 1
     created: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
     @model_validator(mode="before")

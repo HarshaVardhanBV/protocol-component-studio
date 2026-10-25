@@ -1,63 +1,53 @@
 """
-classify.py — map each instance to a fixed template definition (the runtime binder).
+classify.py — bind each instance to its template, keyed on (type, discriminator).
 
-Classification is deterministic and keyed on (component_type, role): a "primary
-objective" instance → the OBJ-PRIMARY template, a "secondary endpoint" → EP-SECONDARY.
-The template library (src/definitions.py) is fixed and regulatory-grounded, so
-onboarding any protocol in any indication mints ZERO new definitions.
+The discriminator depends on the component type:
+  - objective / endpoint -> role (primary/secondary/exploratory)
+  - arm                  -> arm type (CDISC C174222)
+  - eligibility          -> kind (inclusion/exclusion)
+  - population / visit   -> none (single template)
 
-Role is read from the instance's `level` (primary/secondary/exploratory). Some
-endpoint instances currently carry a non-role value in `level` (e.g. "safety",
-which is really an orthogonal *purpose*, not a role) — a known extraction artefact.
-Those fall back to `fallback_role` and are reported by `classification_report`; the
-proper fix is to re-extract endpoints with role and purpose on separate axes.
+Deterministic, zero-cost, idempotent. The template library (definitions.py) is fixed,
+so onboarding any protocol/indication mints ZERO new definitions.
 """
 from __future__ import annotations
 
 from typing import Callable, Optional
 
 from .models import ComponentInstance, ComponentDefinition, ExtractionResult
-from .induce import _collect
 from .definitions import library, LIBRARY_BY_ID, template_id, ROLES
 
 Classifier = Callable[[ComponentInstance], str]
-
 _VALID_ROLES = set(ROLES)
 
 
 def template_library() -> list[ComponentDefinition]:
-    """The complete fixed template library."""
     return library()
 
 
-def _role_of(inst: ComponentInstance, fallback: str) -> str:
-    role = getattr(inst.data, "role", None)
-    return role if role in _VALID_ROLES else fallback
+def _discriminator(inst: ComponentInstance, role_fallback: str = "secondary") -> Optional[str]:
+    t = inst.type
+    if t in ("objective", "endpoint"):
+        role = getattr(inst.data, "role", None)
+        return role if role in _VALID_ROLES else role_fallback
+    if t == "arm":
+        return getattr(inst.data, "type", None) or "other"
+    if t == "eligibility":
+        return getattr(inst.data, "kind", None) or "inclusion"
+    return None  # population, visit → single template
 
 
-def type_role_classifier(fallback_role: str = "secondary") -> Classifier:
-    """Deterministic classifier: (type, role) -> template id."""
+def type_classifier(role_fallback: str = "secondary") -> Classifier:
     def classify_one(inst: ComponentInstance) -> str:
-        return template_id(inst.type, _role_of(inst, fallback_role))
+        return template_id(inst.type, _discriminator(inst, role_fallback))
     return classify_one
 
 
-# Back-compat alias.
-type_classifier = type_role_classifier
-
-
 def classify(results, classifier: Optional[Classifier] = None):
-    """Classify instances into the fixed template library.
-
-    Returns (definitions, instances): the templates actually used (full regulatory
-    metadata) and copies of every instance with `definition_ids` set to exactly its
-    template. Never invents a definition, regardless of how many protocols load.
-    """
     if classifier is None:
-        classifier = type_role_classifier()
+        classifier = type_classifier()
     instances = _collect(results)
-    used_ids: list[str] = []
-    final: list[ComponentInstance] = []
+    used_ids, final = [], []
     for inst in instances:
         tid = classifier(inst)
         if tid not in LIBRARY_BY_ID:
@@ -69,72 +59,27 @@ def classify(results, classifier: Optional[Classifier] = None):
     return definitions, final
 
 
-def classification_report(results) -> dict:
-    """Diagnostics: counts per template, and instances whose `level` was not a valid
-    role (the safety-in-level artefact) and therefore fell back."""
+def classification_report(results):
     instances = _collect(results)
-    per_template: dict[str, int] = {}
-    fallbacks: list[str] = []
-    clf = type_role_classifier()
+    per_template, fallbacks = {}, []
+    clf = type_classifier()
     for inst in instances:
         tid = clf(inst)
         per_template[tid] = per_template.get(tid, 0) + 1
-        if getattr(inst.data, "role", None) not in _VALID_ROLES:
+        # a "fallback" only applies to role-typed components with an invalid role
+        if inst.type in ("objective", "endpoint") and getattr(inst.data, "role", None) not in _VALID_ROLES:
             fallbacks.append(f"{inst.study_id}:{inst.id} (role={getattr(inst.data,'role',None)!r})")
     return {"per_template": per_template, "fallback_count": len(fallbacks), "fallbacks": fallbacks}
 
 
-def _main():
-    import argparse, glob, json, os
-    ap = argparse.ArgumentParser(
-        description="Classify instances into the fixed template-only definition library.")
-    ap.add_argument("inputs", nargs="*")
-    ap.add_argument("--store", default="store")
-    ap.add_argument("--defs-out", default=None)
-    ap.add_argument("--full-library", action="store_true",
-                    help="write the whole template library, not just templates used")
-    ap.add_argument("--no-write-instances", action="store_true")
-    ap.add_argument("--report", action="store_true", help="print a classification report")
-    args = ap.parse_args()
-
-    paths = args.inputs or sorted(
-        p for p in glob.glob(os.path.join(args.store, "*.json"))
-        if os.path.basename(p) != "definitions.json")
-    if not paths:
-        raise SystemExit("no input study files found")
-
-    results, path_by_study = [], {}
-    for p in paths:
-        with open(p) as f:
-            r = ExtractionResult.model_validate(json.load(f))
-        results.append(r)
-        path_by_study[r.study_id] = p
-
-    definitions, instances = classify(results)
-    if args.full_library:
-        definitions = library()
-
-    defs_out = args.defs_out or os.path.join(args.store, "definitions.json")
-    with open(defs_out, "w") as f:
-        json.dump([d.model_dump(mode="json") for d in definitions], f, indent=2)
-
-    by_study = {}
-    for inst in instances:
-        by_study.setdefault(inst.study_id, []).append(inst)
-    if not args.no_write_instances:
-        for study_id, insts in by_study.items():
-            updated = ExtractionResult(study_id=study_id, instances=insts)
-            with open(path_by_study[study_id], "w") as f:
-                json.dump(updated.model_dump(mode="json"), f, indent=2)
-
-    print(f"classified {len(instances)} instances across {len(results)} studies "
-          f"into {len(definitions)} template definitions -> {defs_out}")
-    if args.report:
-        rep = classification_report(results)
-        print("per-template:", rep["per_template"])
-        if rep["fallback_count"]:
-            print(f"fallback (non-role level): {rep['fallback_count']} ->", rep["fallbacks"][:8])
-
-
-if __name__ == "__main__":
-    _main()
+def _collect(results):
+    out = []
+    items = results if isinstance(results, list) else [results]
+    for it in items:
+        if isinstance(it, ExtractionResult):
+            out.extend(it.instances)
+        elif isinstance(it, ComponentInstance):
+            out.append(it)
+        else:
+            raise TypeError(f"unexpected input: {type(it).__name__}")
+    return out

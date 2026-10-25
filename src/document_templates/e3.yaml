@@ -1,0 +1,23 @@
+doc_type: E3
+name: ICH E3 CSR study-design (subset)
+sections:
+  - section_id: E3-9.2
+    title: Study Objectives
+    display_order: 0
+    renders: [objective]
+  - section_id: E3-9.3
+    title: Overall Study Design and Plan
+    display_order: 1
+    renders: [arm]
+  - section_id: E3-9.4
+    title: Selection of Study Population
+    display_order: 2
+    renders: [population, eligibility]
+  - section_id: E3-9.5
+    title: Efficacy and Safety Variables (Endpoints)
+    display_order: 3
+    renders: [endpoint]
+  - section_id: E3-9.5.1
+    title: Schedule of Assessments
+    display_order: 4
+    renders: [visit]

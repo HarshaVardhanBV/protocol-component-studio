@@ -1,0 +1,15 @@
+doc_type: SAP
+name: Statistical Analysis Plan (subset)
+# Reuses the SAME objective/endpoint components; endpoints are ELABORATED
+# (the estimand spelled out statistically).
+sections:
+  - section_id: SAP-OBJ
+    title: Objectives
+    display_order: 0
+    renders: [objective]
+    transform: verbatim
+  - section_id: SAP-EP
+    title: Endpoints and Estimands
+    display_order: 1
+    renders: [endpoint]
+    transform: elaborate

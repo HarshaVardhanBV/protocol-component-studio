@@ -2,5 +2,6 @@ pydantic>=2.6
 anthropic
 neo4j
 pymupdf
+pyyaml
 python-dotenv
 streamlit

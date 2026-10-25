@@ -1,0 +1,27 @@
+doc_type: M11
+name: ICH M11 Protocol (synopsis subset)
+# Assembly instructions for an M11-style protocol. The Synopsis is a derived
+# section: it displays first (display_order 0) but builds last (depends_on the
+# sections it summarises).
+sections:
+  - section_id: M11-SYN
+    title: Protocol Synopsis
+    display_order: 0
+    derivation: summary
+    depends_on: [M11-OBJ, M11-DESIGN, M11-POP, M11-SOA]
+  - section_id: M11-OBJ
+    title: Objectives and Endpoints
+    display_order: 1
+    renders: [objective, endpoint]
+  - section_id: M11-DESIGN
+    title: Overall Design
+    display_order: 2
+    renders: [arm]
+  - section_id: M11-POP
+    title: Population and Eligibility
+    display_order: 3
+    renders: [population, eligibility]
+  - section_id: M11-SOA
+    title: Schedule of Activities
+    display_order: 4
+    renders: [visit]

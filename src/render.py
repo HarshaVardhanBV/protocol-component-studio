@@ -19,7 +19,7 @@ from __future__ import annotations
 from typing import Callable, Optional
 from pydantic import BaseModel
 
-from .models import ComponentInstance
+from .models import ComponentInstance, component_text
 from .templates import REGISTRY, SectionSlot
 
 
@@ -180,7 +180,7 @@ def render_document(study_id: str, doc_type: str,
                     fragment_uid=f"{suid}:{inst.id}", doc_type=doc_type, section_uid=suid,
                     instance_id=inst.id, instance_uid=iuid, transform=s.transform,
                     status=_status_for(s.transform), order=pos,
-                    text=transformer(inst.data.text, s.transform)))
+                    text=transformer(component_text(inst.data), s.transform)))
         sections.append(RenderedSection(
             doc_type=doc_type, section_id=s.section_id, section_uid=suid,
             title=s.title, display_order=s.display_order,
@@ -198,6 +198,36 @@ def render_study(study_id: str, instances: list[ComponentInstance],
             for dt in (doc_types or list(REGISTRY.keys()))]
 
 
+# --- computed change-impact (no graph needed; the renderer IS the source of truth) ---
+def instance_impact(study_id: str, instances: list[ComponentInstance], target_id: str) -> list[dict]:
+    """Every document section the target instance lands in, computed by rendering the
+    study across all document types and finding the sections that contain it (directly
+    or via a derived Synopsis / transformed fragment). Returns dicts, not graph rows."""
+    out = []
+    for doc in render_study(study_id, instances):
+        for s in doc.sections:
+            if any(i.id == target_id for i in s.instances):
+                fr = next((f for f in s.fragments if f.instance_id == target_id), None)
+                out.append({"study": study_id, "doc_type": doc.doc_type,
+                            "section_id": s.section_id, "title": s.title,
+                            "transform": s.transform, "derived": s.derivation == "summary",
+                            "fragment_status": fr.status if fr else None})
+    out.sort(key=lambda r: (r["doc_type"], r["section_id"]))
+    return out
+
+
+def definition_impact(definition_id: str, results) -> list[dict]:
+    """Every (study, document, section) affected by a definition — the union of its
+    instances' impacts across the corpus. `results` is a list of ExtractionResult."""
+    rows = []
+    for r in results:
+        insts = list(r.instances)
+        for inst in insts:
+            if definition_id in inst.definition_ids:
+                rows.extend(instance_impact(r.study_id, insts, inst.id))
+    return rows
+
+
 def fragment_text(doc: RenderedDocument, skip_empty: bool = True) -> str:
     """Human-readable fragment — sections in display order; derived sections tagged."""
     lines = [f"# {doc.doc_type} — {doc.study_id}", ""]
@@ -212,6 +242,6 @@ def fragment_text(doc: RenderedDocument, skip_empty: bool = True) -> str:
         for i in s.instances:
             role = getattr(i.data, "role", None)
             lvl = f"[{role}] " if role else ""
-            lines.append(f"- {lvl}{frag.get(i.id, i.data.text)}")
+            lines.append(f"- {lvl}{frag.get(i.id, component_text(i.data))}")
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
