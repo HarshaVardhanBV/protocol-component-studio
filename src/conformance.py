@@ -67,7 +67,7 @@ def check_study(study_id: str, instances, definitions=None) -> list[dict]:
     for inst in instances:
         if inst.type == "endpoint":
             txt = (inst.data.text or "").strip().lower()
-            if txt.startswith("to ") or txt.startswith("to evaluate") or txt.startswith("to assess"):
+            if txt.startswith("to "):
                 findings.append({"rule": "bleed.endpoint_as_objective", "severity": "warning",
                                  "detail": f"{study_id}:{inst.id} endpoint reads like an objective: "
                                            f"\"{inst.data.text[:70]}\""})

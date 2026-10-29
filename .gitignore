@@ -7,6 +7,14 @@ __pycache__/
 *.env
 .streamlit/secrets.toml
 
+# Raw protocol PDFs — large & regenerable from ClinicalTrials.gov; keep them out of git.
+# (The extracted components in store/*.json ARE committed — that's the demo data.)
+data/
+
+# Eval scratch — bootstrapped templates are regenerable; hand-labeled gold IS committed.
+evals/gold/*.template.json
+evals/reports/
+
 # OS / editor junk
 .DS_Store
 .~lock.*#

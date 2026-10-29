@@ -18,6 +18,7 @@ Documents are NOT here (YAML config; computed). The source document is provenanc
 """
 from __future__ import annotations
 
+import json
 import os
 
 from .models import component_text
@@ -146,7 +147,7 @@ def load(driver, studies, definitions, instances):
                         revised_by=i.revised_by,
                         revised_at=(i.revised_at.isoformat() if i.revised_at else None),
                         change_note=i.change_note, revision_count=len(i.history),
-                        history=__import__("json").dumps([r.model_dump(mode="json") for r in i.history]))
+                        history=json.dumps([r.model_dump(mode="json") for r in i.history]))
             session.run(_MERGE_EXTRACTED_FROM, uid=uid_of(i), protocol_id=i.provenance.protocol_id,
                         page=i.provenance.page, section=i.provenance.section, quote=i.provenance.quote)
             for def_id in i.definition_ids:

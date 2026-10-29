@@ -165,7 +165,8 @@ def render_document(study_id: str, doc_type: str,
         if slot.derivation == "summary":
             built[sid] = _summarize(slot, built)
         else:
-            built[sid] = _order([i for i in mine if i.type in slot.renders])
+            built[sid] = _order([i for i in mine if i.type in slot.renders
+                                 and (not slot.roles or getattr(i.data, "role", None) in slot.roles)])
 
     build_index = {sid: k for k, sid in enumerate(order)}
     sections = []

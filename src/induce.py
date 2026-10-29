@@ -1,7 +1,7 @@
 from __future__ import annotations
 from collections import Counter
 from typing import Callable, Optional
-from .models import ComponentInstance, ComponentDefinition, ExtractionResult
+from .models import ComponentInstance, ComponentDefinition, ExtractionResult, component_text
 from .merge import _norm, _similar, _ID_PREFIX
 from .config import load_secrets
 
@@ -139,12 +139,12 @@ def induce(results, inducer: Optional[Inducer] = None):
     definitions = []
     counters = {}
     for t, insts in by_type.items():
-        records = [{"study_id": i.study_id, "text": i.data.text,
-                    "level": getattr(i.data, "level", None)} for i in insts]
+        records = [{"study_id": i.study_id, "text": component_text(i.data),
+                    "level": getattr(i.data, "role", None)} for i in insts]
         groups = inducer(records, t)
         covered = {m for g in groups for m in g["members"]}
-        groups = groups + [{"name": insts[j].data.text.strip().rstrip("."),
-                            "level": getattr(insts[j].data, "level", None),
+        groups = groups + [{"name": component_text(insts[j].data).strip().rstrip("."),
+                            "level": getattr(insts[j].data, "role", None),
                             "description": None, "members": [j]}
                            for j in range(len(insts)) if j not in covered]
         for g in groups:

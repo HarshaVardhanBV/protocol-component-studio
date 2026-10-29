@@ -27,6 +27,7 @@ class SectionSlot(BaseModel):
     derivation: Derivation = "original"
     depends_on: list[str] = []
     transform: TransformKind = "verbatim"
+    roles: list[str] = []  # optional role filter (e.g. primary/secondary/exploratory) within renders
 
 
 def load_registry(template_dir: Path = _TEMPLATE_DIR) -> dict[str, list[SectionSlot]]:
@@ -47,7 +48,3 @@ REGISTRY: dict[str, list[SectionSlot]] = load_registry()
 
 def slots_for_component_type(ct: ComponentType) -> list[SectionSlot]:
     return [s for slots in REGISTRY.values() for s in slots if ct in s.renders]
-
-
-def slot_key(doc_type: str, section_id: str) -> str:
-    return f"{doc_type}:{section_id}"

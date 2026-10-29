@@ -5,3 +5,5 @@ pymupdf
 pyyaml
 python-dotenv
 streamlit
+fastapi
+uvicorn[standard]

@@ -7,12 +7,16 @@ versioned, provenance-tagged component model; render the *same* components into
 multiple regulatory documents; and when a component changes, show every document
 section it affects.
 
-> 🚧 **Status: Phase 1 complete (thin vertical thread).** Extract → store →
-> render M11 + E3 → change-impact runs end-to-end for objectives + endpoints,
-> verified offline. Two protocols are onboarded and cross-study component
-> *definitions* are induced on top. The only step not yet exercised live is the
-> write into Neo4j Aura (needs credentials). Streamlit UI and evals come next —
-> see the roadmap.
+> **Status: end-to-end and interactive on real data.** Two public protocols are
+> extracted into the component model (all six element types) and render into M11,
+> E3, SAP, ICF and PBRER; selecting a component traces its change-impact across
+> every document, with a scoped knowledge-graph view, provenance, conformance
+> findings and version integrity. Ships as a **web app** (FastAPI + hand-built UI)
+> that reads the stored components — no database or API key needed to *run* it.
+> An **offline eval harness** (`evals/`) measures extraction accuracy against a
+> hand-labeled gold set. Honest open items: finish one study's eligibility/visits
+> re-extract (model recall gap on a dense table), label a gold set for a published
+> accuracy number, and deploy. See the roadmap.
 
 ## Why
 This is the core idea behind modern structured authoring (and CDISC USDM): the
@@ -60,7 +64,17 @@ document — the governance problem that single-source authoring exists to solve
    from what actually renders). Edit one component → every `(study, document, section)` it
    reaches; at the definition level, across every study that instantiates the template.
    *(The governance story.)*
-7. **Evaluate** — hand-label 3–5 protocols and report field-level extraction accuracy.
+7. **Serve** (`server.py`, `web/index.html`, `app_data.py`) — a FastAPI app turns the
+   rendered components into one JSON model (`/api/model`) that a self-contained HTML
+   frontend reads: workspace → document (M11/E3/SAP/ICF/PBRER) → select a component →
+   inspect provenance + trace change-impact (click to jump) + a scoped ego-graph view.
+   Credential-free to run (reads `store/`); a Streamlit build (`app.py`) is kept as a
+   fallback.
+8. **Evaluate** (`evals/`) — field-level precision / recall / F1 per element type +
+   role accuracy, scoring the stored predictions against a hand-labeled gold set.
+   Fully offline (scoring costs nothing; only extraction spends API). `make_gold.py`
+   bootstraps an editable gold template; a `verified` flag gates it so an unedited
+   template can't masquerade as a real gold set.
 
 > **Definitions are templates, not concepts.** An earlier design induced shared
 > *clinical concepts* ("prevent COVID-19") across studies; it bound two drugs together
@@ -76,7 +90,19 @@ registry, not a rewrite.
 
 ## Scope (named honestly)
 A **USDM-shaped subset** — six element types — not the full CDISC USDM. The section
-templates are indicative subsets of ICH M11 / E3, not authoritative reproductions.
+templates are indicative subsets of ICH M11 / E3 / SAP / ICF / PBRER, not authoritative
+reproductions — though M11 Section 3 does follow the authoritative role-based structure
+(3.1 Primary / 3.2 Secondary / 3.3 Exploratory, each grouping objective + endpoint +
+estimand). Each document shows an honest coverage line (how many sections are populated
+from the component model vs. narrative-authored).
+
+## Data & storage (what lives where)
+- **Components (the data)** → `store/*.json` — the extracted, classified
+  `ComponentInstance`s per study, plus `definitions.json` (the template library actually used).
+- **Document templates (config)** → `src/document_templates/*.yaml` — assembly instructions, not data.
+- **Neo4j** → optional. `graph.py` loads the same components into Aura for the cross-study
+  graph story, but the app reads the JSON directly — the renderer is the single source of
+  truth, so no database is required to run or demo.
 
 ## Layout
 ```
@@ -93,20 +119,41 @@ src/
   graph.py       Neo4j = component knowledge base only (4 node types, 3 edges)
   conformance.py governance check: cardinality + plausibility + bleed + version integrity
   revise.py      component versioning: guarded edits + append-only hashed history
-store/           per-study ExtractionResult JSON + definitions.json (template library)
-data/            public protocol PDFs (see data/README.md)
-.streamlit/      secrets.toml.example (Anthropic + Neo4j Aura)
+app_data.py      pure data layer (load store → classify → render/impact/conformance); no Streamlit
+server.py        FastAPI app: serves web/index.html + /api/model (live model from components)
+web/index.html   self-contained frontend (workspace → doc → select → trace impact → graph view)
+app.py           Streamlit build (fallback UI over the same data layer)
+evals/           offline extraction eval — score.py (P/R/F1 + role accuracy), make_gold.py, gold/
+store/           per-study ExtractionResult JSON + definitions.json (the data)
+data/            public protocol PDFs (gitignored — fetch from ClinicalTrials.gov)
+.streamlit/      secrets.toml.example + config.toml (Anthropic + Neo4j Aura)
 ```
 
-## Run the pipeline
+## Run the app (no API key, no database)
 ```bash
-python -m src.extract --protocol-id moderna_cove "data/moderna_cove/<protocol>.pdf" --out store/moderna_cove.json
-python -m src.classify --report   # bind instances to (type, role) templates → store/definitions.json
-python -m src.graph --wipe        # load studies/definitions/instances + render M11/E3 into Aura
+uvicorn server:app --reload          # open http://127.0.0.1:8000
+# or the Streamlit fallback:
+streamlit run app.py
 ```
-`extract` calls Anthropic; `classify` is deterministic (no API); `graph` writes to
-Neo4j (needs `.streamlit/secrets.toml`). `--report` on `classify` shows per-template
-counts; `--no-render` on `graph` loads components without documents.
+Both read the committed `store/*.json`, so the demo runs with zero credentials.
+
+## Refresh the data (needs an Anthropic key; Neo4j optional)
+```bash
+export ANTHROPIC_API_KEY="sk-ant-..."        # extract reads this from the env
+python -m src.extract "data/moderna_cove/<protocol>.pdf" --protocol-id moderna_cove --out store/moderna_cove.json
+python -m src.classify --report              # bind instances to templates; writes definition_ids + store/definitions.json
+python -m src.graph --wipe                   # optional: load components into Neo4j Aura
+```
+`extract` takes `pdf_path` as a positional arg and calls Anthropic (merge uses the LLM
+grouper by default; `--local-merge` for offline fuzzy, `--no-merge` to skip). `classify`
+is deterministic (no API). `graph` needs `NEO4J_*` in `.streamlit/secrets.toml`.
+
+## Score extraction (offline, no API)
+```bash
+python -m evals.make_gold --study moderna_cove   # draft evals/gold/moderna_cove.template.json
+# review against the protocol, set verified=true, save as evals/gold/moderna_cove.json
+python -m evals.score --study moderna_cove --md  # P / R / F1 per element type + role accuracy
+```
 
 ## Setup
 ```bash
@@ -142,9 +189,20 @@ URI / user / password into `.streamlit/secrets.toml`.
     re-validated, monotonic version, extraction provenance preserved; `verify_history()`
     + a conformance `version.integrity` check make tampering detectable.
   - remaining: none in Phase 2 scope.
-- **Phase 3** — Streamlit UI (side-by-side docs + impact panel, demo mode).
-- **Phase 4** — field-level extraction evals on a labelled set.
-- **Phase 5** — deploy + write-up.
+- **Phase 3 ✅** — interactive UI: FastAPI + self-contained HTML frontend (workspace →
+  document → select component → change-impact with click-to-jump → scoped graph view →
+  conformance + version panels). Streamlit build retained as a fallback.
+- **Phase 4 (in progress)** — offline eval harness built (`evals/`: field-level P/R/F1 +
+  role accuracy, gold bootstrap, verified-gate). Remaining: label a gold set and publish a
+  scorecard (incl. KEYNOTE-189 for oncology recall — closes the WS-B accuracy caveat).
+- **Phase 5** — deploy (`uvicorn` on any container host; no DB needed to read) + write-up.
+
+### Known gaps (named honestly)
+- One study's eligibility/visits came back empty from a dense table/SoA grid — a model
+  recall miss (page-selection fix staged; needs one re-extract to confirm). The eval
+  harness is designed to quantify exactly this.
+- Store currently reflects pre-/partial-clean extraction, so the conformance panel shows
+  real over-tagging — surfaced, not hidden.
 
 ---
 _Uses only public data. A demonstration, not a validated system; not for clinical or regulatory use._

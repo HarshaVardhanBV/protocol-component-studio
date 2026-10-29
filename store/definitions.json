@@ -1,112 +1,11 @@
 [
   {
-    "id": "OBJ-PRIMARY",
-    "type": "objective",
-    "role": "primary",
-    "name": "Primary Objective",
-    "label": "Primary Objective",
-    "description": "A primary trial objective: a precise question of interest the trial is designed to answer, paired with an associated estimand (ICH M11 \u00a73).",
-    "standards": [
-      {
-        "framework": "ICH M11",
-        "section": "3.1 Primary Objective(s) and Associated Estimand(s)",
-        "identifier": null,
-        "version": null,
-        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
-      },
-      {
-        "framework": "CDISC USDM",
-        "section": null,
-        "identifier": "Objective (C188707)",
-        "version": null,
-        "url": null
-      },
-      {
-        "framework": "ICH E8(R1)",
-        "section": "General considerations \u2014 trial objectives",
-        "identifier": null,
-        "version": null,
-        "url": null
-      }
-    ],
-    "content_form": "prose",
-    "expected_attributes": [
-      {
-        "name": "clinical_question",
-        "label": "Objective / clinical question",
-        "required": true,
-        "data_type": "string",
-        "cardinality": "single",
-        "description": "The objective stated as a precise question of interest.",
-        "controlled_terms": [],
-        "codelist": null,
-        "source": {
-          "framework": "ICH M11",
-          "section": "Section 3 \u2014 Trial Objectives and Associated Estimands",
-          "identifier": null,
-          "version": null,
-          "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
-        }
-      },
-      {
-        "name": "associated_endpoints",
-        "label": "Associated endpoint(s)",
-        "required": false,
-        "data_type": "coded",
-        "cardinality": "multiple",
-        "description": "Endpoint(s) (via estimand) that operationalise this objective.",
-        "controlled_terms": [],
-        "codelist": null,
-        "source": {
-          "framework": "ICH E9(R1)",
-          "section": "Objective \u2192 estimand \u2192 endpoint linkage",
-          "identifier": null,
-          "version": null,
-          "url": null
-        }
-      }
-    ],
-    "renders_into": [
-      "M11-OBJ",
-      "E3-9.2"
-    ],
-    "allowed_documents": [
-      "M11",
-      "E3",
-      "SAP"
-    ],
-    "min_occurs": 1,
-    "max_occurs": null,
-    "cardinality": "One or more; a trial typically has a single primary objective.",
-    "conformance_rules": [
-      {
-        "id": "OBJ-PRIMARY-1",
-        "text": "A trial must define at least one primary objective.",
-        "severity": "error",
-        "scope": "cardinality"
-      },
-      {
-        "id": "OBJ-EP-1",
-        "text": "Each objective should have at least one associated endpoint.",
-        "severity": "warning",
-        "scope": "associated_endpoints"
-      }
-    ],
-    "status": "approved",
-    "version": 1,
-    "effective_date": "2026-10-25",
-    "retired_date": null,
-    "steward": "Clinical Standards / Protocol Authoring",
-    "change_note": null,
-    "notes": null
-  },
-  {
     "id": "OBJ-SECONDARY",
     "type": "objective",
     "role": "secondary",
     "name": "Secondary Objective",
     "label": "Secondary Objective",
-    "description": "A secondary trial objective: a precise question of interest the trial is designed to answer, paired with an associated estimand (ICH M11 \u00a73).",
+    "description": "A secondary trial objective (ICH M11 \u00a73).",
     "standards": [
       {
         "framework": "ICH M11",
@@ -138,7 +37,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "The objective stated as a precise question of interest.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -155,7 +54,7 @@
         "required": false,
         "data_type": "coded",
         "cardinality": "multiple",
-        "description": "Endpoint(s) (via estimand) that operationalise this objective.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -168,7 +67,7 @@
       }
     ],
     "renders_into": [
-      "M11-OBJ",
+      "M11-3.2",
       "E3-9.2"
     ],
     "allowed_documents": [
@@ -178,8 +77,109 @@
     ],
     "min_occurs": 0,
     "max_occurs": null,
-    "cardinality": "Zero or more.",
+    "cardinality": null,
     "conformance_rules": [
+      {
+        "id": "OBJ-EP-1",
+        "text": "Each objective should have at least one associated endpoint.",
+        "severity": "warning",
+        "scope": "associated_endpoints"
+      }
+    ],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "OBJ-PRIMARY",
+    "type": "objective",
+    "role": "primary",
+    "name": "Primary Objective",
+    "label": "Primary Objective",
+    "description": "A primary trial objective (ICH M11 \u00a73).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "3.1 Primary Objective(s) and Associated Estimand(s)",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "Objective (C188707)",
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "ICH E8(R1)",
+        "section": "General considerations \u2014 trial objectives",
+        "identifier": null,
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "prose",
+    "expected_attributes": [
+      {
+        "name": "clinical_question",
+        "label": "Objective / clinical question",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH M11",
+          "section": "Section 3 \u2014 Trial Objectives and Associated Estimands",
+          "identifier": null,
+          "version": null,
+          "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+        }
+      },
+      {
+        "name": "associated_endpoints",
+        "label": "Associated endpoint(s)",
+        "required": false,
+        "data_type": "coded",
+        "cardinality": "multiple",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "ICH E9(R1)",
+          "section": "Objective \u2192 estimand \u2192 endpoint linkage",
+          "identifier": null,
+          "version": null,
+          "url": null
+        }
+      }
+    ],
+    "renders_into": [
+      "M11-3.1",
+      "E3-9.2"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3",
+      "SAP"
+    ],
+    "min_occurs": 1,
+    "max_occurs": null,
+    "cardinality": null,
+    "conformance_rules": [
+      {
+        "id": "OBJ-PRIMARY-1",
+        "text": "A trial must define at least one primary objective.",
+        "severity": "error",
+        "scope": "cardinality"
+      },
       {
         "id": "OBJ-EP-1",
         "text": "Each objective should have at least one associated endpoint.",
@@ -201,7 +201,7 @@
     "role": "exploratory",
     "name": "Exploratory Objective",
     "label": "Exploratory Objective",
-    "description": "A exploratory trial objective: a precise question of interest the trial is designed to answer, paired with an associated estimand (ICH M11 \u00a73).",
+    "description": "A exploratory trial objective (ICH M11 \u00a73).",
     "standards": [
       {
         "framework": "ICH M11",
@@ -233,7 +233,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "The objective stated as a precise question of interest.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -250,7 +250,7 @@
         "required": false,
         "data_type": "coded",
         "cardinality": "multiple",
-        "description": "Endpoint(s) (via estimand) that operationalise this objective.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -263,7 +263,7 @@
       }
     ],
     "renders_into": [
-      "M11-OBJ",
+      "M11-3.3",
       "E3-9.2"
     ],
     "allowed_documents": [
@@ -273,7 +273,7 @@
     ],
     "min_occurs": 0,
     "max_occurs": null,
-    "cardinality": "Zero or more.",
+    "cardinality": null,
     "conformance_rules": [
       {
         "id": "OBJ-EP-1",
@@ -296,7 +296,7 @@
     "role": "primary",
     "name": "Primary Endpoint",
     "label": "Primary Endpoint",
-    "description": "A primary endpoint: the variable within the associated estimand that operationalises a primary objective (ICH E9(R1); ICH M11 \u00a73).",
+    "description": "A primary endpoint (ICH E9(R1); ICH M11 \u00a73).",
     "standards": [
       {
         "framework": "ICH M11",
@@ -328,7 +328,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "The treatment(s) and comparator of interest, incl. regimen detail.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -345,7 +345,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "The patients targeted by the clinical question (usually the trial I/E).",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -362,7 +362,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "The outcome measured per participant, how and at what timepoint.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -379,7 +379,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "Measure comparing conditions across the population (e.g. risk difference, hazard ratio, difference in means).",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -396,7 +396,7 @@
         "required": true,
         "data_type": "coded",
         "cardinality": "multiple",
-        "description": "Pre-specified strategy for post-treatment events affecting the variable.",
+        "description": null,
         "controlled_terms": [
           "treatment_policy",
           "composite",
@@ -419,7 +419,7 @@
         "required": false,
         "data_type": "string",
         "cardinality": "single",
-        "description": "Timing/window over which the endpoint is assessed.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -436,7 +436,7 @@
         "required": false,
         "data_type": "coded",
         "cardinality": "single",
-        "description": "Orthogonal category of what the endpoint measures.",
+        "description": null,
         "controlled_terms": [
           "efficacy",
           "safety",
@@ -456,7 +456,7 @@
       }
     ],
     "renders_into": [
-      "M11-OBJ",
+      "M11-3.1",
       "E3-9.5"
     ],
     "allowed_documents": [
@@ -466,7 +466,7 @@
     ],
     "min_occurs": 1,
     "max_occurs": null,
-    "cardinality": "One or more; aligned to the primary objective's estimand.",
+    "cardinality": null,
     "conformance_rules": [
       {
         "id": "EP-REF-1",
@@ -476,7 +476,7 @@
       },
       {
         "id": "EP-EST-1",
-        "text": "A primary endpoint must specify its estimand attributes (treatment, population, variable, population-level summary, intercurrent events).",
+        "text": "A primary endpoint must specify its estimand attributes.",
         "severity": "warning",
         "scope": "estimand"
       }
@@ -495,7 +495,7 @@
     "role": "secondary",
     "name": "Secondary Endpoint",
     "label": "Secondary Endpoint",
-    "description": "A secondary endpoint: the variable within the associated estimand that operationalises a secondary objective (ICH E9(R1); ICH M11 \u00a73).",
+    "description": "A secondary endpoint (ICH E9(R1); ICH M11 \u00a73).",
     "standards": [
       {
         "framework": "ICH M11",
@@ -527,7 +527,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "The treatment(s) and comparator of interest, incl. regimen detail.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -544,7 +544,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "The patients targeted by the clinical question (usually the trial I/E).",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -561,7 +561,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "The outcome measured per participant, how and at what timepoint.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -578,7 +578,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "Measure comparing conditions across the population (e.g. risk difference, hazard ratio, difference in means).",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -595,7 +595,7 @@
         "required": true,
         "data_type": "coded",
         "cardinality": "multiple",
-        "description": "Pre-specified strategy for post-treatment events affecting the variable.",
+        "description": null,
         "controlled_terms": [
           "treatment_policy",
           "composite",
@@ -618,7 +618,7 @@
         "required": false,
         "data_type": "string",
         "cardinality": "single",
-        "description": "Timing/window over which the endpoint is assessed.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -635,7 +635,7 @@
         "required": false,
         "data_type": "coded",
         "cardinality": "single",
-        "description": "Orthogonal category of what the endpoint measures.",
+        "description": null,
         "controlled_terms": [
           "efficacy",
           "safety",
@@ -655,7 +655,7 @@
       }
     ],
     "renders_into": [
-      "M11-OBJ",
+      "M11-3.2",
       "E3-9.5"
     ],
     "allowed_documents": [
@@ -665,7 +665,7 @@
     ],
     "min_occurs": 0,
     "max_occurs": null,
-    "cardinality": "Zero or more.",
+    "cardinality": null,
     "conformance_rules": [
       {
         "id": "EP-REF-1",
@@ -688,7 +688,7 @@
     "role": "exploratory",
     "name": "Exploratory Endpoint",
     "label": "Exploratory Endpoint",
-    "description": "A exploratory endpoint: the variable within the associated estimand that operationalises a exploratory objective (ICH E9(R1); ICH M11 \u00a73).",
+    "description": "A exploratory endpoint (ICH E9(R1); ICH M11 \u00a73).",
     "standards": [
       {
         "framework": "ICH M11",
@@ -720,7 +720,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "The treatment(s) and comparator of interest, incl. regimen detail.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -737,7 +737,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "The patients targeted by the clinical question (usually the trial I/E).",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -754,7 +754,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "The outcome measured per participant, how and at what timepoint.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -771,7 +771,7 @@
         "required": true,
         "data_type": "string",
         "cardinality": "single",
-        "description": "Measure comparing conditions across the population (e.g. risk difference, hazard ratio, difference in means).",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -788,7 +788,7 @@
         "required": true,
         "data_type": "coded",
         "cardinality": "multiple",
-        "description": "Pre-specified strategy for post-treatment events affecting the variable.",
+        "description": null,
         "controlled_terms": [
           "treatment_policy",
           "composite",
@@ -811,7 +811,7 @@
         "required": false,
         "data_type": "string",
         "cardinality": "single",
-        "description": "Timing/window over which the endpoint is assessed.",
+        "description": null,
         "controlled_terms": [],
         "codelist": null,
         "source": {
@@ -828,7 +828,7 @@
         "required": false,
         "data_type": "coded",
         "cardinality": "single",
-        "description": "Orthogonal category of what the endpoint measures.",
+        "description": null,
         "controlled_terms": [
           "efficacy",
           "safety",
@@ -848,7 +848,7 @@
       }
     ],
     "renders_into": [
-      "M11-OBJ",
+      "M11-3.3",
       "E3-9.5"
     ],
     "allowed_documents": [
@@ -858,7 +858,7 @@
     ],
     "min_occurs": 0,
     "max_occurs": null,
-    "cardinality": "Zero or more.",
+    "cardinality": null,
     "conformance_rules": [
       {
         "id": "EP-REF-1",
@@ -867,6 +867,666 @@
         "scope": "objective_ref"
       }
     ],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "ARM-EXPERIMENTAL",
+    "type": "arm",
+    "role": null,
+    "name": "Experimental Arm",
+    "label": "Experimental Arm",
+    "description": "A study arm of type 'experimental' (CDISC Study Arm Type, C174222; ICH M11 Trial Design).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "Trial Design \u2014 Arms",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "StudyArm; type = Study Arm Type (C174222)",
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "ICH E3",
+        "section": "9.3 Overall Study Design and Plan",
+        "identifier": null,
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "prose",
+    "expected_attributes": [
+      {
+        "name": "name",
+        "label": "Arm name",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "StudyArm",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "type",
+        "label": "Arm type",
+        "required": true,
+        "data_type": "coded",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [
+          "experimental",
+          "active_comparator",
+          "placebo_comparator",
+          "sham_comparator",
+          "no_intervention",
+          "other"
+        ],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "Study Arm Type (C174222)",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "intervention",
+        "label": "Intervention / treatment",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "StudyIntervention",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "description",
+        "label": "Description",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": null
+      }
+    ],
+    "renders_into": [
+      "M11-DESIGN",
+      "E3-9.3"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3"
+    ],
+    "min_occurs": 1,
+    "max_occurs": null,
+    "cardinality": null,
+    "conformance_rules": [
+      {
+        "id": "ARM-EXP-1",
+        "text": "A trial must define at least one experimental arm.",
+        "severity": "error",
+        "scope": "cardinality"
+      }
+    ],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "ARM-PLACEBO_COMPARATOR",
+    "type": "arm",
+    "role": null,
+    "name": "Placebo Comparator Arm",
+    "label": "Placebo Comparator Arm",
+    "description": "A study arm of type 'placebo_comparator' (CDISC Study Arm Type, C174222; ICH M11 Trial Design).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "Trial Design \u2014 Arms",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "StudyArm; type = Study Arm Type (C174222)",
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "ICH E3",
+        "section": "9.3 Overall Study Design and Plan",
+        "identifier": null,
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "prose",
+    "expected_attributes": [
+      {
+        "name": "name",
+        "label": "Arm name",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "StudyArm",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "type",
+        "label": "Arm type",
+        "required": true,
+        "data_type": "coded",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [
+          "experimental",
+          "active_comparator",
+          "placebo_comparator",
+          "sham_comparator",
+          "no_intervention",
+          "other"
+        ],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "Study Arm Type (C174222)",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "intervention",
+        "label": "Intervention / treatment",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "StudyIntervention",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "description",
+        "label": "Description",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": null
+      }
+    ],
+    "renders_into": [
+      "M11-DESIGN",
+      "E3-9.3"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3"
+    ],
+    "min_occurs": 0,
+    "max_occurs": null,
+    "cardinality": null,
+    "conformance_rules": [],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "POP",
+    "type": "population",
+    "role": null,
+    "name": "Study Population",
+    "label": "Study Population",
+    "description": "The trial's target population (CDISC StudyDesignPopulation; ICH M11 Trial Population).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "Trial Population",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "StudyDesignPopulation",
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "ICH E3",
+        "section": "9.4 Selection of Study Population",
+        "identifier": null,
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "prose",
+    "expected_attributes": [
+      {
+        "name": "description",
+        "label": "Population description",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "StudyDesignPopulation",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "condition",
+        "label": "Condition / indication",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": null
+      },
+      {
+        "name": "planned_enrollment",
+        "label": "Planned enrollment",
+        "required": false,
+        "data_type": "integer",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": null
+      }
+    ],
+    "renders_into": [
+      "M11-POP",
+      "E3-9.4"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3",
+      "ICF"
+    ],
+    "min_occurs": 1,
+    "max_occurs": 1,
+    "cardinality": "Exactly one study population per design.",
+    "conformance_rules": [
+      {
+        "id": "POP-1",
+        "text": "A study design has exactly one study population.",
+        "severity": "warning",
+        "scope": "cardinality"
+      }
+    ],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "ELIG-INCLUSION",
+    "type": "eligibility",
+    "role": null,
+    "name": "Inclusion Criterion",
+    "label": "Inclusion Criterion",
+    "description": "An inclusion eligibility criterion (CDISC EligibilityCriterion; category C66797; ICH M11 Trial Population).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "Trial Population \u2014 Eligibility Criteria",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "EligibilityCriterion; category (C66797)",
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "ICH E3",
+        "section": "9.4 Selection of Study Population",
+        "identifier": null,
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "list",
+    "expected_attributes": [
+      {
+        "name": "text",
+        "label": "Criterion",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "EligibilityCriterion",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "kind",
+        "label": "Inclusion/Exclusion",
+        "required": true,
+        "data_type": "coded",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [
+          "inclusion",
+          "exclusion"
+        ],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "I/E category (C66797)",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "number",
+        "label": "Criterion number",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": null
+      }
+    ],
+    "renders_into": [
+      "M11-POP",
+      "E3-9.4"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3",
+      "ICF"
+    ],
+    "min_occurs": 1,
+    "max_occurs": null,
+    "cardinality": null,
+    "conformance_rules": [
+      {
+        "id": "ELIG-INC-1",
+        "text": "A trial must define at least one inclusion criterion.",
+        "severity": "error",
+        "scope": "cardinality"
+      }
+    ],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "ELIG-EXCLUSION",
+    "type": "eligibility",
+    "role": null,
+    "name": "Exclusion Criterion",
+    "label": "Exclusion Criterion",
+    "description": "An exclusion eligibility criterion (CDISC EligibilityCriterion; category C66797; ICH M11 Trial Population).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "Trial Population \u2014 Eligibility Criteria",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "EligibilityCriterion; category (C66797)",
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "ICH E3",
+        "section": "9.4 Selection of Study Population",
+        "identifier": null,
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "list",
+    "expected_attributes": [
+      {
+        "name": "text",
+        "label": "Criterion",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "EligibilityCriterion",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "kind",
+        "label": "Inclusion/Exclusion",
+        "required": true,
+        "data_type": "coded",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [
+          "inclusion",
+          "exclusion"
+        ],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "I/E category (C66797)",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "number",
+        "label": "Criterion number",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": null
+      }
+    ],
+    "renders_into": [
+      "M11-POP",
+      "E3-9.4"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3",
+      "ICF"
+    ],
+    "min_occurs": 0,
+    "max_occurs": null,
+    "cardinality": null,
+    "conformance_rules": [],
+    "status": "approved",
+    "version": 1,
+    "effective_date": "2026-10-25",
+    "retired_date": null,
+    "steward": "Clinical Standards / Protocol Authoring",
+    "change_note": null,
+    "notes": null
+  },
+  {
+    "id": "VISIT",
+    "type": "visit",
+    "role": null,
+    "name": "Visit (Encounter)",
+    "label": "Visit (Encounter)",
+    "description": "A scheduled visit/encounter in the Schedule of Activities (CDISC Encounter; ICH M11 SoA).",
+    "standards": [
+      {
+        "framework": "ICH M11",
+        "section": "Schedule of Activities",
+        "identifier": null,
+        "version": null,
+        "url": "https://database.ich.org/sites/default/files/ICH_Step4_M11_Final_TechnicalSpecification_2025_1119.pdf"
+      },
+      {
+        "framework": "CDISC USDM",
+        "section": null,
+        "identifier": "Encounter / ScheduleOfActivities",
+        "version": null,
+        "url": null
+      },
+      {
+        "framework": "ICH E3",
+        "section": "9.5.1 Schedule of Assessments",
+        "identifier": null,
+        "version": null,
+        "url": null
+      }
+    ],
+    "content_form": "table",
+    "expected_attributes": [
+      {
+        "name": "name",
+        "label": "Visit / encounter name",
+        "required": true,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "Encounter",
+          "version": null,
+          "url": null
+        }
+      },
+      {
+        "name": "study_day",
+        "label": "Timing (study day/window)",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "single",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": null
+      },
+      {
+        "name": "procedures",
+        "label": "Procedures / activities",
+        "required": false,
+        "data_type": "string",
+        "cardinality": "multiple",
+        "description": null,
+        "controlled_terms": [],
+        "codelist": null,
+        "source": {
+          "framework": "CDISC USDM",
+          "section": null,
+          "identifier": "Activity / Procedure",
+          "version": null,
+          "url": null
+        }
+      }
+    ],
+    "renders_into": [
+      "M11-SOA",
+      "E3-9.5.1"
+    ],
+    "allowed_documents": [
+      "M11",
+      "E3"
+    ],
+    "min_occurs": 0,
+    "max_occurs": null,
+    "cardinality": null,
+    "conformance_rules": [],
     "status": "approved",
     "version": 1,
     "effective_date": "2026-10-25",

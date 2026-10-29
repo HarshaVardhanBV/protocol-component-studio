@@ -83,3 +83,40 @@ def _collect(results):
         else:
             raise TypeError(f"unexpected input: {type(it).__name__}")
     return out
+
+
+def _main():
+    import argparse, glob, json, os
+    ap = argparse.ArgumentParser(description="Classify stored instances onto the fixed template library "
+                                             "(writes definition_ids back into each store file + regenerates definitions.json).")
+    ap.add_argument("--store", default="store")
+    ap.add_argument("--report", action="store_true", help="print per-template counts and role fallbacks")
+    args = ap.parse_args()
+
+    study_paths = sorted(p for p in glob.glob(os.path.join(args.store, "*.json"))
+                         if os.path.basename(p) != "definitions.json")
+    used = {}
+    for p in study_paths:
+        result = ExtractionResult.model_validate(json.load(open(p)))
+        defs, classified = classify(result)
+        for d in defs:
+            used[d.id] = d
+        out = ExtractionResult(study_id=result.study_id, instances=classified)
+        with open(p, "w") as f:
+            f.write(out.model_dump_json(indent=2))
+        print(f"{result.study_id}: classified {len(classified)} instances -> {len(defs)} templates")
+        if args.report:
+            rep = classification_report(result)
+            for tid, n in sorted(rep["per_template"].items()):
+                print(f"    {tid:24} {n}")
+            if rep["fallback_count"]:
+                print(f"    role fallbacks: {rep['fallback_count']}")
+
+    defs_path = os.path.join(args.store, "definitions.json")
+    with open(defs_path, "w") as f:
+        json.dump([d.model_dump(mode="json") for d in used.values()], f, indent=2)
+    print(f"wrote {defs_path} ({len(used)} definitions)")
+
+
+if __name__ == "__main__":
+    _main()

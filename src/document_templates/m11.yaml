@@ -1,27 +1,40 @@
 doc_type: M11
 name: ICH M11 Protocol (synopsis subset)
-# Assembly instructions for an M11-style protocol. The Synopsis is a derived
-# section: it displays first (display_order 0) but builds last (depends_on the
-# sections it summarises).
 sections:
   - section_id: M11-SYN
     title: Protocol Synopsis
     display_order: 0
     derivation: summary
-    depends_on: [M11-OBJ, M11-DESIGN, M11-POP, M11-SOA]
-  - section_id: M11-OBJ
-    title: Objectives and Endpoints
+    # Only M11-3.1 (primary-role-filtered) feeds the synopsis — M11-3.2/M11-3.3
+    # are secondary/exploratory-only, so they'd never have a "primary" item and
+    # would always fall back to their first (non-primary) item instead.
+    depends_on: [M11-3.1, M11-DESIGN, M11-POP, M11-SOA]
+  # ICH M11 Section 3 is organised by role: primary / secondary / exploratory,
+  # each grouping the objective with its associated endpoint(s) and estimand(s).
+  - section_id: M11-3.1
+    title: "3.1 Primary Objective(s), Endpoint(s) and Estimand(s)"
     display_order: 1
     renders: [objective, endpoint]
+    roles: [primary]
+  - section_id: M11-3.2
+    title: "3.2 Secondary Objective(s), Endpoint(s) and Estimand(s)"
+    display_order: 2
+    renders: [objective, endpoint]
+    roles: [secondary]
+  - section_id: M11-3.3
+    title: "3.3 Exploratory Objective(s) and Endpoint(s)"
+    display_order: 3
+    renders: [objective, endpoint]
+    roles: [exploratory]
   - section_id: M11-DESIGN
     title: Overall Design
-    display_order: 2
+    display_order: 4
     renders: [arm]
   - section_id: M11-POP
     title: Population and Eligibility
-    display_order: 3
+    display_order: 5
     renders: [population, eligibility]
   - section_id: M11-SOA
     title: Schedule of Activities
-    display_order: 4
+    display_order: 6
     renders: [visit]

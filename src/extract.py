@@ -40,15 +40,34 @@ def load_pages(pdf_path: str) -> list[tuple[int, str]]:
 # ---- 2. Keep only relevant pages, tagged with page markers -----------------
 def find_relevant_text(pages: list[tuple[int, str]], keywords: list[str],
                        max_chars: int = MAX_CHARS) -> str:
+    """Pick pages that mention any keyword, favouring keyword DENSITY over raw
+    page order. A long document's front matter (amendment history, synopsis,
+    TOC) often mentions these terms in passing; if we fill max_chars in page
+    order, that incidental front-matter can exhaust the budget before the
+    actual target section (e.g. a numbered Inclusion/Exclusion Criteria list
+    deep in the document) is ever seen. Scoring by hit count surfaces the
+    dense, on-topic pages first regardless of where they fall in the doc."""
     kw = [k.lower() for k in keywords]
-    picked = [(n, t) for (n, t) in pages if any(k in t.lower() for k in kw)]
+
+    def score(t: str) -> int:
+        tl = t.lower()
+        return sum(tl.count(k) for k in kw)
+
+    scored = [(n, t, score(t)) for (n, t) in pages]
+    picked = [(n, t) for (n, t, s) in scored if s > 0]
     if not picked:
         picked = pages[:10]
-    out, total = [], 0
+    else:
+        picked.sort(key=lambda nt: -score(nt[1]))
+
+    out, total, selected = [], 0, []
     for n, t in picked:
         block = f"\n\n===== PAGE {n} =====\n{t}"
         if total + len(block) > max_chars:
-            break
+            continue
+        selected.append((n, block))
+        total += len(block)
+    for n, block in sorted(selected, key=lambda nb: nb[0]):
         out.append(block)
         total += len(block)
     return "".join(out)

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Protocol Component Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --paper:#FBFCFD; --paper-2:#F2F5F7; --panel:#FFFFFF;
+  --ink:#14202B; --ink-2:#38474F; --muted:#5C6872; --faint:#6A7680;
+  --rule:#D7DEE4; --rule-2:#E7ECF0;
+  --teal:#2E6E7E; --teal-bg:#E1F5EE; --teal-ink:#0C5F4C; --teal-line:#5DCAA5;
+  --amber:#B06A1E; --amber-bg:#FAEEDA; --amber-ink:#7A4A0C;
+  --red:#9B2C2C; --red-bg:#FBECEB;
+  --green-ink:#366410; --green-bg:#EDF4E1;
+  --blue-bg:#E9F1FA; --blue-ink:#1A4C80;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --serif:'Source Serif 4',"Iowan Old Style",Palatino,Georgia,"Times New Roman",serif;
+  --sh:0 1px 2px rgba(20,32,43,.04),0 1px 3px rgba(20,32,43,.06);
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer}
+.mono{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+[role=button]{cursor:pointer}
+[role=button]:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+
+.app{display:flex;flex-direction:column;height:100vh;min-height:620px}
+.topbar{height:52px;flex:0 0 52px;display:flex;align-items:center;gap:16px;padding:0 20px;background:var(--panel);border-bottom:1px solid var(--rule)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.01em}
+.brand .glyph{width:22px;height:22px;border-radius:5px;background:var(--teal);position:relative;flex:0 0 22px}
+.brand .glyph::after{content:"";position:absolute;left:6px;top:4px;width:3px;height:14px;background:var(--teal-line);border-radius:2px}
+.crumbs{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}
+.crumbs b{color:var(--ink);font-weight:500}
+.crumbs .sep{color:var(--faint)}
+.crumbs .lnk{color:var(--muted)}
+.crumbs .lnk:hover{color:var(--teal);text-decoration:underline}
+.spacer{flex:1}
+.demo-pill{font-size:11px;color:var(--muted);border:1px solid var(--rule);border-radius:20px;padding:3px 10px}
+.body{flex:1;overflow:hidden;position:relative}
+.screen{position:absolute;inset:0;overflow:auto;display:none}
+.screen.on{display:block}
+
+.btn{border:1px solid var(--rule);background:var(--panel);color:var(--ink);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:500;transition:.12s}
+.btn:hover{border-color:var(--ink-2);background:var(--paper-2)}
+.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn.primary:hover{background:#255a68}
+.btn.ghost{border-color:transparent;background:transparent;color:var(--teal)}
+.btn.ghost:hover{background:var(--teal-bg)}
+
+.home-wrap{max-width:1040px;margin:0 auto;padding:34px 28px 60px}
+.home-hero{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;border-bottom:1px solid var(--rule);padding-bottom:22px;margin-bottom:26px}
+.home-hero h1{font-family:var(--serif);font-size:30px;line-height:1.15;margin:0 0 8px;font-weight:600;letter-spacing:-.01em}
+.home-hero p{margin:0;color:var(--muted);max-width:52ch}
+.home-hero .lede{color:var(--teal);font-weight:500}
+.sec-label{font-size:11px;letter-spacing:.09em;color:var(--faint);text-transform:uppercase;margin:0 0 12px}
+.grid-studies{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px;margin-bottom:34px}
+.study-card{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:16px 16px 14px;text-align:left;box-shadow:var(--sh);transition:.12s;display:flex;flex-direction:column;gap:3px}
+.study-card:hover{border-color:var(--teal);transform:translateY(-1px)}
+.study-card .nm{font-weight:600;font-size:15px}
+.study-card .dr{color:var(--teal-ink);font-size:12.5px;font-weight:500}
+.study-card .ti{color:var(--muted);font-size:12.5px;margin-top:2px;line-height:1.4}
+.study-card .meta{margin-top:10px;padding-top:10px;border-top:1px solid var(--rule-2);display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+.study-card.add{border-style:dashed;align-items:center;justify-content:center;text-align:center;color:var(--teal);font-weight:500;min-height:118px}
+.study-card.add:hover{background:var(--teal-bg)}
+.lib-panel{background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:var(--sh);overflow:hidden}
+.lib-head{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--rule-2)}
+.lib-head h3{margin:0;font-size:14px;font-weight:600}
+.lib-head .note{color:var(--muted);font-size:12px}
+.lib-rows{display:grid;grid-template-columns:repeat(2,1fr)}
+.lib-row{display:flex;align-items:center;gap:10px;padding:11px 18px;border-top:1px solid var(--rule-2);font-size:13px}
+.lib-row:nth-child(-n+2){border-top:none}
+.tag{font-size:11px;font-weight:600;letter-spacing:.02em;padding:2px 8px;border-radius:6px;background:var(--teal-bg);color:var(--teal-ink);font-family:var(--sans)}
+.lib-row .desc{color:var(--muted);flex:1}
+.lib-row .ct{color:var(--ink-2);font-weight:600;font-size:12px;background:var(--paper-2);border-radius:6px;padding:2px 9px;min-width:28px;text-align:center}
+
+.wb{display:grid;grid-template-columns:232px 1fr 326px;height:100%}
+.rail{border-right:1px solid var(--rule);background:var(--paper-2);overflow:auto;padding:14px 0}
+.rail .grp{padding:0 14px;margin-bottom:6px}
+.rail .glabel{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);display:flex;justify-content:space-between;align-items:center;margin:14px 0 8px}
+.rail .glabel:first-child{margin-top:0}
+.rail .addlink{color:var(--teal);font-weight:600;letter-spacing:0;text-transform:none;font-size:11.5px}
+.studyitem{display:flex;align-items:center;gap:8px;padding:7px 9px;border-radius:7px;font-size:13px;color:var(--ink-2);cursor:pointer}
+.studyitem .dot{width:7px;height:7px;border-radius:50%;background:var(--faint);flex:0 0 7px}
+.studyitem.sel{background:#fff;color:var(--ink);font-weight:600;box-shadow:var(--sh)}
+.studyitem.sel .dot{background:var(--teal)}
+.libitem{display:flex;align-items:center;justify-content:space-between;padding:6px 9px;border-radius:7px;font-size:12.5px;color:var(--ink-2)}
+.libitem.clk{cursor:pointer}
+.libitem.clk:hover{background:#fff}
+.libitem.disabled{opacity:.55}
+.libitem.active{background:var(--teal-bg);color:var(--teal-ink);font-weight:600}
+.libitem .c{color:var(--faint);font-size:11px}
+.libitem.active .c{color:var(--teal-ink)}
+
+.center{overflow:auto;background:var(--paper);position:relative}
+.doctabs{position:sticky;top:0;z-index:5;background:var(--paper);display:flex;align-items:center;gap:4px;padding:12px 26px 0;border-bottom:1px solid var(--rule);flex-wrap:wrap}
+.doctab{padding:8px 15px;font-size:13px;font-weight:500;color:var(--muted);border:1px solid transparent;border-bottom:none;border-radius:8px 8px 0 0;position:relative;top:1px;cursor:pointer}
+.doctab:hover{color:var(--ink)}
+.doctab.on{color:var(--teal-ink);background:var(--panel);border-color:var(--rule);font-weight:600}
+.doctab .plus{color:var(--teal);font-weight:600}
+.doc{max-width:630px;margin:0 auto;padding:26px 24px 70px;font-family:var(--serif)}
+.doc-head{font-family:var(--sans);display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.doc-head .t{font-size:12px;color:var(--muted)}
+.doc h2{font-family:var(--serif);font-size:21px;font-weight:600;margin:0 0 8px;letter-spacing:-.01em}
+.coverage{font-family:var(--sans);display:flex;align-items:center;gap:10px;margin:0 0 20px;font-size:11.5px;color:var(--muted)}
+.cbar{flex:0 0 120px;height:5px;border-radius:3px;background:var(--rule-2);overflow:hidden}
+.cbar i{display:block;height:100%;background:var(--teal-line)}
+.sec{margin-bottom:22px}
+.sec h3{font-family:var(--serif);font-size:16px;font-weight:600;margin:0 0 9px}
+.comp{border-left:3px solid transparent;padding:7px 10px 8px 13px;margin:5px 0;border-radius:0 6px 6px 0;cursor:pointer;transition:.12s;position:relative;scroll-margin-top:70px}
+.comp:hover{background:var(--paper-2)}
+.comp .ctext{font-size:14.5px;line-height:1.55}
+.comp .cmeta{font-family:var(--sans);font-size:11px;color:var(--faint);margin-top:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.comp .cmeta .vtag{background:var(--teal-bg);color:var(--teal-ink);padding:1px 7px;border-radius:5px;font-weight:600;letter-spacing:.02em}
+.comp .cmeta .xform{background:var(--blue-bg);color:var(--blue-ink);padding:1px 7px;border-radius:5px;font-weight:600}
+.comp .cmeta .review{background:var(--amber-bg);color:var(--amber-ink);padding:1px 7px;border-radius:5px;font-weight:600}
+.comp.lit{background:var(--teal-bg);border-left-color:var(--teal)}
+.comp.lit .reuse{display:inline}
+.reuse{display:none;font-family:var(--sans);color:var(--teal);font-size:11px;font-weight:600}
+.derived-badge{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.03em;background:var(--amber-bg);color:var(--amber-ink);padding:2px 9px;border-radius:20px;vertical-align:middle;margin-left:8px}
+.flag{font-family:var(--sans);margin-top:18px;border:1px solid var(--amber-bg);border-left:3px solid var(--amber);background:var(--amber-bg);border-radius:0 8px 8px 0;padding:11px 14px}
+.flag.clean{border-color:var(--green-bg);border-left-color:var(--green-ink);background:var(--green-bg)}
+.flag .ft{font-size:12.5px;font-weight:600;color:var(--amber-ink)}
+.flag.clean .ft{color:var(--green-ink)}
+.flag .fd{font-size:12px;color:var(--amber-ink);opacity:.95;margin-top:3px;line-height:1.5}
+
+.insp{border-left:1px solid var(--rule);background:var(--panel);overflow:auto;padding:0}
+.insp-empty{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:30px;gap:10px}
+.insp-empty .ic{width:40px;height:40px;border-radius:9px;border:2px dashed var(--rule);display:flex;align-items:center;justify-content:center}
+.insp-empty .ic b{font-size:20px;color:var(--faint)}
+.insp-in{padding:18px 18px 40px}
+.insp-in .ilabel{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin:20px 0 9px}
+.insp-in .ilabel:first-child{margin-top:0}
+.insp-ttl{font-size:16px;font-weight:600}
+.insp-sub{color:var(--muted);font-size:12.5px;margin-top:2px}
+.model-btn{margin-top:12px;width:100%;justify-content:center;display:flex;align-items:center;gap:7px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;background:var(--blue-bg);color:var(--blue-ink)}
+.prov{font-size:12.5px;color:var(--ink-2);line-height:1.6}
+.prov .q{font-family:var(--serif);color:var(--muted);font-style:italic;display:block;margin-top:4px}
+.impact-item{display:grid;grid-template-columns:40px 1fr 14px;gap:8px;align-items:center;padding:8px 10px;border-radius:8px;background:var(--teal-bg);margin-bottom:6px;cursor:pointer;transition:.12s}
+.impact-item:hover{background:#d2efe3}
+.impact-item .d{font-weight:700;font-size:11px;color:var(--teal-ink)}
+.impact-item .s{font-size:12px;color:var(--teal-ink)}
+.impact-item .s em{font-style:normal;color:#0a5442;opacity:.8;font-size:11px}
+.impact-item .go{color:var(--teal);font-weight:700;font-size:13px}
+.impact-item.rev{background:var(--amber-bg)}
+.impact-item.rev:hover{background:#f6e3c2}
+.impact-item.rev .d,.impact-item.rev .s,.impact-item.rev .go{color:var(--amber-ink)}
+.impact-sum{font-size:11.5px;color:var(--muted);margin-top:8px}
+.ver{font-size:12.5px;color:var(--ink-2);line-height:1.6}
+.ok-chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--green-ink);background:var(--green-bg);padding:4px 10px;border-radius:7px;margin-top:8px}
+
+.modal-wrap{position:fixed;inset:0;z-index:50;background:rgba(20,32,43,.4);display:none;align-items:center;justify-content:center;padding:24px}
+.modal-wrap.on{display:flex}
+.modal{background:var(--panel);width:470px;max-width:94vw;max-height:88vh;border-radius:14px;box-shadow:0 24px 60px rgba(20,32,43,.28);overflow:auto;display:flex;flex-direction:column;animation:popin .16s ease}
+@keyframes popin{from{transform:scale(.97);opacity:.4}to{transform:none;opacity:1}}
+.modal-head{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--rule-2);position:sticky;top:0;background:var(--panel);border-radius:14px 14px 0 0}
+.modal-head h3{margin:0;font-size:15px;font-weight:600}
+.modal-head .mx{border:none;background:transparent;font-size:20px;color:var(--muted);line-height:1}
+.modal-body{padding:10px 20px 20px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11.5px;color:var(--muted);padding:4px 2px 12px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+.ob-wrap{max-width:860px;margin:0 auto;padding:30px 28px 60px}
+.ob-wrap h1{font-family:var(--serif);font-size:25px;font-weight:600;margin:0 0 4px}
+.ob-wrap .sub{color:var(--muted);margin:0 0 22px}
+.stepper{display:flex;gap:0;margin-bottom:24px}
+.step{flex:1;display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--faint);position:relative}
+.step .num{width:24px;height:24px;border-radius:50%;border:1.5px solid var(--rule);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:12px;background:var(--panel);flex:0 0 24px}
+.step.done .num{background:var(--teal);border-color:var(--teal);color:#fff}
+.step.active{color:var(--ink);font-weight:600}
+.step.active .num{border-color:var(--teal);color:var(--teal)}
+.step .line{position:absolute;left:24px;right:0;top:12px;height:1.5px;background:var(--rule);z-index:-1}
+.step:last-child .line{display:none}
+.ob-card{background:var(--panel);border:1px solid var(--rule);border-radius:12px;box-shadow:var(--sh);padding:22px;min-height:230px}
+.drop{border:1.5px dashed var(--rule);border-radius:10px;padding:30px;text-align:center;color:var(--muted);background:var(--paper-2)}
+.drop .big{font-size:15px;color:var(--ink);font-weight:500;margin-bottom:4px}
+.extract-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--rule-2);font-size:13px}
+.extract-row:last-child{border:none}
+.extract-row .tick{width:18px;height:18px;border-radius:50%;background:var(--green-bg);color:var(--green-ink);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex:0 0 18px}
+.extract-row .n{font-weight:600;color:var(--teal-ink);margin-left:auto;font-size:12px}
+.classify-note{background:var(--teal-bg);border-radius:9px;padding:13px 15px;color:var(--teal-ink);font-size:13px;margin-bottom:16px;font-weight:500}
+.classify-note b{font-weight:700}
+.map-row{display:grid;grid-template-columns:1fr 26px 1fr;gap:8px;align-items:center;padding:8px 0;font-size:12.5px}
+.map-row .from{text-align:right;color:var(--ink-2)}
+.map-row .arr{color:var(--teal);text-align:center}
+.map-row .to .tag{background:var(--teal-bg)}
+.prop-head{font-size:12.5px;color:var(--muted);margin-bottom:6px}
+.prop{display:grid;grid-template-columns:1fr 150px 92px;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--rule-2);font-size:12.5px}
+.prop:last-child{border:none}
+.prop .head{color:var(--ink-2);font-weight:500}
+.prop .pick-pill{border:1px solid var(--rule);border-radius:7px;padding:4px 8px;display:flex;align-items:center;justify-content:space-between;gap:6px;color:var(--teal-ink);background:var(--teal-bg);font-weight:600;font-size:11.5px}
+.prop .pick-pill .cv{color:var(--muted);font-size:10px}
+.conf{font-size:11px;font-weight:600;text-align:right}
+.conf.hi{color:var(--green-ink)} .conf.mid{color:var(--amber-ink)}
+.review-banner{display:flex;align-items:center;gap:8px;background:var(--amber-bg);color:var(--amber-ink);border-radius:8px;padding:9px 13px;font-size:12px;font-weight:500;margin-bottom:14px}
+.ob-actions{display:flex;justify-content:space-between;margin-top:20px}
+.yaml{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12px;line-height:1.7;background:#0f1b24;color:#cfe7df;border-radius:10px;padding:16px 18px;overflow:auto;white-space:pre;tab-size:2}
+.yaml .k{color:#7fd3b5}.yaml .v{color:#e6d9a6}.yaml .c{color:#5f7480}
+.gen-tag{font-size:11.5px;color:var(--teal-ink);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.success{text-align:center;padding:16px}
+.success .big{width:46px;height:46px;border-radius:50%;background:var(--teal-bg);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 12px}
+.loading{height:100%;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div class="brand" role="button" tabindex="0" onclick="go('home')" aria-label="Go to workspace home"><span class="glyph" aria-hidden="true"></span>Protocol Component Studio</div>
+    <div class="crumbs" id="crumbs"><span>Workspace</span></div>
+    <div class="spacer"></div>
+    <span class="demo-pill">Public-data demo · not for clinical use</span>
+  </div>
+  <div class="body">
+    <section class="screen on" id="screen-home"><div class="loading">Loading workspace…</div></section>
+    <section class="screen" id="screen-doc"></section>
+    <section class="screen" id="screen-onboard-study"></section>
+    <section class="screen" id="screen-onboard-doctype"></section>
+  </div>
+</div>
+
+<div class="modal-wrap" id="modelModal" role="dialog" aria-modal="true" aria-label="Component in the knowledge graph">
+  <div class="modal">
+    <div class="modal-head"><h3 id="model-title">View in model</h3>
+      <button class="mx" onclick="closeModel()" aria-label="Close">×</button></div>
+    <div class="modal-body">
+      <div class="legend">
+        <span><i style="background:#2E6E7E"></i>Definition</span>
+        <span><i style="background:#5DCAA5"></i>Instance</span>
+        <span><i style="background:#9AA6AE"></i>Source</span>
+        <span><i style="background:#B9D7F0"></i>Section</span>
+      </div>
+      <div id="model-body"></div>
+      <p style="font-size:11.5px;color:var(--muted);margin:6px 2px 0">Scoped ego-graph: definition + source → instance → the sections it renders into. Click a section node to open it.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+let M=null, curStudy=null, curDoc=null, curComp=null;
+
+/* ---------- boot ---------- */
+fetch('api/model').then(r=>r.json()).then(m=>{
+  M=m; curStudy=m.studies[0].id; curDoc=m.docOrder[0];
+  renderHome(); renderWorkbench(); go('home');
+}).catch(e=>{
+  document.getElementById('screen-home').innerHTML =
+    "<div class='loading'>Couldn't load /api/model — run the app with <code>uvicorn server:app</code> and open the served URL.</div>";
+});
+
+const esc=t=>(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const study=id=>M.studies.find(s=>s.id===id);
+const comp=id=>M.byStudy[curStudy].components[id];
+const XLABEL={verbatim:'verbatim',summarize:'summary',summary:'summary',lay_language:'lay · needs_review',elaborate:'elaborated'};
+
+/* ---------- nav ---------- */
+function go(screen){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));
+  document.getElementById('screen-'+screen).classList.add('on');
+  const cr=document.getElementById('crumbs');
+  const home=`<span class="lnk" role="button" tabindex="0" onclick="go('home')">Workspace</span>`;
+  if(screen==='home') cr.innerHTML='<span>Workspace</span>';
+  else if(screen==='doc') cr.innerHTML=`${home}<span class="sep">›</span><b>${study(curStudy).name}</b><span class="sep">›</span><span>${M.docLabel[curDoc]||curDoc}</span>`;
+  else if(screen==='onboard-study'){cr.innerHTML=`${home}<span class="sep">›</span><b>Onboard study</b>`;resetStudyWiz();}
+  else if(screen==='onboard-doctype'){cr.innerHTML=`${home}<span class="sep">›</span><b>Add document type</b>`;resetDtWiz();}
+  document.querySelector('.screen.on').scrollTop=0;
+}
+function openStudy(id){curStudy=id;curComp=null;renderWorkbench();go('doc');}
+
+/* ---------- home ---------- */
+function renderHome(){
+  const cards = M.studies.map(s=>`<button class="study-card" onclick="openStudy('${s.id}')">
+    <div class="nm">${s.name}</div><div class="dr">${s.drug}</div><div class="ti">${s.title}</div>
+    <div class="meta"><span>${s.instances} components</span><span>${s.flags?('⚑ '+s.flags+' error'+(s.flags>1?'s':'')):(s.warnings?('⚑ '+s.warnings+' warning'+(s.warnings>1?'s':'')):'✓ clean')}</span></div>
+    </button>`).join('') + `<button class="study-card add" onclick="go('onboard-study')">+ Onboard a study</button>`;
+  const lib = M.library.map(l=>{
+    const tot=Object.values(l.count_by_study).reduce((a,b)=>a+b,0);
+    return `<div class="lib-row"><span class="tag">${l.id}</span><span class="desc">${l.name}</span><span class="ct mono">${tot}</span></div>`;
+  }).join('');
+  document.getElementById('screen-home').innerHTML = `<div class="home-wrap">
+    <div class="home-hero"><div>
+      <h1>One component model.<br>Every regulatory document.</h1>
+      <p><span class="lede">Write once, trace everywhere.</span> Extract study-design elements once, render them into M11, E3, SAP, ICF and PBRER, and see every section a change touches.</p>
+    </div><div style="display:flex;gap:10px">
+      <button class="btn" onclick="go('onboard-doctype')">+ Document type</button>
+      <button class="btn primary" onclick="go('onboard-study')">+ Onboard study</button>
+    </div></div>
+    <p class="sec-label">Studies · ${M.studies.length} onboarded</p>
+    <div class="grid-studies">${cards}</div>
+    <div class="lib-panel"><div class="lib-head"><h3>Component library</h3>
+      <span class="note">Fixed ICH-grounded templates · onboarding a study mints <b>0</b> new definitions</span></div>
+      <div class="lib-rows">${lib}</div></div></div>`;
+}
+
+/* ---------- workbench ---------- */
+function renderWorkbench(){
+  const s=study(curStudy), bs=M.byStudy[curStudy];
+  const rail = M.studies.map(st=>`<div class="studyitem ${st.id===curStudy?'sel':''}" role="button" tabindex="0" onclick="openStudy('${st.id}')"><span class="dot"></span>${st.name}</div>`).join('');
+  const lib = M.library.map(l=>{
+    const n=l.count_by_study[curStudy]||0;
+    const activeDef = curComp && comp(curComp) && comp(curComp).def_id===l.id;
+    const clickable = n>0;
+    return `<div class="libitem ${clickable?'clk':'disabled'} ${activeDef?'active':''}" ${clickable?`role="button" tabindex="0" onclick="pickFirstOf('${l.id}')"`:''} title="${l.name}"><span class="mono">${l.id}</span><span class="c mono">${n}</span></div>`;
+  }).join('');
+  const tabs = M.docOrder.map(d=>`<div class="doctab ${d===curDoc?'on':''}" role="button" tabindex="0" onclick="switchDoc('${d}')">${M.docLabel[d]||d}</div>`).join('')
+    + `<div class="doctab" role="button" tabindex="0" onclick="go('onboard-doctype')" aria-label="Add document type"><span class="plus">+</span></div>`;
+
+  const cov=M.coverage[curDoc];
+  const covHtml = cov?`<div class="coverage"><span class="cbar"><i style="width:${Math.round(cov[0]/cov[1]*100)}%"></i></span>
+    Coverage · ${cov[0]} of ${cov[1]} sections populated from the component model · rest narrative-authored</div>`:'';
+
+  const sections = bs.docs[curDoc].sections.map(sec=>{
+    let badges='';
+    if(sec.derived) badges+=`<span class="derived-badge">derived · built last</span>`;
+    const rows = sec.components.map(c=>{
+      let meta=`<span class="mono" style="color:var(--faint)">${M.byStudy[curStudy].components[c.id].def_id}</span>`;
+      if(sec.transform==='elaborate') meta+=`<span class="xform">elaborated</span>`;
+      if(sec.transform==='lay_language') meta+=`<span class="review">needs_review</span>`;
+      meta+=`<span class="reuse">▌ reused — click to trace</span>`;
+      const role=c.role?`[${c.role}] `:'';
+      return `<div class="comp" data-comp="${c.id}" role="button" tabindex="0" onclick="pick('${c.id}')">
+        <div class="ctext">${role}${esc(c.text)}</div><div class="cmeta">${meta}</div></div>`;
+    }).join('');
+    return `<div class="sec"><h3 style="display:flex;align-items:baseline">${sec.section_id} · ${sec.title}${badges}</h3>${rows}</div>`;
+  }).join('') || `<p style="color:var(--muted);font-family:var(--sans);font-size:13px">No components populate this document for ${s.name} — its slots accept element types not present here.</p>`;
+
+  const cf=bs.conformance, findings=cf.findings.filter(f=>f.severity!=='info').slice(0,4);
+  let flag;
+  if(findings.length){
+    flag=`<div class="flag"><div class="ft">Conformance · ${cf.tally.error} errors · ${cf.tally.warning} warnings · ${cf.tally.info} info</div>`
+      + findings.map(f=>`<div class="fd"><code style="font-size:11px">${f.rule}</code> — ${esc(f.detail)}</div>`).join('') + `</div>`;
+  } else {
+    flag=`<div class="flag clean"><div class="ft">Conformance · ${cf.tally.error} errors · ${cf.tally.warning} warnings · ${cf.tally.info} info</div></div>`;
+  }
+
+  document.getElementById('screen-doc').innerHTML = `<div class="wb">
+    <aside class="rail">
+      <div class="grp"><div class="glabel">Studies <span class="addlink" role="button" tabindex="0" onclick="go('onboard-study')">+ add</span></div>${rail}</div>
+      <div class="grp"><div class="glabel">Component library</div>${lib}
+        <div style="font-size:10.5px;color:var(--faint);padding:6px 9px 0">Click a template to trace its uses</div></div>
+    </aside>
+    <div class="center">
+      <div class="doctabs">${tabs}</div>
+      <div class="doc">
+        <div class="doc-head"><span class="t mono">${curStudy}</span><span class="t">${M.docLabel[curDoc]||curDoc} · ${M.docTitle[curDoc]||''}</span></div>
+        <h2>${M.docTitle[curDoc]||curDoc}</h2>${covHtml}${sections}${flag}
+      </div>
+    </div>
+    <aside class="insp" id="insp"></aside>
+  </div>`;
+  if(curComp && comp(curComp)) applyPick(curComp); else clearInspector();
+}
+function switchDoc(d){curDoc=d;renderWorkbench();go('doc');}
+function clearInspector(){document.getElementById('insp').innerHTML=
+  `<div class="insp-empty"><div class="ic" aria-hidden="true"><b>+</b></div><div>Select a component in the document<br>to inspect it and trace its reach.</div></div>`;}
+function pickFirstOf(defId){
+  const bs=M.byStudy[curStudy];
+  for(const sec of bs.docs[curDoc].sections)
+    for(const c of sec.components)
+      if(bs.components[c.id].def_id===defId){pick(c.id);return;}
+  for(const d of M.docOrder) for(const sec of bs.docs[d].sections) for(const c of sec.components)
+    if(bs.components[c.id].def_id===defId){curDoc=d;renderWorkbench();go('doc');pick(c.id);return;}
+}
+function pick(id){ if(!comp(id))return; curComp=id; applyPick(id);
+  document.querySelectorAll('.libitem').forEach(el=>{const m=el.querySelector('.mono');
+    if(m) el.classList.toggle('active', el.classList.contains('clk') && m.textContent===comp(id).def_id);});
+}
+function jumpTo(doc){ if(doc!==curDoc){curDoc=doc;renderWorkbench();go('doc');}
+  const el=document.querySelector('[data-comp="'+curComp+'"]'); if(el&&el.scrollIntoView) el.scrollIntoView({behavior:'smooth',block:'center'});}
+function applyPick(id){
+  document.querySelectorAll('[data-comp]').forEach(c=>c.classList.toggle('lit', c.dataset.comp===id));
+  const c=comp(id), shared=c.shared;
+  document.getElementById('insp').innerHTML=`<div class="insp-in">
+    <div class="insp-ttl mono">${c.def_id}</div><div class="insp-sub">${c.def_name} template</div>
+    <button class="btn ghost model-btn" onclick="openModel()">◍ View in model</button>
+    ${c.standards.length?`<div class="ilabel">Standards</div><div class="chips">${c.standards.map(s=>`<span class="chip">${s.framework}${s.section?(' '+s.section.split(' ')[0]):''}</span>`).join('')}</div>`:''}
+    <div class="ilabel">Provenance</div>
+    <div class="prov"><span class="mono">EXTRACTED_FROM</span> ${c.provenance.src}<br>p. ${c.provenance.page} · ${esc(c.provenance.section)}
+      <span class="q">“${esc(c.provenance.quote)}”</span></div>
+    <div class="ilabel" style="color:var(--teal);font-weight:600">Change impact</div>
+    <div class="impact-sum" style="margin:0 0 9px">Edit this component → reaches (click to jump):</div>
+    ${c.impact.map(i=>`<div class="impact-item ${i.review?'rev':''}" role="button" tabindex="0" onclick="jumpTo('${i.doc}')">
+      <span class="d">${i.doc}</span><span class="s">${i.section_id}<br><em>${i.derived?'derived':(XLABEL[i.transform]||i.transform)}</em></span><span class="go">→</span></div>`).join('')}
+    <div class="impact-sum">${c.impact.length} fragments · ${shared} ${shared>1?'studies':'study'} ${shared>1?'share':'shares'} this template</div>
+    <div class="ilabel">Version</div>
+    <div class="ver">v${c.version} · ${c.revisions} revision${c.revisions===1?'':'s'} · hash-stamped history</div>
+    <div class="ok-chip">✓ version.integrity verified</div></div>`;
+}
+
+/* ---------- scoped graph popup ---------- */
+function openModel(){
+  if(!curComp)return; const c=comp(curComp), shared=c.shared;
+  document.getElementById('model-title').textContent=c.def_id+' — in the knowledge base';
+  const W=360,n=c.impact.length;
+  const defX=14,defY=14,defW=158,defH=44, srcX=190,srcY=14,srcW=156,srcH=44, insX=96,insY=92,insW=168,insH=50;
+  const secX=24,secW=312,secH=34,secGap=43,secTop=176, H=secTop+n*secGap+6;
+  const insBotY=insY+insH, insBotX=insX+insW/2;
+  let edges='',nodes='';
+  edges+=edge(defX+defW/2,defY+defH,insX+40,insY,'INSTANTIATED_AS','#2E6E7E');
+  edges+=edge(srcX+srcW/2,srcY+srcH,insX+insW-40,insY,'EXTRACTED_FROM','#9AA6AE');
+  c.impact.forEach((i,k)=>{const sy=secTop+k*secGap+secH/2;const col=i.review?'#B06A1E':'#2E8E70';
+    edges+=edge(insBotX,insBotY,secX+14,sy,i.derived?'derived':(XLABEL[i.transform]||i.transform),col,i.review);});
+  nodes+=nodeBox(defX,defY,defW,defH,'#E1F5EE','#2E6E7E','#0C5F4C',c.def_id,'definition');
+  nodes+=nodeBox(srcX,srcY,srcW,srcH,'#F1F3F5','#B4BDC4','#45505A',c.provenance.src,'source protocol');
+  nodes+=nodeBox(insX,insY,insW,insH,'#EAF7F1','#5DCAA5','#0C5F4C',study(curStudy).name,'instance · '+curComp);
+  c.impact.forEach((i,k)=>{const sy=secTop+k*secGap;const bg=i.review?'#FAEEDA':'#EAF2FB';const st=i.review?'#E3B36A':'#B9D7F0';const tk=i.review?'#7A4A0C':'#1A4C80';
+    nodes+=nodeBox(secX,sy,secW,secH,bg,st,tk,i.doc+' · '+i.section_id,'',true,`jumpTo('${i.doc}');closeModel();`);});
+  let hint='';
+  if(shared>1) hint=`<text x="${insX+insW/2}" y="${insY+insH+15}" text-anchor="middle" font-size="10" fill="#5C6872" font-family="var(--sans)">+ ${shared-1} other ${shared-1>1?'studies':'study'} ${shared-1>1?'share':'shares'} this definition</text>`;
+  document.getElementById('model-body').innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="font-family:var(--sans)">
+    <defs><marker id="arw" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#9AA6AE"/></marker></defs>
+    ${edges}${nodes}${hint}</svg>`;
+  document.getElementById('modelModal').classList.add('on');
+}
+function nodeBox(x,y,w,h,bg,stroke,tc,title,sub,small,click){
+  const ty=sub?y+h/2-2:y+h/2+4;
+  let t=`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="9" fill="${bg}" stroke="${stroke}" stroke-width="1.5"/>`;
+  t+=`<text x="${x+w/2}" y="${ty}" text-anchor="middle" font-size="${small?10.5:12}" font-weight="600" fill="${tc}">${esc(title)}</text>`;
+  if(sub) t+=`<text x="${x+w/2}" y="${y+h/2+13}" text-anchor="middle" font-size="10" fill="${tc}" opacity="0.72">${esc(sub)}</text>`;
+  if(click) t=`<g style="cursor:pointer" role="button" tabindex="0" onclick="${click}"><title>Jump to this section</title>${t}</g>`;
+  return t;
+}
+function edge(x1,y1,x2,y2,label,color,dashed){
+  const mx=(x1+x2)/2,my=(y1+y2)/2, dash=dashed?'stroke-dasharray="4 3"':'';
+  let t=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="1.5" ${dash} marker-end="url(#arw)"/>`;
+  t+=`<rect x="${mx-label.length*3.1-4}" y="${my-8}" width="${label.length*6.2+8}" height="15" rx="4" fill="#FBFCFD" opacity="0.92"/>`;
+  t+=`<text x="${mx}" y="${my+3}" text-anchor="middle" font-size="9.5" fill="${color}" font-weight="600" font-family="ui-monospace,monospace">${label}</text>`;
+  return t;
+}
+function closeModel(){document.getElementById('modelModal').classList.remove('on');}
+
+/* ---------- onboarding (simulated demos of the real flow) ---------- */
+const STUDY_STEPS=['Upload protocol','Extract elements','Classify to templates','Preview & load']; let sStep=0;
+function resetStudyWiz(){sStep=0;renderStudyWiz();}
+function renderStudyWiz(){
+  document.getElementById('screen-onboard-study').innerHTML=`<div class="ob-wrap">
+    <h1>Onboard a study</h1><p class="sub">A protocol PDF becomes validated, provenance-tagged components — bound to the existing template library.</p>
+    <div class="stepper">${STUDY_STEPS.map((t,i)=>`<div class="step ${i<sStep?'done':''} ${i===sStep?'active':''}"><span class="num">${i<sStep?'✓':i+1}</span>${t}<span class="line"></span></div>`).join('')}</div>
+    <div class="ob-card">${studyStepBody()}</div>
+    <div class="ob-actions"><button class="btn" onclick="go('home')">Cancel</button>
+      <button class="btn primary" onclick="studyNext()">${sStep<3?'Continue →':'Open workbench'}</button></div></div>`;
+}
+function studyStepBody(){
+  if(sStep===0) return `<div class="drop"><div class="big">AstraZeneca D8110C protocol.pdf</div>Public ClinicalTrials.gov protocol · 184 pages<br><span style="font-size:12px">Per-element targeted extraction in Anthropic tool mode</span></div>`;
+  if(sStep===1) return `<div style="font-size:12.5px;color:var(--muted);margin-bottom:6px">Extracted with page/section provenance:</div>`+
+    [['Objectives',2],['Endpoints',5],['Arms',2],['Eligibility criteria',9],['Population',1],['Visits',6]].map(([n,c])=>`<div class="extract-row"><span class="tick">✓</span>${n}<span class="n mono">${c} found</span></div>`).join('');
+  if(sStep===2) return `<div class="classify-note">Bound 25 instances to existing templates — <b>0 new definitions minted.</b> The library is fixed; drug specificity lives on the instance.</div>`+
+    [['“…reduce the incidence of symptomatic COVID-19…”','OBJ-PRIMARY'],['“time to first RT-PCR-confirmed infection”','EP-PRIMARY'],['“two IM doses of AZD1222, 28 days apart”','ARM-EXPERIMENTAL'],['“age ≥ 18 years at screening”','ELIG-INCLUSION']].map(([f,t])=>`<div class="map-row"><span class="from">${f}</span><span class="arr">→</span><span class="to"><span class="tag">${t}</span></span></div>`).join('');
+  return `<div class="success"><div class="big">✓</div><div style="font-size:15px;font-weight:600">AstraZeneca D8110C ready</div>
+    <div style="color:var(--muted);margin-top:4px">25 components loaded · renders into every document type with no new config</div>
+    <div class="ok-chip" style="margin-top:14px">✓ conformance checked</div></div>`;
+}
+function studyNext(){
+  if(sStep<3){sStep++;renderStudyWiz();return;}
+  if(!M.studies.find(s=>s.id==='az_d8110c')){
+    const base=M.byStudy[M.studies[0].id];
+    M.byStudy['az_d8110c']=JSON.parse(JSON.stringify(base));
+    M.studies.push({id:'az_d8110c',name:'AstraZeneca D8110C',drug:'AZD1222',title:'Phase 3, SARS-CoV-2 prevention',instances:25,flags:0,warnings:0});
+    M.library.forEach(l=>{l.count_by_study['az_d8110c']=base.components?Object.values(base.components).filter(c=>c.def_id===l.id).length:0;});
+    renderHome();
+  }
+  openStudy('az_d8110c');
+}
+
+const DT_STEPS=['Upload template','Auto-proposed mapping','Review & generate','Register']; let dStep=0;
+function resetDtWiz(){dStep=0;renderDtWiz();}
+function renderDtWiz(){
+  document.getElementById('screen-onboard-doctype').innerHTML=`<div class="ob-wrap">
+    <h1>Add a document type</h1><p class="sub">Upload a document template; the mapping is auto-proposed, you review it, and the assembly config is generated — no YAML by hand, no code change.</p>
+    <div class="stepper">${DT_STEPS.map((t,i)=>`<div class="step ${i<dStep?'done':''} ${i===dStep?'active':''}"><span class="num">${i<dStep?'✓':i+1}</span>${t}<span class="line"></span></div>`).join('')}</div>
+    <div class="ob-card">${dtStepBody()}</div>
+    <div class="ob-actions"><button class="btn" onclick="go('home')">Cancel</button>
+      <button class="btn primary" onclick="dtNext()">${dStep<3?'Continue →':'Done'}</button></div></div>`;
+}
+function dtStepBody(){
+  if(dStep===0) return `<div class="drop"><div class="big">DSUR template.docx</div>Development safety update report · headings only, no content<br><span style="font-size:12px">We infer which component types feed each section — you don't write YAML</span></div>`;
+  if(dStep===1) return `<div class="prop-head">Proposed section → component-type + transform, read from the template's headings:</div>`+
+    [['Summary of safety','obj+endpoint','derived',92],['Study objectives','objective','verbatim',95],['Benefit evaluation','endpoint','elaborated',88],['Populations exposed','population','verbatim',73]].map(([h,t,x,c])=>`<div class="prop"><span class="head">${h}</span><span class="pick-pill">${t}<span class="cv">${x}</span></span><span class="conf ${c>=90?'hi':'mid'}">${c}%</span></div>`).join('');
+  if(dStep===2) return `<div class="review-banner">⚑ Nothing is applied until you confirm — auto-mapping is a proposal, never silent.</div>
+    <div class="gen-tag">◍ generated from your reviewed mapping — document_templates/dsur.yaml</div>
+<div class="yaml"><span class="c"># DSUR — development safety update report (generated, reviewed)</span>
+<span class="k">document_type:</span> <span class="v">DSUR</span>
+<span class="k">sections:</span>
+  - <span class="k">id:</span> <span class="v">summary</span>
+    <span class="k">derived:</span> <span class="v">true</span>
+    <span class="k">depends_on:</span> [<span class="v">OBJ-PRIMARY</span>, <span class="v">EP-PRIMARY</span>]
+  - <span class="k">id:</span> <span class="v">objectives</span>
+    <span class="k">accepts:</span> [<span class="v">objective</span>]
+    <span class="k">transform:</span> <span class="v">verbatim</span></div>`;
+  return `<div class="success"><div class="big">✓</div><div style="font-size:15px;font-weight:600">DSUR registered</div>
+    <div style="color:var(--muted);margin-top:4px">Renders for all studies from existing components — change-impact extends to it automatically. No code change.</div></div>`;
+}
+function dtNext(){ if(dStep<3){dStep++;renderDtWiz();} else {renderWorkbench();go('doc');} }
+
+document.addEventListener('keydown',e=>{
+  if((e.key==='Enter'||e.key===' ')&&e.target&&e.target.getAttribute&&e.target.getAttribute('role')==='button'){e.preventDefault();e.target.click();}
+  if(e.key==='Escape') closeModel();
+});
+</script>
+</body>
+</html>

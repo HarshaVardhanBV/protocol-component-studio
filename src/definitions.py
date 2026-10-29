@@ -47,6 +47,8 @@ _KIND_LABEL = {"inclusion": "Inclusion Criterion", "exclusion": "Exclusion Crite
 _M11_OBJ_SECTION = {"primary": "3.1 Primary Objective(s) and Associated Estimand(s)",
                     "secondary": "3.2 Secondary Objective(s) and Associated Estimand(s)",
                     "exploratory": "3.3 Exploratory Objective(s)"}
+# document_templates/m11.yaml section id for each role (kept in sync with that file).
+_M11_OBJ_SLOT = {"primary": "M11-3.1", "secondary": "M11-3.2", "exploratory": "M11-3.3"}
 
 
 # ---- shared expected-attribute sets ----------------------------------------
@@ -95,7 +97,7 @@ def _objective(role):
                    StandardRef(framework="CDISC USDM", identifier="Objective (C188707)"),
                    StandardRef(framework="ICH E8(R1)", section="General considerations — trial objectives")],
         content_form="prose", expected_attributes=_objective_attributes(),
-        renders_into=["M11-OBJ", "E3-9.2"], allowed_documents=["M11", "E3", "SAP"],
+        renders_into=[_M11_OBJ_SLOT[role], "E3-9.2"], allowed_documents=["M11", "E3", "SAP"],
         min_occurs=(1 if role == "primary" else 0), max_occurs=None,
         conformance_rules=rules, status="approved", version=1, effective_date=_EFFECTIVE, steward=_STEWARD)
 
@@ -114,7 +116,7 @@ def _endpoint(role):
                    StandardRef(framework="ICH E9(R1)", section="Addendum: the estimand framework"),
                    StandardRef(framework="CDISC USDM", identifier="Endpoint (C188708)")],
         content_form="prose", expected_attributes=_estimand_attributes(),
-        renders_into=["M11-OBJ", "E3-9.5"], allowed_documents=["M11", "E3", "SAP"],
+        renders_into=[_M11_OBJ_SLOT[role], "E3-9.5"], allowed_documents=["M11", "E3", "SAP"],
         min_occurs=(1 if role == "primary" else 0), max_occurs=None,
         conformance_rules=rules, status="approved", version=1, effective_date=_EFFECTIVE, steward=_STEWARD)
 

@@ -5,21 +5,25 @@
       "id": "obj-001",
       "type": "objective",
       "data": {
-        "role": "primary",
-        "text": "To demonstrate the efficacy of mRNA-1273 to prevent coronavirus disease 2019 (COVID-19)."
+        "role": "secondary",
+        "text": "To evaluate the efficacy of mRNA-1273 to prevent COVID-19 after the first dose of investigational product (IP)."
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 11,
-        "section": "1.1 Synopsis \u2014 Objectives: Primary",
-        "quote": "To demonstrate the efficacy of mRNA-1273 to prevent coronavirus disease 2019 (COVID-19)."
+        "section": "1.1 Synopsis - Objectives: Secondary",
+        "quote": "To evaluate the efficacy of mRNA-1273 to prevent COVID-19 after the first dose of investigational product (IP)."
       },
       "study_id": "moderna_cove",
       "definition_ids": [
-        "OBJ-PRIMARY"
+        "OBJ-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109174Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990595Z"
     },
     {
       "id": "obj-002",
@@ -31,7 +35,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 11,
-        "section": "1.1 Synopsis \u2014 Objectives: Primary",
+        "section": "1.1 Synopsis - Objectives: Primary",
         "quote": "To evaluate the safety and reactogenicity of 2 injections of mRNA-1273 given 28 days apart."
       },
       "study_id": "moderna_cove",
@@ -39,7 +43,11 @@
         "OBJ-PRIMARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109215Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990631Z"
     },
     {
       "id": "obj-003",
@@ -51,7 +59,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 11,
-        "section": "1.1 Synopsis \u2014 Objectives: Secondary",
+        "section": "1.1 Synopsis - Objectives: Secondary",
         "quote": "To evaluate the efficacy of mRNA-1273 to prevent severe COVID-19."
       },
       "study_id": "moderna_cove",
@@ -59,7 +67,11 @@
         "OBJ-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109232Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990648Z"
     },
     {
       "id": "obj-004",
@@ -71,15 +83,19 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 11,
-        "section": "1.1 Synopsis \u2014 Objectives: Secondary",
-        "quote": "To evaluate the efficacy of mRNA-1273 to prevent serologically confirmed severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection or COVID-19 regardless of symptomatology or severity."
+        "section": "1.1 Synopsis - Objectives: Secondary",
+        "quote": "To evaluate the efficacy of mRNA-1273 to prevent serologically confirmed severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) infection or COVID-19"
       },
       "study_id": "moderna_cove",
       "definition_ids": [
         "OBJ-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109246Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990662Z"
     },
     {
       "id": "obj-005",
@@ -91,7 +107,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 11,
-        "section": "1.1 Synopsis \u2014 Objectives: Secondary",
+        "section": "1.1 Synopsis - Objectives: Secondary",
         "quote": "To evaluate vaccine efficacy (VE) against a secondary definition of COVID-19."
       },
       "study_id": "moderna_cove",
@@ -99,7 +115,11 @@
         "OBJ-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109259Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990675Z"
     },
     {
       "id": "obj-006",
@@ -111,7 +131,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 11,
-        "section": "1.1 Synopsis \u2014 Objectives: Secondary",
+        "section": "1.1 Synopsis - Objectives: Secondary",
         "quote": "To evaluate VE to prevent death caused by COVID-19."
       },
       "study_id": "moderna_cove",
@@ -119,30 +139,14 @@
         "OBJ-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109272Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990689Z"
     },
     {
       "id": "obj-007",
-      "type": "objective",
-      "data": {
-        "role": "secondary",
-        "text": "To evaluate the efficacy of mRNA-1273 to prevent COVID-19 after the first dose of investigational product (IP)."
-      },
-      "provenance": {
-        "protocol_id": "moderna_cove",
-        "page": 11,
-        "section": "1.1 Synopsis \u2014 Objectives: Secondary",
-        "quote": "To evaluate the efficacy of mRNA-1273 to prevent COVID-19 after the first dose of investigational product (IP)."
-      },
-      "study_id": "moderna_cove",
-      "definition_ids": [
-        "OBJ-SECONDARY"
-      ],
-      "version": 1,
-      "created": "2026-10-25T09:56:38.109284Z"
-    },
-    {
-      "id": "obj-008",
       "type": "objective",
       "data": {
         "role": "secondary",
@@ -151,7 +155,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 11,
-        "section": "1.1 Synopsis \u2014 Objectives: Secondary",
+        "section": "1.1 Synopsis - Objectives: Secondary",
         "quote": "To evaluate the efficacy of mRNA-1273 to prevent COVID-19 in all study participants, regardless of evidence of prior SARS-CoV-2 infection."
       },
       "study_id": "moderna_cove",
@@ -159,10 +163,14 @@
         "OBJ-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109297Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990701Z"
     },
     {
-      "id": "obj-009",
+      "id": "obj-008",
       "type": "objective",
       "data": {
         "role": "secondary",
@@ -171,7 +179,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 11,
-        "section": "1.1 Synopsis \u2014 Objectives: Secondary",
+        "section": "1.1 Synopsis - Objectives: Secondary",
         "quote": "To evaluate the efficacy of mRNA-1273 to prevent asymptomatic SARS-CoV-2 infection."
       },
       "study_id": "moderna_cove",
@@ -179,10 +187,14 @@
         "OBJ-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109312Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990713Z"
     },
     {
-      "id": "obj-010",
+      "id": "obj-009",
       "type": "objective",
       "data": {
         "role": "secondary",
@@ -191,7 +203,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 57,
-        "section": "3 Objectives and Endpoints \u2014 Immunogenicity Objective (Secondary)",
+        "section": "3 Objectives and Endpoints - Immunogenicity Objective (Secondary)",
         "quote": "To evaluate the immunogenicity of 2 doses of mRNA-1273 given 28 days apart."
       },
       "study_id": "moderna_cove",
@@ -199,39 +211,47 @@
         "OBJ-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109325Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990747Z"
     },
     {
-      "id": "obj-011",
+      "id": "obj-010",
       "type": "objective",
       "data": {
         "role": "secondary",
-        "text": "To infer effectiveness of the 50 \u03bcg of mRNA-1273 booster by establishing noninferiority of Ab response after the BD compared to the primary series of mRNA-1273 using GMT values of serum Ab and seroresponse rate of post booster in Part C compared with primary series recipients of mRNA-1273."
+        "text": "To infer effectiveness of the 50 μg of mRNA-1273 booster by establishing noninferiority of Ab response after the BD compared to the primary series of mRNA-1273 using GMT values of serum Ab and seroresponse rate of post booster in Part C compared with primary series recipients of mRNA-1273."
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 57,
-        "section": "3 Objectives and Endpoints \u2014 Immunogenicity Objective (Secondary) for Part C",
-        "quote": "To infer effectiveness of the 50 \u03bcg of mRNA-1273 booster by establishing noninferiority of Ab response after the BD compared to the primary series of mRNA-1273"
+        "section": "3 Objectives and Endpoints - Immunogenicity Objective (Secondary) for Part C",
+        "quote": "To infer effectiveness of the 50 μg of mRNA-1273 booster by establishing noninferiority of Ab response after the BD compared to the primary series of mRNA-1273"
       },
       "study_id": "moderna_cove",
       "definition_ids": [
         "OBJ-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109366Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990762Z"
     },
     {
-      "id": "obj-012",
+      "id": "obj-011",
       "type": "objective",
       "data": {
         "role": "exploratory",
-        "text": "To evaluate the effect of mRNA-1273 on the viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by RT-PCR and number of days from the estimated date of infection until undetectable infection by RT-PCR."
+        "text": "To evaluate the effect of mRNA-1273 on the viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by RT-PCR and number of days from the estimated date of SARS-CoV-2 infection until undetectable SARS-CoV-2 infection by RT-PCR."
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 57,
-        "section": "3 Objectives and Endpoints \u2014 Exploratory Objectives for Part A",
+        "section": "3 Objectives and Endpoints - Exploratory Objectives for Part A",
         "quote": "To evaluate the effect of mRNA-1273 on the viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by RT-PCR"
       },
       "study_id": "moderna_cove",
@@ -239,10 +259,14 @@
         "OBJ-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109391Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990775Z"
     },
     {
-      "id": "obj-013",
+      "id": "obj-012",
       "type": "objective",
       "data": {
         "role": "exploratory",
@@ -251,7 +275,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 57,
-        "section": "3 Objectives and Endpoints \u2014 Exploratory Objectives for Part A",
+        "section": "3 Objectives and Endpoints - Exploratory Objectives for Part A",
         "quote": "To assess VE to reduce the duration of symptoms of COVID-19."
       },
       "study_id": "moderna_cove",
@@ -259,10 +283,14 @@
         "OBJ-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109404Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990788Z"
     },
     {
-      "id": "obj-014",
+      "id": "obj-013",
       "type": "objective",
       "data": {
         "role": "exploratory",
@@ -271,7 +299,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 57,
-        "section": "3 Objectives and Endpoints \u2014 Exploratory Objectives for Part A",
+        "section": "3 Objectives and Endpoints - Exploratory Objectives for Part A",
         "quote": "To evaluate VE against all-cause mortality."
       },
       "study_id": "moderna_cove",
@@ -279,10 +307,14 @@
         "OBJ-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109426Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990801Z"
     },
     {
-      "id": "obj-015",
+      "id": "obj-014",
       "type": "objective",
       "data": {
         "role": "exploratory",
@@ -291,7 +323,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 57,
-        "section": "3 Objectives and Endpoints \u2014 Exploratory Objectives for Part A",
+        "section": "3 Objectives and Endpoints - Exploratory Objectives for Part A",
         "quote": "To assess VE against burden of disease due to COVID-19."
       },
       "study_id": "moderna_cove",
@@ -299,10 +331,14 @@
         "OBJ-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109441Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990814Z"
     },
     {
-      "id": "obj-016",
+      "id": "obj-015",
       "type": "objective",
       "data": {
         "role": "exploratory",
@@ -311,7 +347,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 57,
-        "section": "3 Objectives and Endpoints \u2014 Exploratory Objectives for Part A",
+        "section": "3 Objectives and Endpoints - Exploratory Objectives for Part A",
         "quote": "To evaluate the genetic and/or phenotypic relationships of isolated SARS-CoV-2 strains to the vaccine sequence."
       },
       "study_id": "moderna_cove",
@@ -319,10 +355,14 @@
         "OBJ-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109454Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990827Z"
     },
     {
-      "id": "obj-017",
+      "id": "obj-016",
       "type": "objective",
       "data": {
         "role": "exploratory",
@@ -331,7 +371,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 57,
-        "section": "3 Objectives and Endpoints \u2014 Exploratory Objectives for Part A",
+        "section": "3 Objectives and Endpoints - Exploratory Objectives for Part A",
         "quote": "To evaluate immune response markers after dosing with IP as correlates of risk of COVID-19 and as correlates of risk of SARS-CoV-2 infection."
       },
       "study_id": "moderna_cove",
@@ -339,10 +379,14 @@
         "OBJ-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109467Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990839Z"
     },
     {
-      "id": "obj-018",
+      "id": "obj-017",
       "type": "objective",
       "data": {
         "role": "exploratory",
@@ -351,7 +395,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 58,
-        "section": "3 Objectives and Endpoints \u2014 Exploratory Objectives for Part A",
+        "section": "3 Objectives and Endpoints - Exploratory Objectives for Part A",
         "quote": "To conduct additional analyses related to furthering the understanding of SARS-CoV-2 infection and COVID-19"
       },
       "study_id": "moderna_cove",
@@ -359,10 +403,14 @@
         "OBJ-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109479Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990852Z"
     },
     {
-      "id": "obj-019",
+      "id": "obj-018",
       "type": "objective",
       "data": {
         "role": "exploratory",
@@ -371,7 +419,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 58,
-        "section": "3 Objectives and Endpoints \u2014 Exploratory Objectives for Part C",
+        "section": "3 Objectives and Endpoints - Exploratory Objectives for Part C",
         "quote": "To evaluate the safety of a BD of mRNA-1273."
       },
       "study_id": "moderna_cove",
@@ -379,10 +427,14 @@
         "OBJ-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109492Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990864Z"
     },
     {
-      "id": "obj-020",
+      "id": "obj-019",
       "type": "objective",
       "data": {
         "role": "exploratory",
@@ -391,7 +443,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 58,
-        "section": "3 Objectives and Endpoints \u2014 Exploratory Objectives for Part C",
+        "section": "3 Objectives and Endpoints - Exploratory Objectives for Part C",
         "quote": "To evaluate the immunogenicity of a BD of mRNA-1273."
       },
       "study_id": "moderna_cove",
@@ -399,7 +451,11 @@
         "OBJ-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:38.109504Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:48.990877Z"
     },
     {
       "id": "end-001",
@@ -407,22 +463,26 @@
       "data": {
         "role": "primary",
         "purpose": "efficacy",
-        "text": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of COVID-19 starting 14 days after the second dose of IP (symptomatic disease per defined criteria)",
+        "text": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of COVID-19 starting 14 days after the second dose of IP, where COVID-19 is defined as symptomatic disease",
         "objective_ref": null,
         "timeframe": "starting 14 days after the second dose of IP"
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 54,
-        "section": "3. Objectives and Endpoints / Table 1 (Primary Endpoints)",
-        "quote": "Efficacy Endpoints (Primary): Vaccine efficacy of mRNA-1273 to prevent the first occurrence of COVID-19 starting 14 days after the second dose of IP"
+        "section": "3. Objectives and Endpoints — Efficacy Endpoints (Primary)",
+        "quote": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of COVID-19 starting 14 days after the second dose of IP, where COVID-19 is defined as symptomatic disease"
       },
       "study_id": "moderna_cove",
       "definition_ids": [
         "EP-PRIMARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130160Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242374Z"
     },
     {
       "id": "end-002",
@@ -437,7 +497,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 54,
-        "section": "3. Objectives and Endpoints / Table 1 (Primary Safety Endpoint)",
+        "section": "3. Objectives and Endpoints — Safety Endpoint (Primary)",
         "quote": "Solicited local and systemic ARs through 7 days after each dose of IP (Part A)."
       },
       "study_id": "moderna_cove",
@@ -445,7 +505,11 @@
         "EP-PRIMARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130198Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242392Z"
     },
     {
       "id": "end-003",
@@ -453,14 +517,14 @@
       "data": {
         "role": "primary",
         "purpose": "safety",
-        "text": "Unsolicited AEs through 28 days after each dose of IP (Part A and Part C BD recipients)",
+        "text": "Unsolicited AEs through 28 days after each dose of IP (Part A [all participants] and Part C [only those who receive the BD])",
         "objective_ref": null,
         "timeframe": "through 28 days after each dose of IP"
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 54,
-        "section": "3. Objectives and Endpoints / Table 1 (Primary Safety Endpoint)",
+        "section": "3. Objectives and Endpoints — Safety Endpoint (Primary)",
         "quote": "Unsolicited AEs through 28 days after each dose of IP (Part A [all participants] and Part C [only those who receive the BD])."
       },
       "study_id": "moderna_cove",
@@ -468,7 +532,11 @@
         "EP-PRIMARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130215Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242400Z"
     },
     {
       "id": "end-004",
@@ -478,12 +546,12 @@
         "purpose": "safety",
         "text": "MAAEs or AEs leading to withdrawal through the entire study period",
         "objective_ref": null,
-        "timeframe": "entire study period"
+        "timeframe": "through the entire study period"
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 54,
-        "section": "3. Objectives and Endpoints / Table 1 (Primary Safety Endpoint)",
+        "section": "3. Objectives and Endpoints — Safety Endpoint (Primary)",
         "quote": "MAAEs or AEs leading to withdrawal through the entire study period."
       },
       "study_id": "moderna_cove",
@@ -491,7 +559,11 @@
         "EP-PRIMARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130231Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242406Z"
     },
     {
       "id": "end-005",
@@ -501,12 +573,12 @@
         "purpose": "safety",
         "text": "SAEs throughout the entire study period",
         "objective_ref": null,
-        "timeframe": "entire study period"
+        "timeframe": "throughout the entire study period"
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 54,
-        "section": "3. Objectives and Endpoints / Table 1 (Primary Safety Endpoint)",
+        "section": "3. Objectives and Endpoints — Safety Endpoint (Primary)",
         "quote": "SAEs throughout the entire study period."
       },
       "study_id": "moderna_cove",
@@ -514,7 +586,11 @@
         "EP-PRIMARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130246Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242412Z"
     },
     {
       "id": "end-006",
@@ -522,14 +598,14 @@
       "data": {
         "role": "secondary",
         "purpose": "efficacy",
-        "text": "Vaccine efficacy of mRNA-1273 to prevent severe COVID-19",
+        "text": "Vaccine efficacy of mRNA-1273 to prevent severe COVID-19, defined as first occurrence of COVID-19 starting 14 days after the second dose of IP plus any severe criteria",
         "objective_ref": null,
         "timeframe": "starting 14 days after the second dose of IP"
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 55,
-        "section": "3. Objectives and Endpoints / Table 1 (Secondary Efficacy Endpoints)",
+        "section": "3. Objectives and Endpoints — Efficacy Endpoints (Secondary)",
         "quote": "Vaccine efficacy of mRNA-1273 to prevent severe COVID-19, defined as first occurrence of COVID-19 starting 14 days after the second dose of IP"
       },
       "study_id": "moderna_cove",
@@ -537,7 +613,11 @@
         "EP-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130261Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242419Z"
     },
     {
       "id": "end-007",
@@ -545,14 +625,14 @@
       "data": {
         "role": "secondary",
         "purpose": "efficacy",
-        "text": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of either COVID-19 or SARS-CoV-2 infection (serologically confirmed infection regardless of symptomatology or severity)",
+        "text": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of either COVID-19 or SARS-CoV-2 infection starting 14 days after the second IP dose",
         "objective_ref": null,
         "timeframe": "starting 14 days after the second IP dose"
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 55,
-        "section": "3. Objectives and Endpoints / Table 1 (Secondary Efficacy Endpoints)",
+        "section": "3. Objectives and Endpoints — Efficacy Endpoints (Secondary)",
         "quote": "Vaccine efficacy of mRNA-1273 to prevent the first occurrence of either COVID-19 or SARS-CoV-2 infection starting 14 days after the second IP dose."
       },
       "study_id": "moderna_cove",
@@ -560,7 +640,11 @@
         "EP-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130291Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242425Z"
     },
     {
       "id": "end-008",
@@ -570,12 +654,12 @@
         "purpose": "efficacy",
         "text": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 using a secondary definition of symptoms",
         "objective_ref": null,
-        "timeframe": "starting 14 days after the second dose of IP"
+        "timeframe": null
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 28,
-        "section": "9.5.1 Efficacy Analyses (Secondary endpoints)",
+        "section": "9.5.1 Efficacy Analyses — Secondary endpoints",
         "quote": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 using a secondary definition of symptoms"
       },
       "study_id": "moderna_cove",
@@ -583,7 +667,11 @@
         "EP-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130308Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242432Z"
     },
     {
       "id": "end-009",
@@ -593,12 +681,12 @@
         "purpose": "efficacy",
         "text": "Vaccine efficacy of mRNA-1273 to prevent death caused by COVID-19",
         "objective_ref": null,
-        "timeframe": "starting 14 days after the second dose of IP"
+        "timeframe": null
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 28,
-        "section": "9.5.1 Efficacy Analyses (Secondary endpoints)",
+        "section": "9.5.1 Efficacy Analyses — Secondary endpoints",
         "quote": "Vaccine efficacy of mRNA-1273 to prevent death caused by COVID-19"
       },
       "study_id": "moderna_cove",
@@ -606,7 +694,11 @@
         "EP-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130324Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242439Z"
     },
     {
       "id": "end-010",
@@ -621,7 +713,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 28,
-        "section": "9.5.1 Efficacy Analyses (Secondary endpoints)",
+        "section": "9.5.1 Efficacy Analyses — Secondary endpoints",
         "quote": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 after the first dose of IP"
       },
       "study_id": "moderna_cove",
@@ -629,7 +721,11 @@
         "EP-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130338Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242454Z"
     },
     {
       "id": "end-011",
@@ -644,7 +740,7 @@
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 28,
-        "section": "9.5.1 Efficacy Analyses (Secondary endpoints)",
+        "section": "9.5.1 Efficacy Analyses — Secondary endpoints",
         "quote": "Vaccine efficacy of mRNA-1273 to prevent asymptomatic SARS-CoV-2 infection"
       },
       "study_id": "moderna_cove",
@@ -652,7 +748,11 @@
         "EP-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130353Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242461Z"
     },
     {
       "id": "end-012",
@@ -662,12 +762,12 @@
         "purpose": "efficacy",
         "text": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 in all study participants, regardless of evidence of prior SARS-CoV-2 infection",
         "objective_ref": null,
-        "timeframe": "starting 14 days after the second dose of IP"
+        "timeframe": null
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 28,
-        "section": "9.5.1 Efficacy Analyses (Secondary endpoints)",
+        "section": "9.5.1 Efficacy Analyses — Secondary endpoints",
         "quote": "Vaccine efficacy of mRNA-1273 to prevent COVID-19 in all study participants, regardless of evidence of prior SARS-CoV-2 infection"
       },
       "study_id": "moderna_cove",
@@ -675,7 +775,11 @@
         "EP-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130367Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242467Z"
     },
     {
       "id": "end-013",
@@ -683,14 +787,14 @@
       "data": {
         "role": "secondary",
         "purpose": "immunogenicity",
-        "text": "Part C Key Secondary Endpoint 1: Ab GMT at BD-Day 29 (noninferiority of booster dose immunogenicity vs. primary series at Day 57)",
+        "text": "Part C Key Secondary Endpoint 1: Ab GMT at BD-Day 29, noninferior to Ab GMT at Day 57 of the primary series",
         "objective_ref": null,
         "timeframe": "BD-Day 29"
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 33,
-        "section": "Statistical Methods / Part C",
+        "section": "Statistical Methods — Part C",
         "quote": "Part C Key Secondary Endpoint 1: Ab GMT at BD-Day 29"
       },
       "study_id": "moderna_cove",
@@ -698,7 +802,11 @@
         "EP-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130380Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242472Z"
     },
     {
       "id": "end-014",
@@ -706,14 +814,14 @@
       "data": {
         "role": "secondary",
         "purpose": "immunogenicity",
-        "text": "Part C Key Secondary Endpoint 2: Ab Seroresponse Rate at BD-Day 29 (noninferiority of booster dose vs. primary series at Day 57)",
+        "text": "Part C Key Secondary Endpoint 2: Ab Seroresponse Rate at BD-Day 29, noninferior to SRR at Day 57 of the primary series",
         "objective_ref": null,
         "timeframe": "BD-Day 29"
       },
       "provenance": {
         "protocol_id": "moderna_cove",
         "page": 34,
-        "section": "Statistical Methods / Part C",
+        "section": "Statistical Methods — Part C",
         "quote": "Part C Key Secondary Endpoint 2: Ab Seroresponse Rate at BD-Day 29"
       },
       "study_id": "moderna_cove",
@@ -721,15 +829,19 @@
         "EP-SECONDARY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130395Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242479Z"
     },
     {
       "id": "end-015",
       "type": "endpoint",
       "data": {
         "role": "exploratory",
-        "purpose": "pharmacodynamic",
-        "text": "Effect of mRNA-1273 on viral infection kinetics as measured by viral load at SARS-CoV-2 diagnosis and days until undetectable infection by RT-PCR",
+        "purpose": "efficacy",
+        "text": "Effect of mRNA-1273 on viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by RT-PCR and number of days until undetectable infection",
         "objective_ref": null,
         "timeframe": null
       },
@@ -737,14 +849,18 @@
         "protocol_id": "moderna_cove",
         "page": 12,
         "section": "Exploratory for Part A",
-        "quote": "To evaluate the effect of mRNA-1273 on the viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by reverse transcriptase polymerase chain reaction"
+        "quote": "To evaluate the effect of mRNA-1273 on the viral infection kinetics as measured by viral load at SARS-CoV-2 infection diagnosis by reverse transcriptase polymerase chain reaction (RT-PCR)"
       },
       "study_id": "moderna_cove",
       "definition_ids": [
         "EP-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130409Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242485Z"
     },
     {
       "id": "end-016",
@@ -767,7 +883,11 @@
         "EP-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130423Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242492Z"
     },
     {
       "id": "end-017",
@@ -790,7 +910,11 @@
         "EP-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130438Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242498Z"
     },
     {
       "id": "end-018",
@@ -813,7 +937,11 @@
         "EP-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130453Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242506Z"
     },
     {
       "id": "end-019",
@@ -836,7 +964,11 @@
         "EP-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130467Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242512Z"
     },
     {
       "id": "end-020",
@@ -859,7 +991,11 @@
         "EP-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130482Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242518Z"
     },
     {
       "id": "end-021",
@@ -882,7 +1018,11 @@
         "EP-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130497Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242524Z"
     },
     {
       "id": "end-022",
@@ -905,7 +1045,1010 @@
         "EP-EXPLORATORY"
       ],
       "version": 1,
-      "created": "2026-10-25T09:56:40.130511Z"
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:51.242535Z"
+    },
+    {
+      "id": "arm-001",
+      "type": "arm",
+      "data": {
+        "name": "mRNA-1273 (100 µg)",
+        "type": "experimental",
+        "description": "Participants randomized to receive two injections of 100 µg mRNA-1273 vaccine 28 days apart in Part A, the Blinded Phase.",
+        "intervention": "mRNA-1273 SARS-CoV-2 vaccine, 100 µg, 0.5 mL IM injection on Day 1 and Day 29"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 13,
+        "section": "1.1 Synopsis (Part A, the Blinded Phase)",
+        "quote": "Participants will be randomly assigned to receive injections of either 100 µg of mRNA-1273 vaccine or a placebo control in a 1:1 randomization ratio."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "ARM-EXPERIMENTAL"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:52.881347Z"
+    },
+    {
+      "id": "arm-002",
+      "type": "arm",
+      "data": {
+        "name": "Placebo",
+        "type": "placebo_comparator",
+        "description": "Participants randomized to receive placebo control (saline) in a 1:1 ratio versus mRNA-1273 in Part A, the Blinded Phase.",
+        "intervention": "0.9% sodium chloride (normal saline) injection, 0.5 mL IM on Day 1 and Day 29"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 13,
+        "section": "1.1 Synopsis (Part A, the Blinded Phase)",
+        "quote": "Participants will be randomly assigned to receive injections of either 100 µg of mRNA-1273 vaccine or a placebo control in a 1:1 randomization ratio."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "ARM-PLACEBO_COMPARATOR"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:52.881393Z"
+    },
+    {
+      "id": "pop-001",
+      "type": "population",
+      "data": {
+        "description": "Adults 18 years of age and older with no known history of SARS-CoV-2 infection but whose locations or circumstances put them at appreciable risk of acquiring COVID-19 and/or SARS-CoV-2 infection",
+        "planned_enrollment": 30000,
+        "condition": "COVID-19 / SARS-CoV-2 infection prevention"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 13,
+        "section": "1.1 Synopsis - Part A, the Blinded Phase",
+        "quote": "evaluation of the efficacy, safety, and immunogenicity of mRNA-1273 SARS-CoV-2 vaccine compared to placebo in adults 18 years of age and older who have no known history of SARS-CoV-2 infection"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "POP"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:54.410446Z"
+    },
+    {
+      "id": "pop-002",
+      "type": "population",
+      "data": {
+        "description": "Males and females 18 years of age or older at time of consent, at risk of SARS-CoV-2 infection with no known history of SARS-CoV-2 infection, including those at increased risk of complications from COVID-19",
+        "planned_enrollment": 30000,
+        "condition": "COVID-19 / SARS-CoV-2 infection prevention"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 19,
+        "section": "1.1 Synopsis - Study Population",
+        "quote": "Participants (males and females 18 years of age or older at time of consent), who are at risk of SARS-CoV-2 infection with no known history of SARS-CoV-2 infection"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "POP"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:54.410478Z"
+    },
+    {
+      "id": "pop-003",
+      "type": "population",
+      "data": {
+        "description": "Participants >=65 years of age eligible with or without underlying medical conditions; approximately 30,000 participants to be enrolled",
+        "planned_enrollment": 30000,
+        "condition": "COVID-19 / SARS-CoV-2 infection prevention"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 20,
+        "section": "1.1 Synopsis - Study Population",
+        "quote": "Participants ≥ 65 years of age will be eligible for enrollment with or without underlying medical conditions... Approximately 30,000 participants will be enrolled."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "POP"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:54.410495Z"
+    },
+    {
+      "id": "elig-001",
+      "type": "eligibility",
+      "data": {
+        "kind": "inclusion",
+        "text": "(Part A only) Adults, ≥ 18 years of age at time of consent, who are at high risk of SARS-CoV-2 infection, defined as adults whose locations or circumstances put them at appreciable risk of exposure to SARS-CoV-2 and COVID-19",
+        "number": "1"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 68,
+        "section": "5.1.1 Inclusion Criteria",
+        "quote": "(Part A only) Adults, ≥ 18 years of age at time of consent, who are at high risk of SARS-CoV-2 infection, defined as adults whose locations or circumstances put them at appreciable risk of exposure to SARS-CoV-2 and COVID-19"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "ELIG-INCLUSION"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:56.157391Z"
+    },
+    {
+      "id": "elig-002",
+      "type": "eligibility",
+      "data": {
+        "kind": "inclusion",
+        "text": "Understands and agrees to comply with the study procedures and provides written informed consent.",
+        "number": "2"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 68,
+        "section": "5.1.1 Inclusion Criteria",
+        "quote": "Understands and agrees to comply with the study procedures and provides written informed consent."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "ELIG-INCLUSION"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:56.157435Z"
+    },
+    {
+      "id": "elig-003",
+      "type": "eligibility",
+      "data": {
+        "kind": "inclusion",
+        "text": "Able to comply with study procedures based on the assessment of the investigator.",
+        "number": "3"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 68,
+        "section": "5.1.1 Inclusion Criteria",
+        "quote": "Able to comply with study procedures based on the assessment of the investigator."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "ELIG-INCLUSION"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:56.157457Z"
+    },
+    {
+      "id": "elig-004",
+      "type": "eligibility",
+      "data": {
+        "kind": "inclusion",
+        "text": "Female participants of nonchildbearing potential may be enrolled in the study. Nonchildbearing potential is defined as surgically sterile or postmenopausal (amenorrhea for ≥ 12 consecutive months prior to Screening without an alternative medical cause).",
+        "number": "4"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 68,
+        "section": "5.1.1 Inclusion Criteria",
+        "quote": "Female participants of nonchildbearing potential may be enrolled in the study. Nonchildbearing potential is defined as surgically sterile (history of bilateral tubal ligation, bilateral oophorectomy, hysterectomy) or postmenopausal"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "ELIG-INCLUSION"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:56.157476Z"
+    },
+    {
+      "id": "elig-005",
+      "type": "eligibility",
+      "data": {
+        "kind": "inclusion",
+        "text": "Female participants of childbearing potential may be enrolled if: negative pregnancy test at Screening and on day of first dose; practiced adequate contraception or abstained ≥ 28 days prior to first dose; agreed to continue adequate contraception through 3 months following last dose; not currently breastfeeding.",
+        "number": "5"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 69,
+        "section": "5.1.1 Inclusion Criteria",
+        "quote": "Female participants of childbearing potential may be enrolled in the study if the participant fulfills all the following criteria: Has a negative pregnancy test at Screening and on the day of the first dose"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "ELIG-INCLUSION"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:56.157494Z"
+    },
+    {
+      "id": "elig-006",
+      "type": "eligibility",
+      "data": {
+        "kind": "inclusion",
+        "text": "Healthy adults or adults with pre-existing medical conditions who are in stable condition. A stable medical condition is defined as disease not requiring significant change in therapy or hospitalization for worsening disease during the 3 months before enrollment.",
+        "number": "6"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 69,
+        "section": "5.1.1 Inclusion Criteria",
+        "quote": "Healthy adults or adults with pre-existing medical conditions who are in stable condition. A stable medical condition is defined as disease not requiring significant change in therapy or hospitalization for worsening disease during the 3 months before enrollment."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "ELIG-INCLUSION"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:56.157514Z"
+    },
+    {
+      "id": "elig-007",
+      "type": "eligibility",
+      "data": {
+        "kind": "inclusion",
+        "text": "(Part C Only) Is currently enrolled in Part B of the current study (mRNA-1273-P301).",
+        "number": "7"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 69,
+        "section": "5.1.1 Inclusion Criteria",
+        "quote": "(Part C Only) Is currently enrolled in Part B of the current study (mRNA-1273-P301)."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "ELIG-INCLUSION"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:56.157532Z"
+    },
+    {
+      "id": "elig-008",
+      "type": "eligibility",
+      "data": {
+        "kind": "inclusion",
+        "text": "(Part C Only) Has received at least 1 dose of mRNA-1273 in the current study (mRNA-1273-P301).",
+        "number": "8"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 69,
+        "section": "5.1.1 Inclusion Criteria",
+        "quote": "(Part C Only) Has received at least 1 dose of mRNA-1273 in the current study (mRNA-1273-P301)."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "ELIG-INCLUSION"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:56.157551Z"
+    },
+    {
+      "id": "elig-009",
+      "type": "eligibility",
+      "data": {
+        "kind": "exclusion",
+        "text": "Acutely ill or febrile prior to or at the Screening Visit. (Participants may be rescheduled within the relevant window periods and retain their initially assigned participant number.)",
+        "number": "1"
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 71,
+        "section": "5.3 Screen Failures",
+        "quote": "Participants meeting the exclusion criterion #1, acutely ill or febrile prior to or at the Screening Visit (exclusion criterion #1, Section 5.1.2), may be rescheduled within the relevant window periods"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "ELIG-EXCLUSION"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:56.157571Z"
+    },
+    {
+      "id": "vis-001",
+      "type": "visit",
+      "data": {
+        "name": "Screening",
+        "study_day": "Prior to Day 1",
+        "procedures": [
+          "Eligibility assessment",
+          "Age and health risk stratification"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 59,
+        "section": "4.1 General Design",
+        "quote": "Upon entry into Part A, all participants had 8 scheduled clinic visits, including Screening, Day 1, Day 29, Day 57, Day 209, Day 394, Day 759"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211104Z"
+    },
+    {
+      "id": "vis-002",
+      "type": "visit",
+      "data": {
+        "name": "Day 1 (First Dose)",
+        "study_day": "Day 1",
+        "procedures": [
+          "First dose of IP (100 µg mRNA-1273 or placebo) by 0.5 mL IM injection",
+          "NP swab sample for RT-PCR prior to dose",
+          "Blood sample",
+          "eDiary instruction for solicited ARs"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 60,
+        "section": "4.1.1 Part A, the Blinded Phase",
+        "quote": "Each participant will receive 2 doses of IP by 0.5 mL IM injection, the first on Day 1 and the second on Day 29."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211130Z"
+    },
+    {
+      "id": "vis-003",
+      "type": "visit",
+      "data": {
+        "name": "Safety Call Day 8",
+        "study_day": "Day 8",
+        "procedures": [
+          "Safety call to monitor for unsolicited AEs and COVID-19 symptoms"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 60,
+        "section": "4.1.1 Part A, the Blinded Phase",
+        "quote": "All participants will receive safety calls on Day 8, Day 15, Day 22, Day 36, and Day 43"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211144Z"
+    },
+    {
+      "id": "vis-004",
+      "type": "visit",
+      "data": {
+        "name": "Safety Call Day 15",
+        "study_day": "Day 15",
+        "procedures": [
+          "Safety call to monitor for unsolicited AEs and COVID-19 symptoms"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 60,
+        "section": "4.1.1 Part A, the Blinded Phase",
+        "quote": "All participants will receive safety calls on Day 8, Day 15, Day 22, Day 36, and Day 43"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211156Z"
+    },
+    {
+      "id": "vis-005",
+      "type": "visit",
+      "data": {
+        "name": "Safety Call Day 22",
+        "study_day": "Day 22",
+        "procedures": [
+          "Safety call to monitor for unsolicited AEs and COVID-19 symptoms"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 60,
+        "section": "4.1.1 Part A, the Blinded Phase",
+        "quote": "All participants will receive safety calls on Day 8, Day 15, Day 22, Day 36, and Day 43"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211166Z"
+    },
+    {
+      "id": "vis-006",
+      "type": "visit",
+      "data": {
+        "name": "Day 29 (Second Dose)",
+        "study_day": "Day 29",
+        "procedures": [
+          "Second dose of IP by 0.5 mL IM injection",
+          "NP swab sample for RT-PCR prior to dose",
+          "Blood sample",
+          "eDiary reminder for solicited ARs"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 60,
+        "section": "4.1.1 Part A, the Blinded Phase",
+        "quote": "Each participant will receive 2 doses of IP by 0.5 mL IM injection, the first on Day 1 and the second on Day 29."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211176Z"
+    },
+    {
+      "id": "vis-007",
+      "type": "visit",
+      "data": {
+        "name": "Safety Call Day 36",
+        "study_day": "Day 36",
+        "procedures": [
+          "Safety call to monitor for unsolicited AEs and COVID-19 symptoms"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 60,
+        "section": "4.1.1 Part A, the Blinded Phase",
+        "quote": "All participants will receive safety calls on Day 8, Day 15, Day 22, Day 36, and Day 43"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211186Z"
+    },
+    {
+      "id": "vis-008",
+      "type": "visit",
+      "data": {
+        "name": "Safety Call Day 43",
+        "study_day": "Day 43",
+        "procedures": [
+          "Safety call to monitor for unsolicited AEs and COVID-19 symptoms"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 60,
+        "section": "4.1.1 Part A, the Blinded Phase",
+        "quote": "All participants will receive safety calls on Day 8, Day 15, Day 22, Day 36, and Day 43"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211196Z"
+    },
+    {
+      "id": "vis-009",
+      "type": "visit",
+      "data": {
+        "name": "Day 57",
+        "study_day": "Day 57 (28 days after second dose)",
+        "procedures": [
+          "Blood sample for immunogenicity (Ab GMT and seroresponse)"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 59,
+        "section": "4.1 General Design",
+        "quote": "Upon entry into Part A, all participants had 8 scheduled clinic visits, including Screening, Day 1, Day 29, Day 57, Day 209, Day 394, Day 759"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211206Z"
+    },
+    {
+      "id": "vis-010",
+      "type": "visit",
+      "data": {
+        "name": "Day 209",
+        "study_day": "Day 209",
+        "procedures": [
+          "Blood sample for immunogenicity",
+          "Efficacy and safety surveillance"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 59,
+        "section": "4.1 General Design",
+        "quote": "Upon entry into Part A, all participants had 8 scheduled clinic visits, including Screening, Day 1, Day 29, Day 57, Day 209, Day 394, Day 759"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211216Z"
+    },
+    {
+      "id": "vis-011",
+      "type": "visit",
+      "data": {
+        "name": "Day 394",
+        "study_day": "Day 394",
+        "procedures": [
+          "Blood sample for immunogenicity",
+          "Efficacy and safety surveillance"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 59,
+        "section": "4.1 General Design",
+        "quote": "Upon entry into Part A, all participants had 8 scheduled clinic visits, including Screening, Day 1, Day 29, Day 57, Day 209, Day 394, Day 759"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211225Z"
+    },
+    {
+      "id": "vis-012",
+      "type": "visit",
+      "data": {
+        "name": "Day 759",
+        "study_day": "Day 759 (Month 25), window -14/+28 days",
+        "procedures": [
+          "Final blood sample",
+          "Efficacy and safety surveillance",
+          "eDiary collection ends"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 59,
+        "section": "4.1 General Design",
+        "quote": "Window for Day 759 Visit was changed from ±14 days to -14/+28 days."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211236Z"
+    },
+    {
+      "id": "vis-013",
+      "type": "visit",
+      "data": {
+        "name": "Illness Visit (Unscheduled)",
+        "study_day": "Within 72 hours of COVID-19 symptoms lasting at least 48 hours",
+        "procedures": [
+          "NP swab sample for RT-PCR (SARS-CoV-2 and other respiratory pathogens)",
+          "Alternatively saliva sample for RT-PCR",
+          "Issue instruction card, thermometer, oxygen saturation monitor, saliva collection tubes"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 60,
+        "section": "4.1.1 Part A, the Blinded Phase",
+        "quote": "Participants with symptoms of COVID-19 lasting at least 48 hours ... will return to the clinic or will be visited at home by medically qualified site staff within 72 hours"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211246Z"
+    },
+    {
+      "id": "vis-014",
+      "type": "visit",
+      "data": {
+        "name": "Daily Telemedicine Visits (Convalescent Period)",
+        "study_day": "Daily through Day 14 from Illness Visit or until symptoms resolve",
+        "procedures": [
+          "Verbal report of symptom severity",
+          "Report highest body temperature and lowest oxygen saturation",
+          "Self-collection of saliva samples on days 3, 5, 7, 9, 14, and 21 after Illness Visit"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 61,
+        "section": "4.1.1 Part A, the Blinded Phase",
+        "quote": "Study participants will be contacted by the investigator ... daily with telemedicine visits through Day 14 (from the Illness Visit or initial COVID-19 contact) or until symptoms have resolved"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211256Z"
+    },
+    {
+      "id": "vis-015",
+      "type": "visit",
+      "data": {
+        "name": "Convalescent Visit",
+        "study_day": "Approximately 28 days after initial Illness Visit",
+        "procedures": [
+          "Saliva sample collection",
+          "Blood sample for immunologic assessment of SARS-CoV-2 infection"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 61,
+        "section": "4.1.1 Part A, the Blinded Phase",
+        "quote": "a Convalescent Visit will be scheduled approximately 28 days after the initial Illness Visit. At this visit, a saliva sample will be collected and a blood sample will be drawn"
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211267Z"
+    },
+    {
+      "id": "vis-016",
+      "type": "visit",
+      "data": {
+        "name": "Participant Decision Visit (PDV) - Part B",
+        "study_day": "Start of Part B",
+        "procedures": [
+          "Option to be unblinded to original group assignment",
+          "Sign revised ICF",
+          "NP swab for RT-PCR for SARS-CoV-2",
+          "Blood sample for serology prior to unblinding",
+          "Counselling on public health measures"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 16,
+        "section": "4.1.2 Part B, the Open-Label Observational Phase",
+        "quote": "Provide a NP swab for RT-PCR for SARS-CoV-2 and a blood sample for serology prior to unblinding."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211277Z"
+    },
+    {
+      "id": "vis-017",
+      "type": "visit",
+      "data": {
+        "name": "Open-label Dose 1 (OL-D1)",
+        "study_day": "At PDV or subsequent visit",
+        "procedures": [
+          "First open-label dose of mRNA-1273 (placebo participants requesting mRNA-1273)"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 16,
+        "section": "4.1.2 Part B, the Open-Label Observational Phase",
+        "quote": "Open-label Dose 1 (OL-D1): To occur at the PDV or at a scheduled subsequent visit."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211287Z"
+    },
+    {
+      "id": "vis-018",
+      "type": "visit",
+      "data": {
+        "name": "Open-label Dose 2 (OL-D29)",
+        "study_day": "OL-D29 (28 days after OL-D1)",
+        "procedures": [
+          "Second open-label dose of mRNA-1273"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 16,
+        "section": "4.1.2 Part B, the Open-Label Observational Phase",
+        "quote": "Open-label Dose 2 (OL-D29): To occur 28 days after Dose 1 on OL-D1."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211298Z"
+    },
+    {
+      "id": "vis-019",
+      "type": "visit",
+      "data": {
+        "name": "Open-label Clinic Visit (OL-D57)",
+        "study_day": "OL-D57 (1 month after OL-D29)",
+        "procedures": [
+          "Clinic visit follow-up after open-label dosing"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 16,
+        "section": "4.1.2 Part B, the Open-Label Observational Phase",
+        "quote": "Open-label Clinic Visit (OL-D57): To occur 1 month after Dose 2 on OL-D29."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211308Z"
+    },
+    {
+      "id": "vis-020",
+      "type": "visit",
+      "data": {
+        "name": "BD-1 Visit (Booster Dose) - Part C",
+        "study_day": "Day 1 of Part C",
+        "procedures": [
+          "Sign revised ICF",
+          "Option to receive single 50 µg dose of mRNA-1273 (booster)",
+          "Pregnancy test for participants who receive a BD",
+          "Physical examination and vital signs (optional if not receiving BD)",
+          "Blood for immunologic analysis",
+          "Counselling on public health measures"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 18,
+        "section": "4.1.3 Part C, the Booster Dose Phase",
+        "quote": "BD-1 visit: Participants will receive a single 50 µg dose of mRNA-1273."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211319Z"
+    },
+    {
+      "id": "vis-021",
+      "type": "visit",
+      "data": {
+        "name": "BD-1a Visit (Optional) - Part C",
+        "study_day": "Day 4 (3 days after BD on Day 1)",
+        "procedures": [
+          "Optional blood sample (subject to kit availability)"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 18,
+        "section": "4.1.3 Part C, the Booster Dose Phase",
+        "quote": "BD-1a visit: Optional, and subject to blood sample kit availability, Day 4, 3 days after BD on Day 1."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211329Z"
+    },
+    {
+      "id": "vis-022",
+      "type": "visit",
+      "data": {
+        "name": "BD-2 Visit - Part C",
+        "study_day": "Day 29 (28 days after BD on Day 1)",
+        "procedures": [
+          "Blood sample for immunogenicity (BD-Day 29 Ab GMT and seroresponse)"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 18,
+        "section": "4.1.3 Part C, the Booster Dose Phase",
+        "quote": "BD-2 visit: Day 29, 28 days after the BD on Day 1."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211337Z"
+    },
+    {
+      "id": "vis-023",
+      "type": "visit",
+      "data": {
+        "name": "BD-3 Visit - Part C",
+        "study_day": "Day 181 (180 days after BD on Day 1), window ±14 days",
+        "procedures": [
+          "Blood sample for immunologic analysis",
+          "Final safety follow-up"
+        ]
+      },
+      "provenance": {
+        "protocol_id": "moderna_cove",
+        "page": 18,
+        "section": "4.1.3 Part C, the Booster Dose Phase",
+        "quote": "BD-3 visit: Day 181, 180 days after the BD on Day 1."
+      },
+      "study_id": "moderna_cove",
+      "definition_ids": [
+        "VISIT"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-28T15:06:58.211348Z"
     }
   ]
 }
