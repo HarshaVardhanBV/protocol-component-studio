@@ -111,9 +111,31 @@ button{font-family:inherit;cursor:pointer}
 .cbar i{display:block;height:100%;background:var(--teal-line)}
 .sec{margin-bottom:22px}
 .sec h3{font-family:var(--serif);font-size:16px;font-weight:600;margin:0 0 9px}
+.subh{font-family:var(--sans);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);font-weight:600;margin:12px 0 3px}
 .comp{border-left:3px solid transparent;padding:7px 10px 8px 13px;margin:5px 0;border-radius:0 6px 6px 0;cursor:pointer;transition:.12s;position:relative;scroll-margin-top:70px}
 .comp:hover{background:var(--paper-2)}
 .comp .ctext{font-size:14.5px;line-height:1.55}
+.comp .ctext p{margin:0 0 .35em}
+.comp .ctext p:last-child{margin-bottom:0}
+.comp .ctext ul,.comp .ctext ol{margin:.25em 0 .25em 1.15em;padding:0}
+.comp .ctext li{margin:.12em 0}
+.comp .ctext table.md{border-collapse:collapse;margin:.4em 0;font-size:13px;font-family:var(--sans)}
+.comp .ctext table.md th,.comp .ctext table.md td{border:1px solid var(--rule);padding:3px 9px;text-align:left}
+.comp .ctext table.md th{background:var(--paper-2);font-weight:600}
+.comp .ctext code{background:var(--paper-2);padding:0 4px;border-radius:4px;font-size:.92em}
+/* SoA table (visits) */
+.soa{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:13px;margin:4px 0 2px}
+.soa th,.soa td{border:1px solid var(--rule);padding:5px 9px;text-align:left;vertical-align:top}
+.soa th{background:var(--paper-2);font-weight:600;font-size:11.5px;letter-spacing:.02em}
+.soa tr.visrow{cursor:pointer;transition:.12s}
+.soa tr.visrow:hover{background:var(--paper-2)}
+.soa tr.visrow.lit td{background:var(--teal-bg);border-color:var(--teal-line)}
+/* eligibility list */
+.elig-h{font-family:var(--sans);font-weight:600;font-size:12px;color:var(--ink-2);margin:10px 0 2px}
+ul.elig{font-family:var(--sans);margin:.2em 0 .5em 1.15em;padding:0;font-size:13.5px}
+ul.elig li.eligli{margin:.18em 0;padding:2px 7px;border-radius:5px;cursor:pointer;transition:.12s}
+ul.elig li.eligli:hover{background:var(--paper-2)}
+ul.elig li.eligli.lit{background:var(--teal-bg)}
 .comp .cmeta{font-family:var(--sans);font-size:11px;color:var(--faint);margin-top:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .comp .cmeta .vtag{background:var(--teal-bg);color:var(--teal-ink);padding:1px 7px;border-radius:5px;font-weight:600;letter-spacing:.02em}
 .comp .cmeta .xform{background:var(--blue-bg);color:var(--blue-ink);padding:1px 7px;border-radius:5px;font-weight:600}
@@ -255,6 +277,31 @@ fetch('api/model').then(r=>r.json()).then(m=>{
 });
 
 const esc=t=>(t||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+/* tiny, escape-first markdown subset for component bodies: tables, lists, bold/italic/code */
+const inlineMd=s=>s.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>')
+  .replace(/(^|[^*])\*([^*]+)\*(?!\*)/g,'$1<em>$2</em>')
+  .replace(/`([^`]+)`/g,'<code>$1</code>');
+function mdToHtml(text){
+  const lines=esc(text||'').split(/\r?\n/); const out=[]; let i=0;
+  const isSep=s=>/^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)+\|?\s*$/.test(s);
+  const isRow=s=>s.includes('|'), isUL=s=>/^\s*[-*]\s+/.test(s), isOL=s=>/^\s*\d+[.)]\s+/.test(s);
+  while(i<lines.length){
+    const ln=lines[i];
+    if(isRow(ln)&&i+1<lines.length&&isSep(lines[i+1])){
+      const cells=r=>r.replace(/^\s*\|/,'').replace(/\|\s*$/,'').split('|').map(c=>inlineMd(c.trim()));
+      const head=cells(ln); i+=2; const body=[];
+      while(i<lines.length&&isRow(lines[i])&&!isSep(lines[i])){body.push(cells(lines[i]));i++;}
+      out.push('<table class="md"><thead><tr>'+head.map(h=>`<th>${h}</th>`).join('')+'</tr></thead><tbody>'
+        +body.map(r=>'<tr>'+r.map(c=>`<td>${c}</td>`).join('')+'</tr>').join('')+'</tbody></table>'); continue;
+    }
+    if(isUL(ln)){const it=[];while(i<lines.length&&isUL(lines[i])){it.push(inlineMd(lines[i].replace(/^\s*[-*]\s+/,'')));i++;}out.push('<ul>'+it.map(x=>`<li>${x}</li>`).join('')+'</ul>');continue;}
+    if(isOL(ln)){const it=[];while(i<lines.length&&isOL(lines[i])){it.push(inlineMd(lines[i].replace(/^\s*\d+[.)]\s+/,'')));i++;}out.push('<ol>'+it.map(x=>`<li>${x}</li>`).join('')+'</ol>');continue;}
+    if(ln.trim()===''){i++;continue;}
+    const para=[];while(i<lines.length&&lines[i].trim()!==''&&!isUL(lines[i])&&!isOL(lines[i])&&!(isRow(lines[i])&&i+1<lines.length&&isSep(lines[i+1]))){para.push(inlineMd(lines[i]));i++;}
+    out.push('<p>'+para.join('<br>')+'</p>');
+  }
+  return out.join('');
+}
 const study=id=>M.studies.find(s=>s.id===id);
 const comp=id=>M.byStudy[curStudy].components[id];
 const XLABEL={verbatim:'verbatim',summarize:'summary',summary:'summary',lay_language:'lay · needs_review',elaborate:'elaborated'};
@@ -315,19 +362,44 @@ function renderWorkbench(){
   const covHtml = cov?`<div class="coverage"><span class="cbar"><i style="width:${Math.round(cov[0]/cov[1]*100)}%"></i></span>
     Coverage · ${cov[0]} of ${cov[1]} sections populated from the component model · rest narrative-authored</div>`:'';
 
+  // Document body reads like the document: clean text only. All component
+  // metadata (template id, role, transform, reuse, provenance) lives in the
+  // inspector on click. Sub-headings by type appear only when a section mixes
+  // types (e.g. M11 3.1 = Objective(s) then Endpoint(s)).
+  const TYPE_LABEL={objective:'Objective(s)',endpoint:'Endpoint(s)',arm:'Arm(s)',population:'Population'};
+  const compItem=c=>`<div class="comp" data-comp="${c.id}" role="button" tabindex="0" onclick="pick('${c.id}')"><div class="ctext">${mdToHtml(c.text)}</div></div>`;
+  const otherGroups=items=>{
+    const order=['objective','endpoint','arm','population'];
+    const g={}; items.forEach(c=>{(g[c.type]=g[c.type]||[]).push(c);});
+    const keys=order.filter(t=>g[t]).concat(Object.keys(g).filter(t=>!order.includes(t)));
+    const multi=keys.length>1;
+    return keys.map(t=>(multi?`<div class="subh">${TYPE_LABEL[t]||t}</div>`:'')+g[t].map(compItem).join('')).join('');
+  };
+  const eligList=items=>{
+    const g={}; items.forEach(c=>{const k=(c.data&&c.data.kind)||'criterion';(g[k]=g[k]||[]).push(c);});
+    const order=['inclusion','exclusion'].filter(k=>g[k]).concat(Object.keys(g).filter(k=>k!=='inclusion'&&k!=='exclusion'));
+    return order.map(k=>{
+      const lis=g[k].map(c=>`<li class="eligli" data-comp="${c.id}" role="button" tabindex="0" onclick="pick('${c.id}')">${inlineMd(esc(c.text))}</li>`).join('');
+      return `<div class="elig-h">${k.charAt(0).toUpperCase()+k.slice(1)} criteria</div><ul class="elig">${lis}</ul>`;
+    }).join('');
+  };
+  const visitTable=items=>{
+    const rows=items.map(c=>{const d=c.data||{};
+      return `<tr class="visrow" data-comp="${c.id}" role="button" tabindex="0" onclick="pick('${c.id}')">
+        <td>${inlineMd(esc(c.text||d.name||''))}</td><td>${esc(d.study_day||'')}</td><td>${esc((d.procedures||[]).join(', '))}</td></tr>`;}).join('');
+    return `<table class="soa"><thead><tr><th>Visit</th><th>Study day</th><th>Procedures</th></tr></thead><tbody>${rows}</tbody></table>`;
+  };
   const sections = bs.docs[curDoc].sections.map(sec=>{
     let badges='';
     if(sec.derived) badges+=`<span class="derived-badge">derived · built last</span>`;
-    const rows = sec.components.map(c=>{
-      let meta=`<span class="mono" style="color:var(--faint)">${M.byStudy[curStudy].components[c.id].def_id}</span>`;
-      if(sec.transform==='elaborate') meta+=`<span class="xform">elaborated</span>`;
-      if(sec.transform==='lay_language') meta+=`<span class="review">needs_review</span>`;
-      meta+=`<span class="reuse">▌ reused — click to trace</span>`;
-      const role=c.role?`[${c.role}] `:'';
-      return `<div class="comp" data-comp="${c.id}" role="button" tabindex="0" onclick="pick('${c.id}')">
-        <div class="ctext">${role}${esc(c.text)}</div><div class="cmeta">${meta}</div></div>`;
-    }).join('');
-    return `<div class="sec"><h3 style="display:flex;align-items:baseline">${sec.section_id} · ${sec.title}${badges}</h3>${rows}</div>`;
+    const comps=sec.components;
+    const visits=comps.filter(c=>c.type==='visit');
+    const eligs=comps.filter(c=>c.type==='eligibility');
+    const others=comps.filter(c=>c.type!=='visit'&&c.type!=='eligibility');
+    let body=others.length?otherGroups(others):'';
+    if(eligs.length) body+=eligList(eligs);
+    if(visits.length) body+=visitTable(visits);
+    return `<div class="sec"><h3 style="display:flex;align-items:baseline">${sec.section_id} · ${sec.title}${badges}</h3>${body}</div>`;
   }).join('') || `<p style="color:var(--muted);font-family:var(--sans);font-size:13px">No components populate this document for ${s.name} — its slots accept element types not present here.</p>`;
 
   const cf=bs.conformance, findings=cf.findings.filter(f=>f.severity!=='info').slice(0,4);

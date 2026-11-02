@@ -15,6 +15,10 @@ data/
 evals/gold/*.template.json
 evals/reports/
 
+# Store backups — never ship (classify globs store/*.json; backups live outside it)
+backups/
+*.bak.json
+
 # OS / editor junk
 .DS_Store
 .~lock.*#

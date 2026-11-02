@@ -41,8 +41,10 @@ def build_model() -> dict:
                 secs.append({
                     "section_id": s.section_id, "title": s.title,
                     "derived": s.derivation == "summary", "transform": s.transform,
-                    "components": [{"id": i.id, "role": getattr(i.data, "role", None),
-                                    "text": frag.get(i.id, component_text(i.data))}
+                    "components": [{"id": i.id, "type": i.type,
+                                    "role": getattr(i.data, "role", None),
+                                    "text": frag.get(i.id, component_text(i.data)),
+                                    "data": i.data.model_dump(mode="json")}
                                    for i in s.instances],
                 })
             docs[dt] = {"sections": secs}

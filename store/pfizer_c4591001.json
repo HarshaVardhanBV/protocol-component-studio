@@ -11,7 +11,7 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 27,
-        "section": "3.1 For Phase 1 - Primary",
+        "section": "Objectives, Estimands, and Endpoints — For Phase 1 (Primary)",
         "quote": "To describe the safety and tolerability profiles of prophylactic BNT162 vaccines in healthy adults after 1 or 2 doses"
       },
       "study_id": "pfizer_c4591001",
@@ -23,7 +23,7 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:05.640060Z"
+      "created": "2026-10-29T07:17:41.476795Z"
     },
     {
       "id": "obj-002",
@@ -35,7 +35,7 @@
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 27,
-        "section": "3.1 For Phase 1 - Secondary",
+        "section": "Objectives, Estimands, and Endpoints — For Phase 1 (Secondary)",
         "quote": "To describe the immune responses elicited by prophylactic BNT162 vaccines in healthy adults after 1 or 2 doses"
       },
       "study_id": "pfizer_c4591001",
@@ -47,44 +47,44 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:05.640084Z"
+      "created": "2026-10-29T07:17:41.476842Z"
     },
     {
       "id": "obj-003",
       "type": "objective",
       "data": {
-        "role": "exploratory",
-        "text": "To describe the immune responses elicited by a third dose of prophylactic BNT162b2 administered to healthy adults at least 6 months after the second dose of either BNT162b1 or BNT162b2"
+        "role": "secondary",
+        "text": "To describe the cell-mediated immune response, and additional humoral immune response parameters, to the reference strain and SA in a subset of participants (after BNT162b2SA or a third dose of BNT162b2)"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 28,
-        "section": "3.1 For Phase 1 - Exploratory",
-        "quote": "To describe the immune responses elicited by a third dose of prophylactic BNT162b2 administered to healthy adults at least 6 months after the second dose of either BNT162b1 or BNT162b2"
+        "page": 35,
+        "section": "Objectives, Estimands, and Endpoints",
+        "quote": "To describe the cell-mediated immune response, and additional humoral immune response parameters, to the reference strain and SA in a subset of participants"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
-        "OBJ-EXPLORATORY"
+        "OBJ-SECONDARY"
       ],
       "version": 1,
       "revised_at": null,
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:05.640093Z"
+      "created": "2026-10-29T07:17:41.476861Z"
     },
     {
       "id": "obj-004",
       "type": "objective",
       "data": {
         "role": "exploratory",
-        "text": "To describe the safety profile of a third dose of prophylactic BNT162b2 administered to healthy adults 6 to 12 months after the second dose of either BNT162b1 or BNT162b2"
+        "text": "To evaluate the immune response over time to prophylactic BNT162b2 and persistence of immune response in participants with and without serological or virological evidence of SARS-CoV-2 infection before vaccination"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 28,
-        "section": "3.1 For Phase 1 - Exploratory",
-        "quote": "To describe the safety profile of a third dose of prophylactic BNT162b2 administered to healthy adults 6 to 12 months after the second dose of either BNT162b1 or BNT162b2"
+        "page": 79,
+        "section": "Objectives, Estimands, and Endpoints",
+        "quote": "To evaluate the immune response over time to prophylactic BNT162b2 and persistence of immune response in participants with and without serological or virological evidence of SARS-CoV-2 infection before vaccination"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -95,20 +95,20 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:05.640100Z"
+      "created": "2026-10-29T07:17:41.476899Z"
     },
     {
       "id": "obj-005",
       "type": "objective",
       "data": {
         "role": "exploratory",
-        "text": "To describe the safety and tolerability profile of BNT162b2 given as a fourth dose at least 6 months after the third dose of BNT162b2 for participants who received a fourth dose as part of protocol amendment 19"
+        "text": "To describe the efficacy of prophylactic BNT162b2 against asymptomatic SARS-CoV-2 infection in participants with evidence of infection up to the start of the asymptomatic surveillance period"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 28,
-        "section": "3.1 For Phase 1 - Exploratory",
-        "quote": "To describe the safety and tolerability profile of BNT162b2 given as a fourth dose at least 6 months after the third dose of BNT162b2 for participants who received a fourth dose as part of protocol amendment 19"
+        "page": 79,
+        "section": "Objectives, Estimands, and Endpoints",
+        "quote": "To describe the efficacy of prophylactic BNT162b2 against asymptomatic SARS-CoV-2 infection in participants with evidence of infection up to the start of the asymptomatic surveillance period"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -119,271 +119,127 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:05.640106Z"
+      "created": "2026-10-29T07:17:41.476916Z"
     },
     {
       "id": "obj-006",
       "type": "objective",
       "data": {
-        "role": "primary",
-        "text": "To evaluate the efficacy of prophylactic BNT162b2 against confirmed COVID-19 occurring from 7 days after the second dose in participants without evidence of infection before vaccination"
+        "role": "exploratory",
+        "text": "To describe the serological responses to the BNT vaccine candidate and characterize the SARS-CoV-2 isolate in cases of confirmed COVID-19 and confirmed severe COVID-19 through approximately 6 months after the second dose"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 29,
-        "section": "3.2 For Phase 2/3 - Primary Efficacy",
-        "quote": "To evaluate the efficacy of prophylactic BNT162b2 against confirmed COVID-19 occurring from 7 days after the second dose in participants without evidence of infection before vaccination"
+        "page": 79,
+        "section": "Objectives, Estimands, and Endpoints",
+        "quote": "To describe the serological responses to the BNT vaccine candidate and characterize the SARS-CoV-2 isolate in cases of:"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
-        "OBJ-PRIMARY"
+        "OBJ-EXPLORATORY"
       ],
       "version": 1,
       "revised_at": null,
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:05.640113Z"
+      "created": "2026-10-29T07:17:41.476931Z"
     },
     {
       "id": "obj-007",
       "type": "objective",
       "data": {
-        "role": "primary",
-        "text": "To evaluate the efficacy of prophylactic BNT162b2 against confirmed COVID-19 occurring from 7 days after the second dose in participants with and without evidence of infection before vaccination"
+        "role": "exploratory",
+        "text": "To describe the safety, immunogenicity, and efficacy of prophylactic BNT162b2 in individuals with confirmed stable HIV disease"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 29,
-        "section": "3.2 For Phase 2/3 - Primary Efficacy",
-        "quote": "To evaluate the efficacy of prophylactic BNT162b2 against confirmed COVID-19 occurring from 7 days after the second dose in participants with and without evidence of infection before vaccination"
+        "page": 79,
+        "section": "Objectives, Estimands, and Endpoints",
+        "quote": "To describe the safety, immunogenicity, and efficacy of prophylactic BNT162b2 in individuals with confirmed stable HIV disease"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
-        "OBJ-PRIMARY"
+        "OBJ-EXPLORATORY"
       ],
       "version": 1,
       "revised_at": null,
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:05.640118Z"
+      "created": "2026-10-29T07:17:41.476946Z"
     },
     {
       "id": "obj-008",
       "type": "objective",
       "data": {
-        "role": "primary",
-        "text": "To define the safety profile of prophylactic BNT162b2 in the first 360 participants randomized (Phase 2)"
+        "role": "exploratory",
+        "text": "To describe the immune response to any VOCs not already specified"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 29,
-        "section": "3.2 For Phase 2/3 - Primary Safety",
-        "quote": "To define the safety profile of prophylactic BNT162b2 in the first 360 participants randomized (Phase 2)"
+        "page": 79,
+        "section": "Objectives, Estimands, and Endpoints",
+        "quote": "To describe the immune response to any VOCs not already specified"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
-        "OBJ-PRIMARY"
+        "OBJ-EXPLORATORY"
       ],
       "version": 1,
       "revised_at": null,
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:05.640124Z"
+      "created": "2026-10-29T07:17:41.476961Z"
     },
     {
       "id": "obj-009",
       "type": "objective",
       "data": {
-        "role": "primary",
-        "text": "To define the safety profile of prophylactic BNT162b2 in all participants randomized in Phase 2/3"
+        "role": "exploratory",
+        "text": "To describe the immune response to a third dose of BNT162b2 (at 30 µg or a lower dose of 5 µg or 10 µg) or a third or fourth dose of BNT162b2SA"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 29,
-        "section": "3.2 For Phase 2/3 - Primary Safety",
-        "quote": "To define the safety profile of prophylactic BNT162b2 in all participants randomized in Phase 2/3"
+        "page": 79,
+        "section": "Objectives, Estimands, and Endpoints",
+        "quote": "To describe the immune response to a third dose of BNT162b2 (at 30 µg or a lower dose of 5 µg or 10 µg) or a third or fourth dose of BNT162b2SA"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
-        "OBJ-PRIMARY"
+        "OBJ-EXPLORATORY"
       ],
       "version": 1,
       "revised_at": null,
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:05.640130Z"
+      "created": "2026-10-29T07:17:41.476975Z"
     },
     {
       "id": "obj-010",
       "type": "objective",
       "data": {
-        "role": "primary",
-        "text": "To define the safety profile of prophylactic BNT162b2 in participants 12 to 15 years of age in Phase 3"
+        "role": "exploratory",
+        "text": "To describe the cell-mediated immune response, and additional humoral immune response parameters, to the reference strain and SA in a subset of participants"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 29,
-        "section": "3.2 For Phase 2/3 - Primary Safety",
-        "quote": "To define the safety profile of prophylactic BNT162b2 in participants 12 to 15 years of age in Phase 3"
+        "page": 79,
+        "section": "Objectives, Estimands, and Endpoints",
+        "quote": "To describe the cell-mediated immune response, and additional humoral immune response parameters, to the reference strain and SA in a subset of participants:"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
-        "OBJ-PRIMARY"
+        "OBJ-EXPLORATORY"
       ],
       "version": 1,
       "revised_at": null,
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:05.640136Z"
-    },
-    {
-      "id": "obj-011",
-      "type": "objective",
-      "data": {
-        "role": "primary",
-        "text": "To describe the safety and tolerability profile of BNT162b2SA given as 1 or 2 doses to BNT162b2-experienced participants, or as 2 doses to BNT162b2-naïve participants"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 30,
-        "section": "3.2 For Phase 2/3 - Primary Safety",
-        "quote": "To describe the safety and tolerability profile of BNT162b2SA given as 1 or 2 doses to BNT162b2-experienced participants, or as 2 doses to BNT162b2-naïve participants"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "OBJ-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:05.640151Z"
-    },
-    {
-      "id": "obj-012",
-      "type": "objective",
-      "data": {
-        "role": "primary",
-        "text": "To describe the safety and tolerability profile of BNT162b2 given as a third dose to BNT162b2-experienced participants in the subset for evaluation of boostability and protection against emerging VOCs"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 30,
-        "section": "3.2 For Phase 2/3 - Primary Safety",
-        "quote": "To describe the safety and tolerability profile of BNT162b2 given as a third dose to BNT162b2-experienced participants in the subset for evaluation of boostability and protection against emerging VOCs"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "OBJ-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:05.640157Z"
-    },
-    {
-      "id": "obj-013",
-      "type": "objective",
-      "data": {
-        "role": "primary",
-        "text": "To describe the safety and tolerability profile of BNT162b2 given as a third dose at least 3 months after the second dose of BNT162b2 (or BNT162b2SA) for participants who received a third dose as part of protocol amendment 18"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 30,
-        "section": "3.2 For Phase 2/3 - Primary Safety",
-        "quote": "To describe the safety and tolerability profile of BNT162b2 given as a third dose at least 3 months after the second dose of BNT162b2 (or BNT162b2SA) for participants who received a third dose as part of protocol amendment 18"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "OBJ-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:05.640163Z"
-    },
-    {
-      "id": "obj-014",
-      "type": "objective",
-      "data": {
-        "role": "primary",
-        "text": "To describe the safety and tolerability profile of BNT162b2 given as a fourth (or fifth) dose at least 6 months after the third (or fourth) dose of BNT162b2 (or BNT162b2SA) for participants who received a fourth (or fifth) dose as part of protocol amendment 19"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 30,
-        "section": "3.2 For Phase 2/3 - Primary Safety",
-        "quote": "To describe the safety and tolerability profile of BNT162b2 given as a fourth (or fifth) dose at least 6 months after the third (or fourth) dose of BNT162b2"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "OBJ-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:05.640169Z"
-    },
-    {
-      "id": "obj-015",
-      "type": "objective",
-      "data": {
-        "role": "primary",
-        "text": "To demonstrate the noninferiority of the anti–reference strain immune response after a third dose of BNT162b2 at 30 µg compared to after 2 doses of BNT162b2, in the same individuals"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 30,
-        "section": "3.2 For Phase 2/3 - Primary Immunogenicity",
-        "quote": "To demonstrate the noninferiority of the anti–reference strain immune response after a third dose of BNT162b2 at 30 µg compared to after 2 doses of BNT162b2, in the same individuals"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "OBJ-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:05.640174Z"
-    },
-    {
-      "id": "obj-016",
-      "type": "objective",
-      "data": {
-        "role": "primary",
-        "text": "To demonstrate the noninferiority of the anti-SA immune response after 1 dose of BNT162b2SA compared to the anti–reference strain immune response after 2 doses of BNT162b2, in the same individuals"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 30,
-        "section": "3.2 For Phase 2/3 - Primary Immunogenicity",
-        "quote": "To demonstrate the noninferiority of the anti-SA immune response after 1 dose of BNT162b2SA compared to the anti–reference strain immune response after 2 doses of BNT162b2, in the same individuals"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "OBJ-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:05.640180Z"
+      "created": "2026-10-29T07:17:41.476991Z"
     },
     {
       "id": "end-001",
@@ -393,13 +249,13 @@
         "purpose": "safety",
         "text": "Percentage of participants reporting local reactions (pain at the injection site, redness, and swelling) for up to 7 days following each dose",
         "objective_ref": null,
-        "timeframe": "up to 7 days following each dose"
+        "timeframe": "Up to 7 days following each dose"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 27,
+        "page": 72,
         "section": "3.1 For Phase 1 (Primary)",
-        "quote": "Local reactions (pain at the injection site, redness, and swelling)"
+        "quote": "Local reactions for up to 7 days following each dose"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -410,7 +266,7 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886145Z"
+      "created": "2026-10-29T07:17:43.789445Z"
     },
     {
       "id": "end-002",
@@ -420,13 +276,13 @@
         "purpose": "safety",
         "text": "Percentage of participants reporting systemic events (fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, and new or worsened joint pain) for up to 7 days following each dose",
         "objective_ref": null,
-        "timeframe": "up to 7 days following each dose"
+        "timeframe": "Up to 7 days following each dose"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 27,
+        "page": 72,
         "section": "3.1 For Phase 1 (Primary)",
-        "quote": "Systemic events (fever, fatigue, headache, chills, vomiting, diarrhea, new or worsened muscle pain, and new or worsened joint pain)"
+        "quote": "Systemic events for up to 7 days following each dose"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -437,7 +293,7 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886165Z"
+      "created": "2026-10-29T07:17:43.789488Z"
     },
     {
       "id": "end-003",
@@ -445,13 +301,13 @@
       "data": {
         "role": "primary",
         "purpose": "safety",
-        "text": "Percentage of participants reporting AEs from Dose 1 to 1 month after the last dose",
+        "text": "Percentage of participants reporting adverse events (AEs) from Dose 1 to 1 month after the last dose",
         "objective_ref": null,
         "timeframe": "Dose 1 to 1 month after the last dose"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 27,
+        "page": 72,
         "section": "3.1 For Phase 1 (Primary)",
         "quote": "Adverse events (AEs) from Dose 1 to 1 month after the last dose"
       },
@@ -464,7 +320,7 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886174Z"
+      "created": "2026-10-29T07:17:43.789506Z"
     },
     {
       "id": "end-004",
@@ -472,13 +328,13 @@
       "data": {
         "role": "primary",
         "purpose": "safety",
-        "text": "Percentage of participants reporting SAEs from Dose 1 to 6 months after the last dose",
+        "text": "Percentage of participants reporting serious AEs (SAEs) from Dose 1 to 6 months after the last dose",
         "objective_ref": null,
         "timeframe": "Dose 1 to 6 months after the last dose"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 27,
+        "page": 72,
         "section": "3.1 For Phase 1 (Primary)",
         "quote": "Serious AEs (SAEs) from Dose 1 to 6 months after the last dose"
       },
@@ -491,7 +347,7 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886180Z"
+      "created": "2026-10-29T07:17:43.789523Z"
     },
     {
       "id": "end-005",
@@ -499,13 +355,13 @@
       "data": {
         "role": "primary",
         "purpose": "safety",
-        "text": "Percentage of participants with abnormal hematology and chemistry laboratory values 1 and 7 days after Dose 1; and 7 days after Dose 2, and grading shifts between baseline and these timepoints",
+        "text": "Percentage of participants with abnormal hematology and chemistry laboratory values 1 and 7 days after Dose 1; and 7 days after Dose 2",
         "objective_ref": null,
-        "timeframe": "1 and 7 days after Dose 1; before Dose 2 and 7 days after Dose 2"
+        "timeframe": "1 and 7 days after Dose 1; 7 days after Dose 2"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 27,
+        "page": 72,
         "section": "3.1 For Phase 1 (Primary)",
         "quote": "Abnormal hematology and chemistry laboratory values 1 and 7 days after Dose 1; and 7 days after Dose 2"
       },
@@ -518,21 +374,48 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886187Z"
+      "created": "2026-10-29T07:17:43.789539Z"
     },
     {
       "id": "end-006",
       "type": "endpoint",
       "data": {
+        "role": "primary",
+        "purpose": "safety",
+        "text": "Percentage of participants with grading shifts in hematology and chemistry laboratory assessments between baseline and 1 and 7 days after Dose 1; and before Dose 2 and 7 days after Dose 2",
+        "objective_ref": null,
+        "timeframe": "Baseline to 1 and 7 days after Dose 1; before Dose 2 to 7 days after Dose 2"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 72,
+        "section": "3.1 For Phase 1 (Primary)",
+        "quote": "Grading shifts in hematology and chemistry laboratory assessments between baseline and 1 and 7 days after Dose 1; and before Dose 2 and 7 days after Dose 2"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789554Z"
+    },
+    {
+      "id": "end-007",
+      "type": "endpoint",
+      "data": {
         "role": "secondary",
         "purpose": "immunogenicity",
-        "text": "SARS-CoV-2 neutralizing titers: GMTs at each time point, GMFR from before vaccination to each subsequent time point, and proportion achieving ≥4-fold rise",
+        "text": "SARS-CoV-2 neutralizing titers: GMTs, GMFR from before vaccination to each subsequent time point, and proportion achieving ≥4-fold rise, at 7 and 21 days after Dose 1; 7 and 14 days and 1 and 6 months after Dose 2",
         "objective_ref": null,
         "timeframe": "7 and 21 days after Dose 1; 7 and 14 days and 1 and 6 months after Dose 2"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 27,
+        "page": 72,
         "section": "3.1 For Phase 1 (Secondary)",
         "quote": "SARS-CoV-2 neutralizing titers"
       },
@@ -545,22 +428,22 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886193Z"
+      "created": "2026-10-29T07:17:43.789570Z"
     },
     {
-      "id": "end-007",
+      "id": "end-008",
       "type": "endpoint",
       "data": {
         "role": "secondary",
         "purpose": "immunogenicity",
-        "text": "S1-binding IgG levels and RBD-binding IgG levels: GMCs at each time point, GMFR, and proportion achieving ≥4-fold rise",
+        "text": "S1-binding IgG levels and RBD-binding IgG levels: GMCs, GMFR, and proportion achieving ≥4-fold rise at each time point after vaccination",
         "objective_ref": null,
         "timeframe": "7 and 21 days after Dose 1; 7 and 14 days and 1 and 6 months after Dose 2"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 27,
-        "section": "3.1 For Phase 1 (Secondary)",
+        "section": "Objectives, Estimands, and Endpoints For Phase 1 (Secondary)",
         "quote": "S1-binding IgG levels and RBD-binding IgG levels"
       },
       "study_id": "pfizer_c4591001",
@@ -572,23 +455,320 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886200Z"
+      "created": "2026-10-29T07:17:43.789586Z"
     },
     {
-      "id": "end-008",
+      "id": "end-009",
       "type": "endpoint",
       "data": {
-        "role": "secondary",
-        "purpose": "immunogenicity",
-        "text": "Geometric mean ratio (GMR) of SARS-CoV-2 neutralizing titers to binding IgG levels at each time point — SARS-CoV-2 neutralizing titers, S1-binding IgG levels, RBD-binding IgG levels",
+        "role": "exploratory",
+        "purpose": "efficacy",
+        "text": "COVID-19 incidence per 1000 person-years of blinded follow-up based on central laboratory or locally confirmed NAAT (from 7 days after the second dose through blinded follow-up)",
         "objective_ref": null,
-        "timeframe": "each time point"
+        "timeframe": "From 7 days after second dose through blinded follow-up"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 28,
-        "section": "3.1 For Phase 1 (Secondary)",
-        "quote": "Geometric mean ratio (GMR), estimated by the ratio of the geometric mean of SARS-CoV-2 neutralizing titers to the geometric mean of binding IgG levels at each time point"
+        "page": 34,
+        "section": "Objectives, Estimands, and Endpoints (Exploratory)",
+        "quote": "COVID-19 incidence per 1000 person-years of blinded follow-up based on central laboratory or locally confirmed NAAT"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789603Z"
+    },
+    {
+      "id": "end-010",
+      "type": "endpoint",
+      "data": {
+        "role": "exploratory",
+        "purpose": "efficacy",
+        "text": "COVID-19 incidence per 1000 person-years of follow-up based on central laboratory or locally confirmed NAAT through the entire study follow-up period",
+        "objective_ref": null,
+        "timeframe": "Entire study follow-up period"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 34,
+        "section": "Objectives, Estimands, and Endpoints (Exploratory)",
+        "quote": "COVID-19 incidence per 1000 person-years of follow-up based on central laboratory or locally confirmed NAAT"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789619Z"
+    },
+    {
+      "id": "end-011",
+      "type": "endpoint",
+      "data": {
+        "role": "exploratory",
+        "purpose": "immunogenicity",
+        "text": "Full-length S-binding or S1-binding IgG levels and SARS-CoV-2 neutralizing titers: GMC/GMT at baseline and 1 and 6 months after Dose 2 and GMFR from baseline",
+        "objective_ref": null,
+        "timeframe": "Baseline and 1 and 6 months after Dose 2"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 34,
+        "section": "Objectives, Estimands, and Endpoints (Exploratory)",
+        "quote": "Full-length S-binding or S1-binding IgG levels / SARS-CoV-2 neutralizing titers"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789635Z"
+    },
+    {
+      "id": "end-012",
+      "type": "endpoint",
+      "data": {
+        "role": "exploratory",
+        "purpose": "efficacy",
+        "text": "Incidence of asymptomatic SARS-CoV-2 infection per 1000 person-years of follow-up based on central laboratory–confirmed NAAT in participants with prior evidence of infection",
+        "objective_ref": null,
+        "timeframe": "Asymptomatic surveillance period"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 34,
+        "section": "Objectives, Estimands, and Endpoints (Exploratory)",
+        "quote": "Incidence of asymptomatic SARS-CoV-2 infection per 1000 person-years of follow-up based on central laboratory–confirmed NAAT"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789652Z"
+    },
+    {
+      "id": "end-013",
+      "type": "endpoint",
+      "data": {
+        "role": "exploratory",
+        "purpose": "immunogenicity",
+        "text": "SARS-CoV-2 neutralizing titers and identification of SARS-CoV-2 variant(s) in confirmed COVID-19 and confirmed severe COVID-19 cases through approximately 6 months after the second dose",
+        "objective_ref": null,
+        "timeframe": "Through approximately 6 months after the second dose"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 34,
+        "section": "Objectives, Estimands, and Endpoints (Exploratory)",
+        "quote": "SARS-CoV-2 neutralizing titers / Identification of SARS-CoV-2 variant(s)"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789667Z"
+    },
+    {
+      "id": "end-014",
+      "type": "endpoint",
+      "data": {
+        "role": "exploratory",
+        "purpose": "other",
+        "text": "All safety, immunogenicity, and efficacy endpoints described above, in individuals with confirmed stable HIV disease",
+        "objective_ref": null,
+        "timeframe": null
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 34,
+        "section": "Objectives, Estimands, and Endpoints (Exploratory)",
+        "quote": "All safety, immunogenicity, and efficacy endpoints described above"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789683Z"
+    },
+    {
+      "id": "end-015",
+      "type": "endpoint",
+      "data": {
+        "role": "exploratory",
+        "purpose": "immunogenicity",
+        "text": "SARS-CoV-2 NTs for any VOCs not already specified (geometric mean NT after any dose of BNT162b2SA or BNT162b2)",
+        "objective_ref": null,
+        "timeframe": "After any dose of BNT162b2SA or BNT162b2"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 34,
+        "section": "Objectives, Estimands, and Endpoints (Exploratory)",
+        "quote": "SARS-CoV-2 NTs for any VOCs not already specified"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789699Z"
+    },
+    {
+      "id": "end-016",
+      "type": "endpoint",
+      "data": {
+        "role": "exploratory",
+        "purpose": "immunogenicity",
+        "text": "SARS-CoV-2 reference strain NTs: GMTs at Dose 3 and subsequent time points and GMFRs from Dose 3, for a third dose of BNT162b2 or third/fourth dose of BNT162b2SA",
+        "objective_ref": null,
+        "timeframe": "Dose 3 and subsequent time points"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 34,
+        "section": "Objectives, Estimands, and Endpoints (Exploratory)",
+        "quote": "SARS-CoV-2 reference strain NTs"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789715Z"
+    },
+    {
+      "id": "end-017",
+      "type": "endpoint",
+      "data": {
+        "role": "exploratory",
+        "purpose": "immunogenicity",
+        "text": "Cell-mediated immune response and additional humoral immune response parameters to the reference strain and SA in a subset of participants (7 days and 1 and 6 months after relevant doses)",
+        "objective_ref": null,
+        "timeframe": "7 days and 1 and 6 months after relevant doses"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 79,
+        "section": "3.1 For Phase 1 (Exploratory)",
+        "quote": "To describe the cell-mediated immune response, and additional humoral immune response parameters, to the reference strain and SA in a subset of participants"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-EXPLORATORY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789729Z"
+    },
+    {
+      "id": "end-018",
+      "type": "endpoint",
+      "data": {
+        "role": "primary",
+        "purpose": "efficacy",
+        "text": "Ratio of confirmed COVID-19 illness from 7 days after the second dose per 1000 person-years of follow-up in participants without evidence of infection, for active vaccine vs placebo (VE1)",
+        "objective_ref": null,
+        "timeframe": "From 7 days after the second dose"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 206,
+        "section": "9.4.2 Efficacy Analyses (Primary efficacy)",
+        "quote": "Ratio of confirmed COVID-19 illness from 7 days after the second dose per 1000 person-years of follow-up in participants without evidence of infection"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789743Z"
+    },
+    {
+      "id": "end-019",
+      "type": "endpoint",
+      "data": {
+        "role": "primary",
+        "purpose": "efficacy",
+        "text": "Ratio of confirmed COVID-19 illness from 7 days after the second dose per 1000 person-years of follow-up in participants with and without evidence of infection, for active vaccine vs placebo (VE2)",
+        "objective_ref": null,
+        "timeframe": "From 7 days after the second dose"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 206,
+        "section": "9.4.2 Efficacy Analyses (Primary efficacy)",
+        "quote": "Ratio of confirmed COVID-19 illness from 7 days after the second dose per 1000 person-years of follow-up in participants with and without evidence of infection"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-PRIMARY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789758Z"
+    },
+    {
+      "id": "end-020",
+      "type": "endpoint",
+      "data": {
+        "role": "secondary",
+        "purpose": "efficacy",
+        "text": "Ratio of confirmed COVID-19 illness from 14 days after the second dose per 1000 person-years in participants without evidence of infection, for active vaccine vs placebo",
+        "objective_ref": null,
+        "timeframe": "From 14 days after the second dose"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 207,
+        "section": "9.4.2 Efficacy Analyses (Secondary)",
+        "quote": "First: Ratio of confirmed COVID-19 illness from 14 days after the second dose per 1000 person-years of follow-up in participants without evidence of infection"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -599,385 +779,61 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886207Z"
-    },
-    {
-      "id": "end-009",
-      "type": "endpoint",
-      "data": {
-        "role": "exploratory",
-        "purpose": "immunogenicity",
-        "text": "Immune responses to a third dose: SARS-CoV-2 reference-strain neutralizing titers, SA-variant neutralizing titers, and full-length S-binding or S1-binding IgG levels (GMCs/GMTs, GMFRs, and GMRs)",
-        "objective_ref": null,
-        "timeframe": "at Dose 3, 7 days and 1 month after Dose 3, and 12 months after Dose 2"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 28,
-        "section": "3.1 For Phase 1 (Exploratory)",
-        "quote": "SARS-CoV-2 reference-strain neutralizing titers; SARS-CoV-2 SA-variant neutralizing titers; Full-length S-binding or S1-binding IgG levels"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-EXPLORATORY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886214Z"
-    },
-    {
-      "id": "end-010",
-      "type": "endpoint",
-      "data": {
-        "role": "exploratory",
-        "purpose": "safety",
-        "text": "Percentage of participants reporting local reactions, systemic events, AEs and SAEs after a third dose of BNT162b2",
-        "objective_ref": null,
-        "timeframe": "up to 7 days after Dose 3; Dose 3 to 1 month after Dose 3"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 28,
-        "section": "3.1 For Phase 1 (Exploratory)",
-        "quote": "Local reactions for up to 7 days after Dose 3; Systemic events for up to 7 days after Dose 3; AEs and SAEs from Dose 3 to 1 month after Dose 3"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-EXPLORATORY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886222Z"
-    },
-    {
-      "id": "end-011",
-      "type": "endpoint",
-      "data": {
-        "role": "exploratory",
-        "purpose": "safety",
-        "text": "Percentage of participants reporting AEs and SAEs from Dose 4 to 1 month after Dose 4 (fourth dose under protocol amendment 19)",
-        "objective_ref": null,
-        "timeframe": "Dose 4 to 1 month after Dose 4"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 28,
-        "section": "3.1 For Phase 1 (Exploratory)",
-        "quote": "AEs and SAEs from Dose 4 to 1 month after Dose 4"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-EXPLORATORY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886229Z"
-    },
-    {
-      "id": "end-012",
-      "type": "endpoint",
-      "data": {
-        "role": "primary",
-        "purpose": "efficacy",
-        "text": "COVID-19 incidence per 1000 person-years based on NAAT from 7 days after second dose in participants without evidence of prior infection",
-        "objective_ref": null,
-        "timeframe": "from 7 days after the second dose"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 29,
-        "section": "3.2 Phase 2/3 Primary Efficacy",
-        "quote": "COVID-19 incidence per 1000 person-years of follow-up based on central laboratory or locally confirmed NAAT in participants with no serological or virological evidence"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886236Z"
-    },
-    {
-      "id": "end-013",
-      "type": "endpoint",
-      "data": {
-        "role": "primary",
-        "purpose": "efficacy",
-        "text": "COVID-19 incidence per 1000 person-years based on NAAT from 7 days after second dose in participants with and without evidence of prior infection",
-        "objective_ref": null,
-        "timeframe": "from 7 days after the second dose"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 29,
-        "section": "3.2 Phase 2/3 Primary Efficacy",
-        "quote": "COVID-19 incidence per 1000 person-years of follow-up based on central laboratory or locally confirmed NAAT"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886242Z"
-    },
-    {
-      "id": "end-014",
-      "type": "endpoint",
-      "data": {
-        "role": "primary",
-        "purpose": "safety",
-        "text": "Percentage of participants (first 360 randomized, Phase 2) reporting local reactions, systemic events, AEs and SAEs from Dose 1 to 7 days after the second dose",
-        "objective_ref": null,
-        "timeframe": "up to 7 days following each dose; Dose 1 to 7 days after second dose"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 29,
-        "section": "3.2 Phase 2/3 Primary Safety",
-        "quote": "To define the safety profile of prophylactic BNT162b2 in the first 360 participants randomized (Phase 2)"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886248Z"
-    },
-    {
-      "id": "end-015",
-      "type": "endpoint",
-      "data": {
-        "role": "primary",
-        "purpose": "safety",
-        "text": "Percentage of all Phase 2/3 participants reporting local reactions, systemic events, AEs (to 1 month after second dose) and SAEs (to 6 months after second dose)",
-        "objective_ref": null,
-        "timeframe": "up to 7 days following each dose; AEs to 1 month and SAEs to 6 months after second dose"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 29,
-        "section": "3.2 Phase 2/3 Primary Safety",
-        "quote": "To define the safety profile of prophylactic BNT162b2 in all participants randomized in Phase 2/3"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886254Z"
-    },
-    {
-      "id": "end-016",
-      "type": "endpoint",
-      "data": {
-        "role": "primary",
-        "purpose": "safety",
-        "text": "Percentage of participants 12 to 15 years of age reporting local reactions, systemic events, AEs (to 1 month after second dose) and SAEs (to 6 months after second dose)",
-        "objective_ref": null,
-        "timeframe": "up to 7 days following each dose; AEs to 1 month and SAEs to 6 months after second dose"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 29,
-        "section": "3.2 Phase 2/3 Primary Safety",
-        "quote": "To define the safety profile of prophylactic BNT162b2 in participants 12 to 15 years of age in Phase 3"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886260Z"
-    },
-    {
-      "id": "end-017",
-      "type": "endpoint",
-      "data": {
-        "role": "primary",
-        "purpose": "safety",
-        "text": "Percentage of participants reporting local reactions, systemic events, AEs and SAEs following BNT162b2SA given as 1 or 2 doses, or BNT162b2 given as a third dose in the boostability subset",
-        "objective_ref": null,
-        "timeframe": "up to 7 days following each dose; AEs to 1 month and SAEs to 5 or 6 months after last dose"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 30,
-        "section": "3.2 Phase 2/3 Primary Safety",
-        "quote": "To describe the safety and tolerability profile of BNT162b2SA given as 1 or 2 doses to BNT162b2-experienced participants, or as 2 doses to BNT162b2-naïve participants"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886267Z"
-    },
-    {
-      "id": "end-018",
-      "type": "endpoint",
-      "data": {
-        "role": "primary",
-        "purpose": "safety",
-        "text": "Percentage of participants reporting AEs and SAEs from Dose 3 to 1 month after Dose 3 (third dose under protocol amendment 18)",
-        "objective_ref": null,
-        "timeframe": "Dose 3 to 1 month after Dose 3"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 30,
-        "section": "3.2 Phase 2/3 Primary Safety",
-        "quote": "AEs and SAEs from Dose 3 to 1 month after Dose 3"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886273Z"
-    },
-    {
-      "id": "end-019",
-      "type": "endpoint",
-      "data": {
-        "role": "primary",
-        "purpose": "safety",
-        "text": "Percentage of participants reporting AEs and SAEs from Dose 4 (or Dose 5) to 1 month after Dose 4 (or Dose 5) under protocol amendment 19",
-        "objective_ref": null,
-        "timeframe": "Dose 4 (or Dose 5) to 1 month after Dose 4 (or Dose 5)"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 30,
-        "section": "3.2 Phase 2/3 Primary Safety",
-        "quote": "AEs and SAEs from Dose 4 (or Dose 5) to 1 month after Dose 4 (or Dose 5)"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886279Z"
-    },
-    {
-      "id": "end-020",
-      "type": "endpoint",
-      "data": {
-        "role": "primary",
-        "purpose": "immunogenicity",
-        "text": "SARS-CoV-2 reference strain NTs (noninferiority of anti–reference strain response after third dose BNT162b2 30 µg vs 2 doses BNT162b2) in participants with no prior infection evidence",
-        "objective_ref": null,
-        "timeframe": "1 month after the third dose vs 1 month after the second dose"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 30,
-        "section": "3.2 Phase 2/3 Primary Immunogenicity",
-        "quote": "SARS-CoV-2 reference strain NTs in participants with no serological or virological evidence (up to 1 month after receipt of the third dose of BNT162b2 at 30 µg) of past SARS-CoV-2 infection"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "EP-PRIMARY"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:07.886285Z"
+      "created": "2026-10-29T07:17:43.789774Z"
     },
     {
       "id": "end-021",
       "type": "endpoint",
       "data": {
-        "role": "primary",
-        "purpose": "immunogenicity",
-        "text": "SARS-CoV-2 SA and reference strain NTs (noninferiority of anti-SA response after 1 dose BNT162b2SA vs anti–reference strain after 2 doses BNT162b2) in participants with no prior infection evidence",
+        "role": "secondary",
+        "purpose": "efficacy",
+        "text": "Ratio of confirmed COVID-19 illness from 14 days after the second dose per 1000 person-years in participants with and without evidence of infection, for active vaccine vs placebo",
         "objective_ref": null,
-        "timeframe": "1 month after 1 dose BNT162b2SA vs 1 month after second dose BNT162b2"
+        "timeframe": "From 14 days after the second dose"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 30,
-        "section": "3.2 Phase 2/3 Primary Immunogenicity",
-        "quote": "SARS-CoV-2 SA and reference strain NTs in participants with no serological or virological evidence (up to 1 month after receipt of 1 dose of BNT162b2SA) of past SARS-CoV-2 infection"
+        "page": 207,
+        "section": "9.4.2 Efficacy Analyses (Secondary)",
+        "quote": "Second: Ratio of confirmed COVID-19 illness from 14 days after the second dose per 1000 person-years of follow-up in participants with and without evidence of infection"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
-        "EP-PRIMARY"
+        "EP-SECONDARY"
       ],
       "version": 1,
       "revised_at": null,
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886291Z"
+      "created": "2026-10-29T07:17:43.789788Z"
     },
     {
       "id": "end-022",
       "type": "endpoint",
       "data": {
-        "role": "primary",
-        "purpose": "immunogenicity",
-        "text": "SARS-CoV-2 SA and reference strain NTs (noninferiority of anti-SA response after 2 doses BNT162b2SA vs anti–reference strain after 2 doses BNT162b2) in BNT162b2-naïve participants with no prior infection evidence",
+        "role": "secondary",
+        "purpose": "efficacy",
+        "text": "Ratios of confirmed severe COVID-19 illness from 7 days and from 14 days after the second dose per 1000 person-years in participants without evidence of infection, for active vaccine vs placebo",
         "objective_ref": null,
-        "timeframe": "1 month after second dose"
+        "timeframe": "From 7 days and from 14 days after the second dose"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 31,
-        "section": "3.2 Phase 2/3 Primary Immunogenicity",
-        "quote": "SARS-CoV-2 SA and reference strain NTs in participants with no serological or virological evidence (up to 1 month after receipt of the second dose of BNT162b2SA or BNT162b2 as appropriate) of past SARS-CoV-2 infection"
+        "page": 207,
+        "section": "9.4.2 Efficacy Analyses (Secondary)",
+        "quote": "Third and fourth: Ratios of confirmed severe COVID-19 illness from 7 days and from 14 days after the second dose per 1000 person-years of follow-up in participants without evidence of infection"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
-        "EP-PRIMARY"
+        "EP-SECONDARY"
       ],
       "version": 1,
       "revised_at": null,
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886297Z"
+      "created": "2026-10-29T07:17:43.789803Z"
     },
     {
       "id": "end-023",
@@ -985,15 +841,15 @@
       "data": {
         "role": "secondary",
         "purpose": "efficacy",
-        "text": "COVID-19 incidence per 1000 person-years based on NAAT from 14 days after second dose in participants without evidence of prior infection",
+        "text": "Ratios of confirmed severe COVID-19 illness from 7 days and from 14 days after the second dose per 1000 person-years in participants with and without evidence of infection, for active vaccine vs placebo",
         "objective_ref": null,
-        "timeframe": "from 14 days after the second dose"
+        "timeframe": "From 7 days and from 14 days after the second dose"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 31,
-        "section": "3.2 Phase 2/3 Secondary Efficacy",
-        "quote": "COVID-19 incidence per 1000 person-years of follow-up based on central laboratory or locally confirmed NAAT in participants with no serological or virological evidence (up to 14 days after receipt of the second dose) of past SARS-CoV-2 infection"
+        "page": 207,
+        "section": "9.4.2 Efficacy Analyses (Secondary)",
+        "quote": "Fifth and sixth: Ratios of confirmed severe COVID-19 illness from 7 days and from 14 days after the second dose per 1000 person-years of follow-up in participants with and without evidence of infection"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -1004,7 +860,7 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886302Z"
+      "created": "2026-10-29T07:17:43.789818Z"
     },
     {
       "id": "end-024",
@@ -1012,15 +868,15 @@
       "data": {
         "role": "secondary",
         "purpose": "efficacy",
-        "text": "COVID-19 incidence per 1000 person-years based on NAAT from 14 days after second dose in participants with and without evidence of prior infection",
+        "text": "Ratios of confirmed COVID-19 illness according to CDC-defined symptoms from 7 days and from 14 days after the second dose per 1000 person-years in participants without evidence of infection, for active vaccine vs placebo",
         "objective_ref": null,
-        "timeframe": "from 14 days after the second dose"
+        "timeframe": "From 7 days and from 14 days after the second dose"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 31,
-        "section": "3.2 Phase 2/3 Secondary Efficacy",
-        "quote": "COVID-19 incidence per 1000 person-years of follow-up based on central laboratory or locally confirmed NAAT"
+        "page": 207,
+        "section": "9.4.2 Efficacy Analyses (Secondary)",
+        "quote": "Ratios of confirmed COVID-19 illness (according to the CDC-defined symptoms) from 7 days and from 14 days after the second dose per 1000 person-years of follow-up in participants without evidence of infection"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -1031,23 +887,23 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886308Z"
+      "created": "2026-10-29T07:17:43.789834Z"
     },
     {
       "id": "end-025",
       "type": "endpoint",
       "data": {
         "role": "secondary",
-        "purpose": "efficacy",
-        "text": "Confirmed severe COVID-19 incidence per 1000 person-years from 7 and 14 days after second dose in participants without evidence of prior infection",
+        "purpose": "immunogenicity",
+        "text": "GMR of SA NT and difference in seroresponse percentages to the SA strain 1 month after 1 dose of BNT162b2SA vs 1 month after the third dose of BNT162b2 at 30 µg (E3a/E3b etc.)",
         "objective_ref": null,
-        "timeframe": "from 7 days and from 14 days after the second dose"
+        "timeframe": "1 month after dose"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 31,
-        "section": "3.2 Phase 2/3 Secondary Efficacy",
-        "quote": "Confirmed severe COVID-19 incidence per 1000 person-years of follow-up in participants with no serological or virological evidence (up to 7 days and up to 14 days after receipt of the second dose) of past SARS-CoV-2 infection"
+        "page": 198,
+        "section": "9 Statistical Analysis (BNT162b2-experienced)",
+        "quote": "GMR of SA NT 1 month after 1 dose of BNT162b2SA to 1 month after the third dose of BNT162b2 at 30 µg"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -1058,23 +914,23 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886313Z"
+      "created": "2026-10-29T07:17:43.789851Z"
     },
     {
       "id": "end-026",
       "type": "endpoint",
       "data": {
         "role": "secondary",
-        "purpose": "efficacy",
-        "text": "Confirmed severe COVID-19 incidence per 1000 person-years from 7 and 14 days after second dose in participants with and without evidence of prior infection",
+        "purpose": "immunogenicity",
+        "text": "GMR of SA NT and difference in seroresponse percentages to the SA strain 1 month after the second dose of BNT162b2SA vs reference strain NT 1 month after the second dose of BNT162b2 in the same individuals",
         "objective_ref": null,
-        "timeframe": "from 7 days and from 14 days after the second dose"
+        "timeframe": "1 month after second dose"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 31,
-        "section": "3.2 Phase 2/3 Secondary Efficacy",
-        "quote": "Confirmed severe COVID-19 incidence per 1000 person-years of follow-up"
+        "page": 198,
+        "section": "9 Statistical Analysis (BNT162b2-experienced)",
+        "quote": "GMR of SA NT 1 month after the second dose of BNT162b2SA to the reference strain NT 1 month after the second dose of BNT162b2 in the same individuals"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -1085,16 +941,70 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:07.886319Z"
+      "created": "2026-10-29T07:17:43.789866Z"
+    },
+    {
+      "id": "end-027",
+      "type": "endpoint",
+      "data": {
+        "role": "secondary",
+        "purpose": "immunogenicity",
+        "text": "N2b: Difference in percentages of participants with seroresponse to the SA strain 1 month after the second dose of BNT162b2SA vs BNT162b2 (BNT162b2-naïve participants)",
+        "objective_ref": null,
+        "timeframe": "1 month after second dose"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 199,
+        "section": "9 Statistical Analysis (BNT162b2-naïve)",
+        "quote": "N2b: The difference in percentages of participants with seroresponse to the SA strain at 1 month after the second dose of BNT162b2SA and 1 month after the second dose of BNT162b2"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789883Z"
+    },
+    {
+      "id": "end-028",
+      "type": "endpoint",
+      "data": {
+        "role": "secondary",
+        "purpose": "immunogenicity",
+        "text": "GMR of reference strain NT and difference in seroresponse percentages to the reference strain 1 month after the second dose of BNT162b2SA vs BNT162b2 (BNT162b2-naïve participants)",
+        "objective_ref": null,
+        "timeframe": "1 month after second dose"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 199,
+        "section": "9 Statistical Analysis (BNT162b2-naïve)",
+        "quote": "GMR of reference strain NT 1 month after the second dose of BNT162b2SA to 1 month after the second dose of BNT162b2"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "EP-SECONDARY"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:43.789899Z"
     },
     {
       "id": "arm-001",
       "type": "arm",
       "data": {
-        "name": "BNT162b1 (10 µg, 20 µg, 30 µg, 100 µg) - Phase 1",
+        "name": "BNT162b1",
         "type": "experimental",
-        "description": "Phase 1 investigational RNA vaccine candidate evaluated at multiple dose levels (4:1 active:placebo randomization).",
-        "intervention": "BNT162b1 RNA-LNP vaccine encoding the RBD, 2-dose schedule separated by 21 days at dose levels 10, 20, 30, 100 µg"
+        "description": "Phase 1 RNA vaccine candidate encoding the RBD, evaluated at multiple dose levels in a 2-dose schedule separated by 21 days.",
+        "intervention": "BNT162b1 (BNT162 RNA-LNP vaccine utilizing modRNA and encoding the RBD) at 10, 20, 30, or 100 µg; 2-dose schedule (Phase 1)"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
@@ -1111,16 +1021,42 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:09.693902Z"
+      "created": "2026-10-29T07:17:45.425929Z"
     },
     {
       "id": "arm-002",
       "type": "arm",
       "data": {
-        "name": "BNT162b2 (5 µg, 10 µg, 20 µg, 30 µg) - Phase 1",
+        "name": "BNT162b2 30 µg",
         "type": "experimental",
-        "description": "Phase 1 investigational RNA vaccine candidate evaluated at multiple dose levels (4:1 active:placebo randomization).",
-        "intervention": "BNT162b2 RNA-LNP vaccine encoding the P2 S, 2-dose schedule separated by 21 days at dose levels 5, 10, 20, 30 µg"
+        "description": "Vaccine candidate selected for Phase 2/3 evaluation; ~21,999 vaccine recipients randomized 1:1 vs placebo.",
+        "intervention": "BNT162b2 (modRNA encoding the P2 S) at a dose of 30 µg; 2-dose series separated by 21 days"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 40,
+        "section": "1.2. Schema",
+        "quote": "BNT162b2 30 µg or placebo 2 doses (n~21,999 per group, total n~43.998)"
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "ARM-EXPERIMENTAL"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:45.425956Z"
+    },
+    {
+      "id": "arm-003",
+      "type": "arm",
+      "data": {
+        "name": "BNT162b2 (Phase 1 dose levels)",
+        "type": "experimental",
+        "description": "Phase 1 RNA vaccine candidate encoding the P2 S, evaluated at multiple dose levels.",
+        "intervention": "BNT162b2 (modRNA encoding the P2 S) at 5, 10, 20, or 30 µg; 2-dose schedule (Phase 1)"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
@@ -1137,16 +1073,16 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:09.693939Z"
+      "created": "2026-10-29T07:17:45.425967Z"
     },
     {
-      "id": "arm-003",
+      "id": "arm-004",
       "type": "arm",
       "data": {
-        "name": "BNT162b2SA (30 µg)",
+        "name": "BNT162b2SA",
         "type": "experimental",
-        "description": "Variant-specific vaccine candidate evaluated as a 2-dose series and as booster doses.",
-        "intervention": "BNT162b2SA RNA-LNP vaccine encoding the P2 S with South Africa B.1.351 variant-specific mutations, 30 µg"
+        "description": "Variant-specific vaccine candidate used as a third dose booster and as a 2-dose series in a naïve cohort.",
+        "intervention": "BNT162b2SA (modRNA encoding P2 S with South Africa B.1.351 variant-specific mutations) at 30 µg"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
@@ -1163,33 +1099,7 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:09.693954Z"
-    },
-    {
-      "id": "arm-004",
-      "type": "arm",
-      "data": {
-        "name": "BNT162b2 30 µg - Phase 2/3",
-        "type": "experimental",
-        "description": "Vaccine candidate selected for Phase 2/3 efficacy evaluation; participants ≥12 years randomized 1:1 to vaccine or placebo.",
-        "intervention": "BNT162b2 at 30 µg, 2 doses separated by 21 days"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 40,
-        "section": "1.2. Schema - Phase 2/3",
-        "quote": "BNT162b2 30 µg or placebo 2 doses (n~21,999 per group, total n~43.998)"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "ARM-EXPERIMENTAL"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:09.693967Z"
+      "created": "2026-10-29T07:17:45.425977Z"
     },
     {
       "id": "arm-005",
@@ -1197,14 +1107,14 @@
       "data": {
         "name": "Placebo",
         "type": "placebo_comparator",
-        "description": "Placebo arm in Phase 1 (3 per group) and Phase 2/3 (1:1 randomization with active vaccine).",
-        "intervention": "Placebo, 2 doses"
+        "description": "Control arm; an equal number of participants received placebo, randomized 1:1 with BNT162b2 in Phase 2/3.",
+        "intervention": "Placebo administered in a 1:1 ratio vs active vaccine, 2 doses"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 40,
-        "section": "1.2. Schema - Phase 2/3",
-        "quote": "BNT162b2 30 µg or placebo 2 doses (n~21,999 per group, total n~43.998)"
+        "page": 37,
+        "section": "Number of Participants",
+        "quote": "An equal number of participants will receive placebo, ie, randomized in a 1:1 ratio."
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -1215,149 +1125,19 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:09.693979Z"
-    },
-    {
-      "id": "arm-006",
-      "type": "arm",
-      "data": {
-        "name": "Third dose BNT162b2 30 µg (boostability rerandomization)",
-        "type": "experimental",
-        "description": "600 existing Phase 3 participants 18-55 years rerandomized 1:1 to receive a third dose of BNT162b2 at 30 µg.",
-        "intervention": "Third dose of BNT162b2 at 30 µg"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 37,
-        "section": "Number of Participants",
-        "quote": "600 existing Phase 3 participants 18 to 55 years of age will be rerandomized in a 1:1 ratio to receive either a third dose of BNT162b2 at 30 µg or a third dose of BNT162b2SA"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "ARM-EXPERIMENTAL"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:09.693993Z"
-    },
-    {
-      "id": "arm-007",
-      "type": "arm",
-      "data": {
-        "name": "Third dose BNT162b2SA (boostability rerandomization)",
-        "type": "experimental",
-        "description": "600 existing Phase 3 participants 18-55 years rerandomized 1:1 to receive a third dose of BNT162b2SA.",
-        "intervention": "Third dose of BNT162b2SA"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 37,
-        "section": "Number of Participants",
-        "quote": "rerandomized in a 1:1 ratio to receive either a third dose of BNT162b2 at 30 µg or a third dose of BNT162b2SA"
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "ARM-EXPERIMENTAL"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:09.694004Z"
-    },
-    {
-      "id": "arm-008",
-      "type": "arm",
-      "data": {
-        "name": "Third and fourth dose BNT162b2SA group",
-        "type": "experimental",
-        "description": "Additional group of 30 existing Phase 3 participants 18-55 years enrolled to receive a third and fourth dose of BNT162b2SA.",
-        "intervention": "Third and fourth dose of BNT162b2SA"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 37,
-        "section": "Number of Participants",
-        "quote": "An additional group of 30 existing Phase 3 participants 18 to 55 years of age will be enrolled to receive a third and fourth dose of BNT162b2SA."
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "ARM-EXPERIMENTAL"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:09.694025Z"
-    },
-    {
-      "id": "arm-009",
-      "type": "arm",
-      "data": {
-        "name": "Third lower dose BNT162b2 (5 or 10 µg)",
-        "type": "experimental",
-        "description": "~144 existing Phase 3 participants ≥18 years enrolled to receive a third, lower dose of BNT162b2 of either 5 or 10 µg.",
-        "intervention": "Third dose of BNT162b2 at 5 or 10 µg"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 37,
-        "section": "Number of Participants",
-        "quote": "A further group of approximately 144 existing Phase 3 participants 18 years of age and older will be enrolled to receive a third, lower, dose of BNT162b2 of either 5 or 10 µg."
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "ARM-EXPERIMENTAL"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:09.694038Z"
-    },
-    {
-      "id": "arm-010",
-      "type": "arm",
-      "data": {
-        "name": "BNT162b2SA 2-dose series (vaccine-naïve cohort)",
-        "type": "experimental",
-        "description": "300 COVID-19 vaccine-naïve participants 18-55 years enrolled as a new cohort to receive BNT162b2SA as a 2-dose series.",
-        "intervention": "BNT162b2SA given as a 2-dose series separated by 21 days"
-      },
-      "provenance": {
-        "protocol_id": "pfizer_c4591001",
-        "page": 37,
-        "section": "Number of Participants",
-        "quote": "Three hundred participants 18 to 55 years of age who are COVID-19 vaccine–naïve ... will be enrolled as a new cohort of participants to receive BNT162b2SA given as a 2-dose series."
-      },
-      "study_id": "pfizer_c4591001",
-      "definition_ids": [
-        "ARM-EXPERIMENTAL"
-      ],
-      "version": 1,
-      "revised_at": null,
-      "revised_by": null,
-      "change_note": null,
-      "history": [],
-      "created": "2026-10-28T15:10:09.694051Z"
+      "created": "2026-10-29T07:17:45.425986Z"
     },
     {
       "id": "pop-001",
       "type": "population",
       "data": {
-        "description": "Phase 1 participants aged 18 to 55 years and 65 to 85 years, randomized to receive investigational RNA vaccine candidates or placebo for active immunization against COVID-19",
+        "description": "Healthy adults in Phase 1 dose-finding, aged 18-55 years and 65-85 years, receiving active vaccine or placebo",
         "planned_enrollment": 195,
-        "condition": "COVID-19 (prevention)"
+        "condition": "COVID-19 prevention (SARS-CoV-2)"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 38,
+        "page": 37,
         "section": "Number of Participants",
         "quote": "Each group in Phase 1 will comprise 15 participants (12 receiving active vaccine and 3 receiving placebo). In this phase, 13 groups will be studied"
       },
@@ -1370,15 +1150,15 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:11.327589Z"
+      "created": "2026-10-29T07:17:47.270647Z"
     },
     {
       "id": "pop-002",
       "type": "population",
       "data": {
-        "description": "Phase 2/3 participants ≥12 years of age (stratified 12-15, 16-55, >55 years) at risk for acquiring COVID-19, randomized 1:1 to BNT162b2 30 µg or placebo",
+        "description": "Phase 2/3 participants ≥12 years of age at higher risk for acquiring COVID-19, stratified as 12-15, 16-55, or >55 years, receiving BNT162b2 30 µg or placebo",
         "planned_enrollment": 43998,
-        "condition": "COVID-19 (prevention)"
+        "condition": "COVID-19 prevention (SARS-CoV-2)"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
@@ -1395,21 +1175,21 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:11.327645Z"
+      "created": "2026-10-29T07:17:47.270708Z"
     },
     {
       "id": "pop-003",
       "type": "population",
       "data": {
-        "description": "Adolescent stratum of Phase 2/3 participants 12 to 15 years of age enrolled at selected investigational sites",
+        "description": "Adolescent participants 12 to 15 years of age enrolled at selected sites for immunogenicity noninferiority bridging",
         "planned_enrollment": 2000,
-        "condition": "COVID-19 (prevention)"
+        "condition": "COVID-19 prevention (SARS-CoV-2)"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
-        "page": 37,
-        "section": "Number of Participants",
-        "quote": "The 12- to 15-year stratum will comprise up to approximately 2000 participants (1000 vaccine recipients) enrolled at selected investigational sites."
+        "page": 83,
+        "section": "4.1.2. Phase 2/3",
+        "quote": "The 12- to 15-year stratum will comprise up to approximately 2000 participants enrolled at selected investigational sites."
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -1420,15 +1200,15 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:11.327680Z"
+      "created": "2026-10-29T07:17:47.270742Z"
     },
     {
       "id": "pop-004",
       "type": "population",
       "data": {
-        "description": "Existing Phase 3 participants 18 to 55 years of age rerandomized to receive a third dose of BNT162b2 or BNT162b2SA for boostability and VOC protection",
+        "description": "Existing Phase 3 participants 18 to 55 years of age rerandomized to receive a third dose of BNT162b2 30 µg or BNT162b2SA (boostability/VOC subset)",
         "planned_enrollment": 600,
-        "condition": "COVID-19 (prevention/boostability)"
+        "condition": "COVID-19 prevention (SARS-CoV-2 variants of concern)"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
@@ -1445,7 +1225,7 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:11.327712Z"
+      "created": "2026-10-29T07:17:47.270774Z"
     },
     {
       "id": "pop-005",
@@ -1453,7 +1233,7 @@
       "data": {
         "description": "Existing Phase 3 participants 18 to 55 years of age enrolled to receive a third and fourth dose of BNT162b2SA",
         "planned_enrollment": 30,
-        "condition": "COVID-19 (prevention/boostability)"
+        "condition": "COVID-19 prevention (SARS-CoV-2)"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
@@ -1470,7 +1250,7 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:11.327742Z"
+      "created": "2026-10-29T07:17:47.270804Z"
     },
     {
       "id": "pop-006",
@@ -1478,7 +1258,7 @@
       "data": {
         "description": "Existing Phase 3 participants 18 years of age and older enrolled to receive a third, lower dose of BNT162b2 (5 or 10 µg)",
         "planned_enrollment": 144,
-        "condition": "COVID-19 (prevention/boostability)"
+        "condition": "COVID-19 prevention (SARS-CoV-2)"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
@@ -1495,21 +1275,21 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:11.327773Z"
+      "created": "2026-10-29T07:17:47.270834Z"
     },
     {
       "id": "pop-007",
       "type": "population",
       "data": {
-        "description": "New cohort of COVID-19 vaccine-naive (BNT162b2-naive) participants 18 to 55 years of age who have not experienced COVID-19, enrolled to receive BNT162b2SA as a 2-dose series",
+        "description": "New cohort of COVID-19 vaccine-naive (BNT162b2-naive) participants 18 to 55 years of age who have not experienced COVID-19, receiving BNT162b2SA as a 2-dose series",
         "planned_enrollment": 300,
-        "condition": "COVID-19 (prevention/VOC protection)"
+        "condition": "COVID-19 prevention (SARS-CoV-2)"
       },
       "provenance": {
         "protocol_id": "pfizer_c4591001",
         "page": 37,
         "section": "Number of Participants",
-        "quote": "Three hundred participants 18 to 55 years of age who are COVID-19 vaccine–naïve (ie, BNT162b2-naïve) and have not experienced COVID-19 will be enrolled as a new cohort"
+        "quote": "Three hundred participants 18 to 55 years of age who are COVID-19 vaccine–naïve (ie, BNT162b2-naïve) and have not experienced COVID-19 will be enrolled"
       },
       "study_id": "pfizer_c4591001",
       "definition_ids": [
@@ -1520,7 +1300,57 @@
       "revised_by": null,
       "change_note": null,
       "history": [],
-      "created": "2026-10-28T15:10:11.327805Z"
+      "created": "2026-10-29T07:17:47.270865Z"
+    },
+    {
+      "id": "elig-001",
+      "type": "eligibility",
+      "data": {
+        "kind": "inclusion",
+        "text": "Male or female participants between the ages of 18 and 55 years, inclusive, and 65 and 85 years, inclusive (Phase 1), or ≥12 years (Phase 2/3), at randomization.",
+        "number": "1"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 88,
+        "section": "5.1 Inclusion Criteria",
+        "quote": "Male or female participants between the ages of 18 and 55 years, inclusive, and 65 and 85 years, inclusive (Phase 1), or ≥12 years (Phase 2/3), at randomization."
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "ELIG-INCLUSION"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:48.601487Z"
+    },
+    {
+      "id": "elig-002",
+      "type": "eligibility",
+      "data": {
+        "kind": "inclusion",
+        "text": "For the boostability and protection-against-VOCs subset: Existing participants enrolled to receive a third dose of BNT162b2 at 30 µg or BNT162b2SA; male or female participants between the ages of 18 and 55 years, inclusive, at rerandomization.",
+        "number": "1 (subset)"
+      },
+      "provenance": {
+        "protocol_id": "pfizer_c4591001",
+        "page": 88,
+        "section": "5.1 Inclusion Criteria",
+        "quote": "Existing participants enrolled to receive a third dose of BNT162b2 at 30 µg or BNT162b2SA; male or female participants between the ages of 18 and 55 years, inclusive, at rerandomization."
+      },
+      "study_id": "pfizer_c4591001",
+      "definition_ids": [
+        "ELIG-INCLUSION"
+      ],
+      "version": 1,
+      "revised_at": null,
+      "revised_by": null,
+      "change_note": null,
+      "history": [],
+      "created": "2026-10-29T07:17:48.601532Z"
     }
   ]
 }

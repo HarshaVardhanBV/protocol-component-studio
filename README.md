@@ -14,9 +14,11 @@ section it affects.
 > findings and version integrity. Ships as a **web app** (FastAPI + hand-built UI)
 > that reads the stored components — no database or API key needed to *run* it.
 > An **offline eval harness** (`evals/`) measures extraction accuracy against a
-> hand-labeled gold set. Honest open items: finish one study's eligibility/visits
-> re-extract (model recall gap on a dense table), label a gold set for a published
-> accuracy number, and deploy. See the roadmap.
+> gold set grounded in ClinicalTrials.gov: on the Moderna study, **objective/endpoint
+> F1 = 1.00, role accuracy = 0.98**, with a measured **eligibility-recall gap (0.36 on
+> Moderna, 0.04 on Pfizer's longer criteria table)** — the dense-table limit, surfaced
+> not hidden (see Evaluation). Honest open items: a table-aware eligibility re-extract
+> and deploy. See the roadmap.
 
 ## Why
 This is the core idea behind modern structured authoring (and CDISC USDM): the
@@ -155,6 +157,51 @@ python -m evals.make_gold --study moderna_cove   # draft evals/gold/moderna_cove
 python -m evals.score --study moderna_cove --md  # P / R / F1 per element type + role accuracy
 ```
 
+## Evaluation (measured)
+Scorecard for **moderna_cove**, scored against a gold set grounded in the study's
+ClinicalTrials.gov registration (NCT04470427) — an *independent* source, not the
+pipeline's own output. Roles assigned by the registry (primary = registered primary
+outcome, secondary = registered secondary, exploratory = protocol outcome not
+registered as either); eligibility is the registry's full inclusion/exclusion list.
+
+```
+type             gold pred  TP  FP  FN     P     R    F1
+--------------------------------------------------------------
+arm                 2    2   2   0   0  1.00  1.00  1.00
+eligibility        22    9   8   1  14  0.89  0.36  0.52
+endpoint           22   22  22   0   0  1.00  1.00  1.00
+objective          19   19  19   0   0  1.00  1.00  1.00
+population          2    3   2   1   0  0.67  1.00  0.80
+--------------------------------------------------------------
+OVERALL (micro)             53   2  14  0.96  0.79  0.87
+
+Role accuracy (matched obj/endpoint): 0.98  (n=41)
+```
+Reading it: objective/endpoint **identification** is complete (F1 1.00) and their
+primary/secondary/exploratory **role** — the signal that drives document section
+structure (M11 §3.1/3.2/3.3) — is **0.98**. The real, measured gap is **eligibility
+recall 0.36**: the extractor recovers inclusion criteria but misses most of the long
+exclusion list in the dense criteria table. Precision stays high (0.96 overall), i.e.
+it rarely invents content — it under-recalls a long tail. The gap is *surfaced, not
+hidden*, which is the point of shipping the harness.
+
+Second study, **pfizer_c4591001**, scored on **eligibility only** (gold from CT.gov
+NCT04368728's inclusion/exclusion list — 28 criteria). Objectives/endpoints are
+deliberately left unlabeled here: C4591001's registry outcome list is a Phase 1 + 2/3 +
+booster/variant superset (lab panels, reactogenicity, multiple cohorts) that doesn't
+fairly correspond to the protocol-synopsis scope the extractor targets, so scoring
+against it would understate precision.
+
+```
+type         gold pred  TP  FP  FN     P     R    F1
+eligibility    28    2   1   1  27  0.50  0.04  0.07
+```
+This is the dense-table recall gap at its starkest — the extractor returned 2 eligibility
+items and the protocol lists 28. Same failure mode as Moderna's exclusion criteria, worse
+here because C4591001's inclusion/exclusion section is longer and more deeply nested. It is
+the top candidate for a targeted re-extract (table-aware prompting / chunking). Two studies
+labeled; obj/endpoint role accuracy and eligibility recall are the two numbers to track.
+
 ## Setup
 ```bash
 python3 -m venv .venv
@@ -193,8 +240,12 @@ URI / user / password into `.streamlit/secrets.toml`.
   document → select component → change-impact with click-to-jump → scoped graph view →
   conformance + version panels). Streamlit build retained as a fallback.
 - **Phase 4 (in progress)** — offline eval harness built (`evals/`: field-level P/R/F1 +
-  role accuracy, gold bootstrap, verified-gate). Remaining: label a gold set and publish a
-  scorecard (incl. KEYNOTE-189 for oncology recall — closes the WS-B accuracy caveat).
+  role accuracy, gold bootstrap, verified-gate). ✅ first gold set labeled and scored
+  (moderna_cove, grounded in CT.gov NCT04470427): obj/endpoint F1 1.00, role accuracy
+  0.98, eligibility recall 0.36 (measured gap). ✅ second study scored (pfizer_c4591001,
+  eligibility-only from CT.gov NCT04368728): eligibility recall 0.04 on a 28-criteria
+  table — the dense-table limit quantified. Remaining: a table-aware eligibility
+  re-extract to lift recall; oncology/KEYNOTE-189 for the WS-B accuracy caveat.
 - **Phase 5** — deploy (`uvicorn` on any container host; no DB needed to read) + write-up.
 
 ### Known gaps (named honestly)

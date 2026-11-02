@@ -1,0 +1,35 @@
+{
+  "study_id": "pfizer_c4591001",
+  "_source": "Ground truth from ClinicalTrials.gov NCT04368728 EligibilityModule (full inclusion/exclusion list). SCOPE: eligibility only. Objectives/endpoints are intentionally NOT labeled for this study because C4591001's registry outcome list is a Phase 1 + Phase 2/3 + booster/variant superset (lab panels, reactogenicity, multiple cohorts) that does not fairly correspond to the protocol-synopsis scope the extractor targets; scoring against it would understate precision. Visits/SoA are not in CT.gov. Eligibility IS authoritative here and is the documented recall gap, so it is the measured dimension for this study.",
+  "items": [
+    {"type": "eligibility", "role": null, "text": "Male or female participants between the ages of 18 and 55 years, inclusive, 65 and 85 years, inclusive, or >=12 years, inclusive, at randomization (dependent upon study phase).", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Participants who are willing and able to comply with all scheduled visits, vaccination plan, laboratory tests, lifestyle considerations, and other study procedures.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Healthy participants who are determined by medical history, physical examination, and clinical judgment of the investigator to be eligible for inclusion in the study.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Participants who, in the judgment of the investigator, are at risk for acquiring COVID-19.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Boostability and protection-against-VOCs existing participant subset only: Participants who provided a serum sample at Visit 3, with Visit 3 occurring within the protocol-specified window.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Capable of giving personal signed informed consent.", "verified": true},
+
+    {"type": "eligibility", "role": null, "text": "Other medical or psychiatric condition including recent (within the past year) or active suicidal ideation/behavior or laboratory abnormality that may increase the risk of study participation or, in the investigator's judgment, make the participant inappropriate for the study.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Phases 1 and 2 only: Known infection with human immunodeficiency virus (HIV), hepatitis C virus (HCV), or hepatitis B virus (HBV).", "verified": true},
+    {"type": "eligibility", "role": null, "text": "History of severe adverse reaction associated with a vaccine and/or severe allergic reaction (eg, anaphylaxis) to any component of the study intervention(s).", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Receipt of medications intended to prevent COVID-19.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Previous clinical (based on COVID-19 symptoms/signs alone, if a SARS-CoV-2 NAAT result was not available) or microbiological (based on COVID-19 symptoms/signs and a positive SARS-CoV-2 NAAT result) diagnosis of COVID-19.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Phase 1 only: Individuals at high risk for severe COVID-19, including those with any of the following risk factors: hypertension, diabetes mellitus, chronic pulmonary disease, asthma, current vaping or smoking, history of chronic smoking within the prior year, BMI >30 kg/m2, anticipating the need for immunosuppressive treatment within the next 6 months.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Phase 1 only: Individuals currently working in occupations with high risk of exposure to SARS-CoV-2 (eg, healthcare worker, emergency response personnel).", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Immunocompromised individuals with known or suspected immunodeficiency, as determined by history and/or laboratory/physical examination.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Phase 1 only: Individuals with a history of autoimmune disease or an active autoimmune disease requiring therapeutic intervention.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Bleeding diathesis or condition associated with prolonged bleeding that would, in the opinion of the investigator, contraindicate intramuscular injection.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Women who are pregnant or breastfeeding.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Previous vaccination with any coronavirus vaccine.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Individuals who receive treatment with immunosuppressive therapy, including cytotoxic agents or systemic corticosteroids, eg, for cancer or an autoimmune disease, or planned receipt throughout the study.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Phase 1 only: Regular receipt of inhaled/nebulized corticosteroids.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Receipt of blood/plasma products or immunoglobulin, from 60 days before study intervention administration or planned receipt throughout the study.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Participation in other studies involving study intervention within 28 days prior to study entry through and including 6 months after the last dose of study intervention, with the exception of non-Pfizer interventional studies for prevention of COVID-19, which are prohibited throughout study participation.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Previous participation in other studies involving study intervention containing lipid nanoparticles.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Phase 1 only: Positive serological test for SARS-CoV-2 IgM and/or IgG antibodies at the screening visit.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Phase 1 only: Any screening hematology and/or blood chemistry laboratory value that meets the definition of a >= Grade 1 abnormality.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Phase 1 only: Positive test for HIV, hepatitis B surface antigen (HBsAg), hepatitis B core antibodies (HBc Abs), or hepatitis C virus antibodies (HCV Abs) at the screening visit.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Phase 1 only: SARS-CoV-2 NAAT-positive nasal swab within 24 hours before receipt of study intervention.", "verified": true},
+    {"type": "eligibility", "role": null, "text": "Investigator site staff or Pfizer employees directly involved in the conduct of the study, site staff otherwise supervised by the investigator, and their respective family members.", "verified": true}
+  ]
+}
