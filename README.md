@@ -2,6 +2,9 @@
 
 **Write once, reuse everywhere — for clinical-trial documents.**
 
+**Live demo:** https://protocol-component-studio.onrender.com
+_(free tier — first load after idle takes ~30–60s to wake)_
+
 Extract study-design elements from a public trial protocol into one validated,
 versioned, provenance-tagged component model; render the *same* components into
 multiple regulatory documents; and when a component changes, show every document
